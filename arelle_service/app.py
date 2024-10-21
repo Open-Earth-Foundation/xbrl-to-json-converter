@@ -35,8 +35,7 @@ async def convert_file(file: UploadFile = File(...)):
         os.remove(upload_path)
         os.remove(json_output_path)
         return JSONResponse(content={"error": "An error occurred during conversion"})
-        # Optionally, clean up the uploaded file and the JSON output if you don't want to keep them
-    
+        
     # Read the generated JSON file
     with open(json_output_path, 'r') as json_file:
         json_content = json_file.read()
