@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - arelle_service
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - app-network
+
+  arelle_service:
+    build: ./arelle_service
+    ports:
+      - "8001:8000"  # Expose on a different host port if needed
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
