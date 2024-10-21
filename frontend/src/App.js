@@ -10,44 +10,92 @@ function App() {
   const [chatMessages, setChatMessages] = useState([]);
   const [socket, setSocket] = useState(null);
   const chatWindowRef = useRef(null);
-  const [isStreaming, setIsStreaming] = useState(false);
   const [theme, setTheme] = useState('light');
   const [fileUploaded, setFileUploaded] = useState(false);
   const [userId, setUserId] = useState(null);
-  const [jsonData, setJsonData] = useState(null); // New state variable
+  const [conversionInProgress, setConversionInProgress] = useState(false);
+  const [websocketConnected, setWebsocketConnected] = useState(false);
+  const [isTyping, setIsTyping] = useState(false); // New state variable
 
+  // Establish WebSocket connection on component mount
+  useEffect(() => {
+    const ws = new WebSocket('ws://localhost:8000/ws/chat');
+    setSocket(ws);
+
+    ws.onopen = () => {
+      console.log('Connected to the server');
+      setWebsocketConnected(true);
+    };
+
+    ws.onmessage = (event) => {
+      const data = event.data;
+
+      if (data.startsWith('[USER_ID]:')) {
+        const newUserId = data.replace('[USER_ID]:', '').trim();
+        setUserId(newUserId);
+      } else if (data.startsWith('[STATUS_UPDATE]:')) {
+        const statusMessage = data.replace('[STATUS_UPDATE]:', '').trim();
+        if (statusMessage === 'Conversion started.') {
+          setConversionInProgress(true);
+        } else if (statusMessage === 'Conversion completed.') {
+          setConversionInProgress(false);
+          alert('File conversion completed. You can now start chatting.');
+        } else if (statusMessage.startsWith('Error during conversion:')) {
+          setConversionInProgress(false);
+          alert(statusMessage);
+        }
+      } else {
+        // Add the bot's full message to chat messages
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { sender: 'bot', message: data, complete: true },
+        ]);
+
+        // Set isTyping to false
+        setIsTyping(false);
+      }
+    };
+
+    ws.onclose = () => {
+      console.log('Disconnected from the server');
+      setWebsocketConnected(false);
+    };
+
+    return () => {
+      ws.close();
+    };
+  }, []);
 
   // Handle file upload
-
   const handleFileUpload = async (e) => {
     e.preventDefault();
     const fileInput = e.target.elements.fileInput;
     const file = fileInput.files[0];
-  
+
     if (!file) {
       alert('Please select a file to upload.');
       return;
     }
-  
+
+    if (!userId) {
+      alert('WebSocket connection not established. Please wait and try again.');
+      return;
+    }
+
     const formData = new FormData();
     formData.append('file', file);
-  
+
     try {
-      const response = await fetch('http://localhost:8000/upload', {
+      const response = await fetch(`http://localhost:8000/upload?user_id=${userId}`, {
         method: 'POST',
         body: formData,
         credentials: 'include',
       });
-  
+
       if (response.ok) {
         const result = await response.json();
         setFileUploaded(true);
-        setUserId(result.user_id);
-        setJsonData(result.json_data); // Store the JSON data in state
-  
-        // Remove this line to prevent the download
-        // saveJsonToFile(result.json_data, 'converted_data.json');
-  
+        // Conversion will start on the backend, and status updates will be received via WebSocket
       } else {
         const errorResult = await response.json();
         alert(`Error: ${errorResult.error}`);
@@ -58,74 +106,22 @@ function App() {
     }
   };
 
-  // Function to save JSON data to a file on the frontend
-  const saveJsonToFile = (data, filename) => {
-    const jsonStr = JSON.stringify(data, null, 2);
-    const blob = new Blob([jsonStr], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    // Create a link and trigger a download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename;
-    link.click();
-
-    // Clean up
-    URL.revokeObjectURL(url);
-  };
-  // Establish WebSocket connection after file upload
-  useEffect(() => {
-    if (fileUploaded && userId) {
-      const ws = new WebSocket(`ws://localhost:8000/ws/chat?user_id=${userId}`);
-      setSocket(ws);
-
-      ws.onopen = () => {
-        console.log('Connected to the server');
-      };
-
-      ws.onmessage = (event) => {
-        const data = event.data;
-
-        if (data === '[STREAM_END]') {
-          // Mark the last bot message as complete
-          setChatMessages((prevMessages) =>
-            prevMessages.map((msg) =>
-              msg.sender === 'bot' && !msg.complete ? { ...msg, complete: true } : msg
-            )
-          );
-          setIsStreaming(false);
-        } else {
-          // Append the received message chunk
-          setChatMessages((prevMessages) => {
-            const lastMessage = prevMessages[prevMessages.length - 1];
-            if (lastMessage && lastMessage.sender === 'bot' && !lastMessage.complete) {
-              // Update the last bot message
-              const updatedMessage = {
-                ...lastMessage,
-                message: lastMessage.message + data,
-              };
-              return [...prevMessages.slice(0, -1), updatedMessage];
-            } else {
-              // Add new bot message
-              return [...prevMessages, { sender: 'bot', message: data, complete: false }];
-            }
-          });
-        }
-      };
-
-      ws.onclose = () => {
-        console.log('Disconnected from the server');
-      };
-
-      return () => {
-        ws.close();
-      };
+  // Handle skipping upload
+  const handleSkipUpload = () => {
+    if (!websocketConnected) {
+      alert('WebSocket connection not established. Please wait and try again.');
+      return;
     }
-  }, [fileUploaded, userId]);
+    setFileUploaded(true);
+  };
 
   const handleSendMessage = (e) => {
     e.preventDefault();
-    if (userMessage.trim() !== '' && socket && socket.readyState === WebSocket.OPEN) {
+    if (
+      userMessage.trim() !== '' &&
+      socket &&
+      socket.readyState === WebSocket.OPEN
+    ) {
       // Send the user's message to the backend
       socket.send(userMessage);
 
@@ -137,7 +133,9 @@ function App() {
 
       // Reset input field
       setUserMessage('');
-      setIsStreaming(true);
+
+      // Set isTyping to true
+      setIsTyping(true);
     }
   };
 
@@ -162,7 +160,12 @@ function App() {
           <UploadForm onSubmit={handleFileUpload}>
             <Title>Upload Your Document</Title>
             <FileInput type="file" name="fileInput" accept=".xbrl, .xml, .zip" />
-            <UploadButton type="submit">Upload</UploadButton>
+            <ButtonContainer>
+              <UploadButton type="submit">Upload</UploadButton>
+              <SkipButton type="button" onClick={handleSkipUpload}>
+                Skip Upload
+              </SkipButton>
+            </ButtonContainer>
           </UploadForm>
         ) : (
           // Chat interface
@@ -173,13 +176,16 @@ function App() {
                 {theme === 'light' ? '🌙' : '☀️'}
               </ThemeToggle>
             </Header>
+            {conversionInProgress && (
+              <StatusMessage>Conversion in progress. Please wait...</StatusMessage>
+            )}
             <ChatWindow ref={chatWindowRef}>
               {chatMessages.map((msg, index) => (
                 <MessageBubble key={index} sender={msg.sender}>
                   {msg.message}
                 </MessageBubble>
               ))}
-              {isStreaming && <TypingIndicator>Chatbot is typing...</TypingIndicator>}
+              {isTyping && <TypingIndicator>Chatbot is typing...</TypingIndicator>}
             </ChatWindow>
             <Form onSubmit={handleSendMessage}>
               <Input
@@ -187,9 +193,12 @@ function App() {
                 value={userMessage}
                 onChange={(e) => setUserMessage(e.target.value)}
                 placeholder="Type your message..."
-                disabled={isStreaming}
+                disabled={conversionInProgress || !websocketConnected}
               />
-              <SendButton type="submit" disabled={isStreaming}>
+              <SendButton
+                type="submit"
+                disabled={conversionInProgress || !websocketConnected}
+              >
                 Send
               </SendButton>
             </Form>
@@ -199,6 +208,7 @@ function App() {
     </ThemeProvider>
   );
 }
+
 export default App;
 
 // Styled Components
@@ -317,6 +327,11 @@ const FileInput = styled.input`
   margin: 20px 0;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
 const UploadButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
@@ -325,4 +340,21 @@ const UploadButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+`;
+
+const SkipButton = styled.button`
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const StatusMessage = styled.div`
+  padding: 10px;
+  background-color: ${(props) => props.theme.headerBg};
+  color: ${(props) => props.theme.textColor};
+  text-align: center;
 `;
