@@ -4,7 +4,7 @@ import uuid
 import traceback
 from typing import Dict
 from urllib.parse import parse_qs
-
+from openai import OpenAI
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,9 +15,9 @@ import json
 import threading
 import asyncio
 import queue  # Add this import
-
+from chat_service import AssistantService
 # Import the AI function
-from chat_service import process_user_req
+assistant_service = AssistantService()
 
 app = FastAPI()
 
@@ -174,23 +174,21 @@ async def get_converted_data(user_id: str):
 
 @app.websocket("/ws/chat")
 async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()  # Accept the connection immediately
+    await websocket.accept()
 
     try:
         query_params = parse_qs(websocket.scope['query_string'].decode())
         user_id = query_params.get('user_id', [None])[0]
 
         if not user_id:
-            # Generate a user_id if not provided
             user_id = str(uuid.uuid4())
-            # Send the user_id to the client
             await websocket.send_text(f"[USER_ID]: {user_id}")
 
         await manager.connect(websocket, user_id=user_id)
 
         while True:
             data = await websocket.receive_text()
-            await process_message(data, websocket, user_id)
+            await process_message(data, websocket)
     except WebSocketDisconnect:
         manager.disconnect(websocket)
     except Exception as e:
@@ -198,16 +196,29 @@ async def websocket_endpoint(websocket: WebSocket):
         traceback.print_exc()
         await websocket.close()
 
-async def process_message(message: str, websocket: WebSocket, user_id: str):
+async def process_message(message: str, websocket: WebSocket):
     try:
-        json_data = uploaded_data.get(user_id)
-        user_text = message
+        connection_info = manager.active_connections.get(websocket)
+        if not connection_info:
+            await websocket.send_text("Error: Connection not found.")
+            return
+        client = OpenAI()
+        thread = client.beta.threads.create()
+        # Add the user's message to the Thread
+        assistant_service.add_user_message(thread, message)
 
-        # Process the user's message and get the full response
-        response_text = process_user_req(user_text, json_data)
+        # Run the Assistant on the Thread in a thread to avoid blocking
+        run = await asyncio.to_thread(assistant_service.run_assistant, thread)
 
-        # Send the full response to the client
-        await manager.send_personal_message(response_text, websocket)
+        if run.status == 'completed':
+            # Get the Assistant's latest message
+            assistant_message = assistant_service.get_latest_assistant_message(thread)
+            if assistant_message:
+                await manager.send_personal_message(assistant_message, websocket)
+            else:
+                await manager.send_personal_message("Error: No assistant response.", websocket)
+        else:
+            await manager.send_personal_message(f"Error: Run failed with status {run.status}", websocket)
 
     except Exception as e:
         print(f"Error processing message: {e}")
