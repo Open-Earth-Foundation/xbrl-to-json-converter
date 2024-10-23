@@ -1,16 +1,17 @@
-// Define styled components
+// src/StyledComponents.js
 
 import styled from 'styled-components';
 
-const Container = styled.div`
-  max-width: 600px;
+export const Container = styled.div`
+  max-width: 90%; /* Increase the maximum width */
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   height: 100vh;
 `;
 
-const Header = styled.header`
+export const Header = styled.header`
   background-color: ${(props) => props.theme.headerBg};
   padding: 20px;
   display: flex;
@@ -18,12 +19,12 @@ const Header = styled.header`
   justify-content: space-between;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   margin: 0;
   color: ${(props) => props.theme.textColor};
 `;
 
-const ThemeToggle = styled.button`
+export const ThemeToggle = styled.button`
   background: none;
   border: none;
   font-size: 24px;
@@ -31,14 +32,14 @@ const ThemeToggle = styled.button`
   color: ${(props) => props.theme.textColor};
 `;
 
-const ChatWindow = styled.div`
+export const ChatWindow = styled.div`
   flex-grow: 1;
-  background-color: ${(props) => props.theme.bodyBg};
+  background-color: ${(props) => props.theme.chatBg};
   padding: 20px;
   overflow-y: auto;
 `;
 
-const MessageBubble = styled.div`
+export const MessageBubble = styled.div`
   max-width: 70%;
   margin-bottom: 15px;
   align-self: ${(props) => (props.sender === 'user' ? 'flex-end' : 'flex-start')};
@@ -48,6 +49,12 @@ const MessageBubble = styled.div`
   padding: 10px 15px;
   border-radius: 15px;
   position: relative;
+  word-wrap: break-word;
+
+  & > * {
+    margin: 0;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -63,19 +70,19 @@ const MessageBubble = styled.div`
   }
 `;
 
-const TypingIndicator = styled.div`
+export const TypingIndicator = styled.div`
   font-style: italic;
   color: ${(props) => props.theme.textColor};
   margin-bottom: 10px;
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   padding: 10px;
   background-color: ${(props) => props.theme.headerBg};
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   flex-grow: 1;
   padding: 15px;
   font-size: 16px;
@@ -86,7 +93,7 @@ const Input = styled.input`
   color: ${(props) => props.theme.textColor};
 `;
 
-const SendButton = styled.button`
+export const SendButton = styled.button`
   padding: 0 20px;
   font-size: 16px;
   margin-left: 10px;
@@ -95,8 +102,54 @@ const SendButton = styled.button`
   background-color: ${(props) => props.theme.buttonBg};
   color: #fff;
   cursor: pointer;
+
   &:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
+`;
+
+// Styled components for the file upload form
+export const UploadForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+export const FileInput = styled.input`
+  margin: 20px 0;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const UploadButton = styled.button`
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: ${(props) => props.theme.buttonBg};
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const SkipButton = styled.button`
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const StatusMessage = styled.div`
+  padding: 10px;
+  background-color: ${(props) => props.theme.headerBg};
+  color: ${(props) => props.theme.textColor};
+  text-align: center;
 `;

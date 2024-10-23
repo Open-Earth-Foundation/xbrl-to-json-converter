@@ -70,7 +70,12 @@ class ConnectionManager:
         self.active_connections: Dict[WebSocket, str] = {}
 
     async def connect(self, websocket: WebSocket, user_id: str):
-        self.active_connections[websocket] = user_id
+            # Create a new Thread for the user
+            thread = assistant_service.create_thread()
+            thread_id = thread.id
+
+            # Store the user_id and thread_id for this connection
+            self.active_connections[websocket] = {'user_id': user_id, 'thread_id': thread_id}
 
     def disconnect(self, websocket: WebSocket):
         self.active_connections.pop(websocket, None)
@@ -202,24 +207,24 @@ async def process_message(message: str, websocket: WebSocket):
         if not connection_info:
             await websocket.send_text("Error: Connection not found.")
             return
-        client = OpenAI()
-        thread = client.beta.threads.create()
+
+        thread_id = connection_info['thread_id']
+
         # Add the user's message to the Thread
-        assistant_service.add_user_message(thread, message)
+        assistant_service.add_user_message(thread_id, message)
 
         # Run the Assistant on the Thread in a thread to avoid blocking
-        run = await asyncio.to_thread(assistant_service.run_assistant, thread)
+        run = await asyncio.to_thread(assistant_service.run_assistant, thread_id)
 
         if run.status == 'completed':
             # Get the Assistant's latest message
-            assistant_message = assistant_service.get_latest_assistant_message(thread)
+            assistant_message = assistant_service.get_latest_assistant_message(thread_id)
             if assistant_message:
                 await manager.send_personal_message(assistant_message, websocket)
             else:
                 await manager.send_personal_message("Error: No assistant response.", websocket)
         else:
             await manager.send_personal_message(f"Error: Run failed with status {run.status}", websocket)
-
     except Exception as e:
         print(f"Error processing message: {e}")
         traceback.print_exc()

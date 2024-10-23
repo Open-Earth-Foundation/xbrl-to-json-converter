@@ -20,32 +20,42 @@ class AssistantService:
         thread = self.client.beta.threads.create()
         return thread
 
-    def add_user_message(self, thread, content):
+    def add_user_message(self, thread_id, content):
         message = self.client.beta.threads.messages.create(
-            thread_id=thread.id,
+            thread_id=thread_id,
             role="user",
             content=content
         )
         return message
 
-    def run_assistant(self, thread):
+    def run_assistant(self, thread_id):
         run = self.client.beta.threads.runs.create_and_poll(
-            thread_id=thread.id,
+            thread_id=thread_id,
             assistant_id=self.assistant_id
         )
         return run
 
     def get_latest_assistant_message(self, thread_id):
         messages = self.client.beta.threads.messages.list(thread_id=thread_id)
-        # Get the last assistant message
-        print(messages)
-        for message in reversed(messages.data):
+        # Print message IDs and roles for debugging
+        print("Messages in thread:")
+        for msg in messages.data:
+            print(f"Message ID: {msg.id}, Role: {msg.role}")
+
+        # Assuming messages.data is ordered from newest to oldest
+        for message in messages.data:
             if message.role == 'assistant':
                 content_text = ''
                 if isinstance(message.content, list):
                     for content_item in message.content:
-                        if content_item['type'] == 'text':
-                            content_text += content_item['text']
+                        print(f"content_item: {content_item}")
+                        print(f"type(content_item): {type(content_item)}")
+                        if hasattr(content_item, 'type') and content_item.type == 'text':
+                            content_text += content_item.text.value
+                        elif isinstance(content_item, dict) and content_item.get('type') == 'text':
+                            content_text += content_item.get('text', {}).get('value', '')
+                        elif isinstance(content_item, str):
+                            content_text += content_item
                         else:
                             # Handle other content types if necessary
                             pass
@@ -56,4 +66,3 @@ class AssistantService:
                     content_text = str(message.content)
                 return content_text
         return None
-
