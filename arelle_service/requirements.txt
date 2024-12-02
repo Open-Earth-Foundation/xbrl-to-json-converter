@@ -21,5 +21,5 @@ arelle-release==2.30.19
 holidays==0.54
 pytz==2024.1
 fastapi==0.112.0
-python-multipart==0.0.9
+python-multipart==0.0.18
 uvicorn==0.30.5
