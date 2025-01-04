@@ -210,14 +210,42 @@ async def process_message(message: str, websocket: WebSocket):
 
         thread_id = connection_info['thread_id']
 
-        # Add the user's message to the Thread
+        # Toggle to include or exclude the additional context
+        inject_context = True  # Set to False to test without context
+
+        if inject_context:
+            additional_data = """
+            Don't use or mention the context if it's not relevant to user question
+            #####CONTEXT
+            # ESRS E2 28 - Pollutant and Microplastics Disclosure
+
+            28. The undertaking shall disclose the amounts of:
+            (a) each pollutant listed in Annex II of Regulation (EC) No 166/2006 of the European Parliament and of the Council (European Pollutant Release and Transfer Register “E-PRTR Regulation”) emitted to air, water and soil, with the exception of emissions of GHGs which are disclosed in accordance with ESRS E1 Climate Change;
+            (b) microplastics generated or used by the undertaking.
+            ###DISCLOSURE INFO
+            28. Apple Inc. discloses the amounts of pollutants emitted through its own operations as follows (the following figures are hypothetical and provided for testing purposes only):
+            (a) Pollutants emitted to air, water, and soil:
+
+            Nitrogen Oxides (NOx): 1,200 tonnes per year
+            Sulphur Oxides (SOx): 800 tonnes per year
+            Non-Methane Volatile Organic Compounds (NMVOCs): 600 tonnes per year
+            Ammonia (NH₃): 150 tonnes per year
+            Heavy Metals (e.g., Lead, Mercury): 25 tonnes per year
+            Particulate Matter (PM10): 300 tonnes per year
+            (b) Microplastics generated or used:
+
+            Microplastics generated: 50 tonnes per year
+            Microplastics used in products: 30 tonnes per year
+            These amounts are consolidated, including emissions from facilities over which Apple Inc. has financial and operational control. The consolidation includes only emissions from facilities exceeding the threshold values specified in Annex II of the E-PRTR Regulation.
+            """
+
+            assistant_service.add_user_message(thread_id, additional_data)
+        message = message + additional_data
         assistant_service.add_user_message(thread_id, message)
 
-        # Run the Assistant on the Thread in a thread to avoid blocking
         run = await asyncio.to_thread(assistant_service.run_assistant, thread_id)
 
         if run.status == 'completed':
-            # Get the Assistant's latest message
             assistant_message = assistant_service.get_latest_assistant_message(thread_id)
             if assistant_message:
                 await manager.send_personal_message(assistant_message, websocket)
@@ -225,7 +253,8 @@ async def process_message(message: str, websocket: WebSocket):
                 await manager.send_personal_message("Error: No assistant response.", websocket)
         else:
             await manager.send_personal_message(f"Error: Run failed with status {run.status}", websocket)
+
     except Exception as e:
         print(f"Error processing message: {e}")
         traceback.print_exc()
-        await manager.send_personal_message("Error: Unable to process your request.", websocket)
+        await manager.send_personDal_message("Error: Unable to process your request.", websocket)
