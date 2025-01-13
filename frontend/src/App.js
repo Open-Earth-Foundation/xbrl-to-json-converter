@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import ReactMarkdown from 'react-markdown'; // Import react-markdown
+import ReactMarkdown from 'react-markdown';
 import GlobalStyles from './GlobalStyles';
-import remarkGfm from 'remark-gfm'; // Import the remark-gfm plugin
+import remarkGfm from 'remark-gfm';
 import { lightTheme, darkTheme } from './themes';
 import {
   Container,
@@ -23,7 +23,7 @@ import {
   UploadButton,
   SkipButton,
   StatusMessage,
-} from './StyledComponents'; // Import styled components from separate file
+} from './StyledComponents';
 
 function App() {
   const [userMessage, setUserMessage] = useState('');
@@ -37,9 +37,13 @@ function App() {
   const [websocketConnected, setWebsocketConnected] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
 
+  // Read environment variables (fallback to localhost if missing)
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+  const WS_URL = process.env.REACT_APP_WS_URL || 'ws://localhost:8000/ws/chat';
+
   // Establish WebSocket connection on component mount
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8000/ws/chat');
+    const ws = new WebSocket(WS_URL);
     setSocket(ws);
 
     ws.onopen = () => {
@@ -84,7 +88,7 @@ function App() {
     return () => {
       ws.close();
     };
-  }, []);
+  }, [WS_URL]);
 
   // Handle file upload
   const handleFileUpload = async (e) => {
@@ -106,7 +110,8 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`http://localhost:8000/upload?user_id=${userId}`, {
+      // Use the environment variable for your upload endpoint
+      const response = await fetch(`${API_URL}/upload?user_id=${userId}`, {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -115,7 +120,6 @@ function App() {
       if (response.ok) {
         const result = await response.json();
         setFileUploaded(true);
-        // Conversion will start on the backend, and status updates will be received via WebSocket
       } else {
         const errorResult = await response.json();
         alert(`Error: ${errorResult.error}`);
@@ -137,11 +141,7 @@ function App() {
 
   const handleSendMessage = (e) => {
     e.preventDefault();
-    if (
-      userMessage.trim() !== '' &&
-      socket &&
-      socket.readyState === WebSocket.OPEN
-    ) {
+    if (userMessage.trim() !== '' && socket && socket.readyState === WebSocket.OPEN) {
       // Send the user's message to the backend
       socket.send(userMessage);
 
@@ -176,7 +176,6 @@ function App() {
       <GlobalStyles />
       <Container>
         {!fileUploaded ? (
-          // File upload form
           <UploadForm onSubmit={handleFileUpload}>
             <Title>Upload Your Document</Title>
             <FileInput type="file" name="fileInput" accept=".xbrl, .xml, .zip" />
@@ -188,7 +187,6 @@ function App() {
             </ButtonContainer>
           </UploadForm>
         ) : (
-          // Chat interface
           <>
             <Header>
               <Title>Chatbot Assistant</Title>
