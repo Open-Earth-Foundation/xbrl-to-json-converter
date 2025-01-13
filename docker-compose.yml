@@ -1,3 +1,4 @@
+version: '3.8'
 services:
   backend:
     build: ./backend
@@ -13,17 +14,18 @@ services:
       - app-network
 
   frontend:
-    build: ./frontend
+    build: 
+      context: ./client
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "5173:5173"
     volumes:
-      - ./frontend:/app
+      - ./client:/app
+      - /app/node_modules
     environment:
-      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=development
     depends_on:
       - backend
-    networks:
-      - app-network
 
   arelle_service:
     build: ./arelle_service
