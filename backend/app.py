@@ -4,14 +4,20 @@ import uuid
 import traceback
 from typing import Dict
 from urllib.parse import parse_qs
-
+from openai import OpenAI
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 import requests
-import json  # Import json module
+import json
+import threading
+import asyncio
+import queue  # Add this import
+from chat_service import AssistantService
+# Import the AI function
+assistant_service = AssistantService()
 
 app = FastAPI()
 
@@ -59,23 +65,35 @@ async def validation_exception_handler(request, exc):
 # In-memory storage (replace with database in production)
 uploaded_data = {}
 
-# Connection Manager to handle WebSocket connections
 class ConnectionManager:
     def __init__(self):
         self.active_connections: Dict[WebSocket, str] = {}
 
     async def connect(self, websocket: WebSocket, user_id: str):
-        await websocket.accept()
-        self.active_connections[websocket] = user_id
+            # Create a new Thread for the user
+            thread = assistant_service.create_thread()
+            thread_id = thread.id
+
+            # Store the user_id and thread_id for this connection
+            self.active_connections[websocket] = {'user_id': user_id, 'thread_id': thread_id}
 
     def disconnect(self, websocket: WebSocket):
         self.active_connections.pop(websocket, None)
 
-    def get_user_id(self, websocket: WebSocket) -> str:
-        return self.active_connections.get(websocket)
-
     async def send_personal_message(self, message: str, websocket: WebSocket):
         await websocket.send_text(message)
+
+    async def broadcast_status(self, user_id: str, message: str):
+        websocket = None
+        for ws, uid in self.active_connections.items():
+            if uid == user_id:
+                websocket = ws
+                break
+
+        if websocket:
+            await self.send_personal_message(f"[STATUS_UPDATE]: {message}", websocket)
+        else:
+            print(f"No active WebSocket connection for user_id {user_id}")
 
 manager = ConnectionManager()
 
@@ -86,6 +104,7 @@ async def read_root():
         content={"message": "Welcome to the API. Use the /upload endpoint to upload files."},
         media_type="application/json"
     )
+
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     user_id = str(uuid.uuid4())
@@ -125,7 +144,7 @@ async def upload_file(file: UploadFile = File(...)):
                 "user_id": user_id
             },
             status_code=200,
-            media_type="application/json"  # No Content-Disposition header
+            media_type="application/json"
         )
     except Exception as e:
         print(f"Error during conversion: {e}")
@@ -138,9 +157,9 @@ async def upload_file(file: UploadFile = File(...)):
         return JSONResponse(
             content={"error": f"An error occurred during conversion: {str(e)}"},
             status_code=500,
-            media_type="application/json"  # No Content-Disposition header
+            media_type="application/json"
         )
-    
+
 # Endpoint to retrieve converted data
 @app.get("/data/{user_id}")
 async def get_converted_data(user_id: str):
@@ -158,21 +177,23 @@ async def get_converted_data(user_id: str):
             media_type="application/json"
         )
 
-# Modify the WebSocket endpoint to include user_id
 @app.websocket("/ws/chat")
 async def websocket_endpoint(websocket: WebSocket):
-    query_params = parse_qs(websocket.scope['query_string'].decode())
-    user_id = query_params.get('user_id', [None])[0]
+    await websocket.accept()
 
-    if not user_id:
-        await websocket.close(code=1008, reason="User ID not provided")
-        return
-
-    await manager.connect(websocket, user_id=user_id)
     try:
+        query_params = parse_qs(websocket.scope['query_string'].decode())
+        user_id = query_params.get('user_id', [None])[0]
+
+        if not user_id:
+            user_id = str(uuid.uuid4())
+            await websocket.send_text(f"[USER_ID]: {user_id}")
+
+        await manager.connect(websocket, user_id=user_id)
+
         while True:
             data = await websocket.receive_text()
-            await process_message(data, websocket, user_id)
+            await process_message(data, websocket)
     except WebSocketDisconnect:
         manager.disconnect(websocket)
     except Exception as e:
@@ -180,25 +201,29 @@ async def websocket_endpoint(websocket: WebSocket):
         traceback.print_exc()
         await websocket.close()
 
-# Update process_message to use the user's uploaded data
-async def process_message(message: str, websocket: WebSocket, user_id: str):
+async def process_message(message: str, websocket: WebSocket):
     try:
-        json_data = uploaded_data.get(user_id)
-        if not json_data:
-            await manager.send_personal_message(
-                "Error: No data found for this user. Please upload a document first.", websocket
-            )
-            await manager.send_personal_message("[STREAM_END]", websocket)
+        connection_info = manager.active_connections.get(websocket)
+        if not connection_info:
+            await websocket.send_text("Error: Connection not found.")
             return
 
-        # Implement logic to handle the message using json_data
-        # For simplicity, let's just echo the message back
-        await manager.send_personal_message(f"Echo: {message}", websocket)
-        await manager.send_personal_message("[STREAM_END]", websocket)
+        thread_id = connection_info['thread_id']
+
+        assistant_service.add_user_message(thread_id, message)
+
+        run = await asyncio.to_thread(assistant_service.run_assistant, thread_id)
+
+        if run.status == 'completed':
+            assistant_message = assistant_service.get_latest_assistant_message(thread_id)
+            if assistant_message:
+                await manager.send_personal_message(assistant_message, websocket)
+            else:
+                await manager.send_personal_message("Error: No assistant response.", websocket)
+        else:
+            await manager.send_personal_message(f"Error: Run failed with status {run.status}", websocket)
+
     except Exception as e:
         print(f"Error processing message: {e}")
         traceback.print_exc()
-        await manager.send_personal_message(
-            "Error: Unable to process your request.", websocket
-        )
-        await manager.send_personal_message("[STREAM_END]", websocket)
+        await manager.send_personDal_message("Error: Unable to process your request.", websocket)

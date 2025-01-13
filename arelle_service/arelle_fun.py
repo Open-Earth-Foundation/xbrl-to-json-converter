@@ -40,13 +40,3 @@ def convert(args):
         print(os.getenv("ARELLE_ARGS"))
 
         CntlrCmdLine.main()
-        #CntlrCmdLine.main()
-
-if __name__ == "__main__":
-
-    file_path = r'D:/_OpenEarth/Arelle_server_standalone'
-    command = ['-f', f'{file_path}/apple.zip',
-            '--plugins', 'validate/EFM|saveLoadableOIM',
-            f'--saveLoadableOIM={file_path}/file.json']
-
-    convert(command)

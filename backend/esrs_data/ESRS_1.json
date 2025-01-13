@@ -1,0 +1,551 @@
+[
+    {
+      "tag": "ESRS 1 1",
+      "text": "Objective\n1. The objective of European Sustainability Reporting Standards (ESRS) is to specify the sustainability information that an undertaking shall disclose in accordance with Directive 2013/34/EU of the European Parliament and of the Council (1), as amended by Directive (EU) 2022/2464 of the European Parliament and of the Council. (2) Reporting in accordance with ESRS does not exempt undertakings from other obligations laid down in Union law."
+    },
+    {
+      "tag": "ESRS 1 2",
+      "text": "2. Specifically, ESRS specify the information that an undertaking shall disclose about its material impacts, risks and opportunities in relation to environmental, social, and governance sustainability matters. ESRS do not require undertakings to disclose any information on environmental, social and governance topics covered by ESRS when the undertaking has assessed the topic in question as non-material (See Appendix E of this Standard “Flowchart for determining disclosures to be included”). The information disclosed in accordance with ESRS enables users of the sustainability statement to understand the undertaking’s material impacts on people and environment and the material effects of sustainability matters on the undertaking’s development, performance and position."
+    },
+    {
+      "tag": "ESRS 1 3",
+      "text": "3. The objective of this Standard (ESRS 1) is to provide an understanding of the architecture of ESRS, the drafting conventions and fundamental concepts used, and the general requirements for preparing and presenting sustainability information in accordance with Directive 2013/34/EU, as amended by Directive (EU) 2022/2464."
+    },
+    {
+      "tag": "ESRS 1 4",
+      "text": "1. Categories of ESRS Standards, reporting areas and drafting conventions\n1.1 Categories of ESRS standards\n4. There are three categories of ESRS:\n(a) cross-cutting standards;\n(b) topical standards (Environmental, Social and Governance standards); and\n(c) sector-specific standards.\nCross-cutting standards and topical standards are sector-agnostic, meaning that they apply to all undertakings regardless of which sector or sectors the undertaking operates in."
+    },
+    {
+      "tag": "ESRS 1 5",
+      "text": "5. The cross-cutting standards ESRS 1 General requirements and ESRS 2 General disclosures apply to the sustainability matters covered by topical standards and sector-specific standards."
+    },
+    {
+      "tag": "ESRS 1 6",
+      "text": "6. This standard (ESRS 1) describes the architecture of ESRS standards, explains drafting conventions and fundamental concepts, and sets out general requirements for preparing and presenting sustainability-related information."
+    },
+    {
+      "tag": "ESRS 1 7",
+      "text": "7. ESRS 2 establishes Disclosure Requirements on the information that the undertaking shall provide at a general level across all material sustainability matters on the reporting areas governance, strategy, impact, risk and opportunity management, and metrics and targets."
+    },
+    {
+      "tag": "ESRS 1 8",
+      "text": "8. Topical ESRS cover a sustainability topic and are structured into topics and sub-topics, and where necessary sub-sub-topics. The table in Application Requirement 16 (AR 16) to this standard provides an overview of the sustainability topics, sub-topics and sub-sub-topics (collectively ‘sustainability matters’) covered by topical ESRS."
+    },
+    {
+      "tag": "ESRS 1 9",
+      "text": "9. Topical ESRS can include specific requirements that complement the general level Disclosure Requirements of ESRS 2. ESRS 2 Appendix C Disclosure/Application Requirements in topical ESRS that are applicable jointly with ESRS 2 General Disclosures provides a list of the additional requirements in topical ESRS that the undertaking shall apply in conjunction with the general level disclosure requirements of ESRS 2."
+    },
+    {
+      "tag": "ESRS 1 10",
+      "text": "10. Sector-specific standards are applicable to all undertakings within a sector. They address impacts, risks and opportunities that are likely to be material for all undertakings in a specific sector and that are not covered, or not sufficiently covered, by topical standards. Sector-specific standards are multi-topical and cover the topics that are most relevant to the sector in question. Sector-specific standards achieve a high degree of comparability."
+    },
+    {
+      "tag": "ESRS 1 11",
+      "text": "11. In addition to the disclosure requirements laid down in the three categories of ESRS, when an undertaking concludes that an impact, risk or opportunity is not covered or not covered with sufficient granularity by an ESRS but is material due to its specific facts and circumstances, it shall provide additional entity-specific disclosures to enable users to understand the undertaking’s sustainability-related impacts, risks or opportunities. Application requirements AR 1 to AR 5 provide further guidance regarding entity-specific disclosures."
+    },
+    {
+      "tag": "ESRS 1 12",
+      "text": "1.2 Reporting areas and minimum content disclosure requirements on policies, actions, targets and metrics\n12. The Disclosure Requirements in ESRS 2, in topical ESRS and in sector-specific ESRS are structured into the following reporting areas:\n(a) Governance (GOV): the governance processes, controls and procedures used to monitor, manage and oversee impacts, risks and opportunities (see ESRS 2, chapter 2 Governance);\n(b) Strategy (SBM): how the undertaking’s strategy and business model interact with its material impacts, risks and opportunities, including how the undertaking addresses those impacts, risks and opportunities (see ESRS 2, chapter 3 Strategy);\n(c) Impact, risk and opportunity management (IRO): the process(es) by which the undertaking:\ni. identifies impacts, risks and opportunities and assesses their materiality (see IRO-1 in section 4.1 of ESRS 2),\nii. manages material sustainability matters through policies and actions (see section 4.2 of ESRS 2).\n(d) Metrics and targets (MT): the undertaking’s performance, including targets it has set and progress towards meeting them (see ESRS 2, chapter 5 Metrics and targets)."
+    },
+    {
+      "tag": "ESRS 1 13",
+      "text": "13. ESRS 2 includes:\n(a) in section 4.2 Minimum Disclosure Requirements regarding policies (MDR-P) and actions (MDR-A);\n(b) in section 5 Minimum Disclosure Requirements regarding metrics (MDR-M) and targets (MDR-T).\nThe undertaking shall apply the minimum disclosure requirements regarding policies, actions, metrics and targets together with the corresponding Disclosure Requirements in topical and sector-specific ESRS."
+    },
+    {
+      "tag": "ESRS 1 14",
+      "text": "1.3 Drafting conventions\n14. In all ESRS:\n(a) the term “impacts” refers to positive and negative sustainability-related impacts that are connected with the undertaking’s business, as identified through an impact materiality assessment (see section 3.4 Impact materiality). It refers both to actual impacts and to potential future impacts.\n(b) The term “risks and opportunities” refers to the undertaking’s sustainability-related financial risks and opportunities, including those deriving from dependencies on natural, human and social resources, as identified through a financial materiality assessment (see section 3.5).\nCollectively, these are referred to as “impacts, risks and opportunities” (IROs). They reflect the double materiality perspective of ESRS described in section 3."
+    },
+    {
+      "tag": "ESRS 1 15",
+      "text": "15. Throughout ESRS, the terms that are defined in the glossary of definitions (Annex II) are put in bold italic, except when a defined term is used more than once in the same paragraph."
+    },
+    {
+      "tag": "ESRS 1 16",
+      "text": "16. ESRS structure the information to be disclosed under Disclosure Requirements. Each Disclosure Requirement consists of one or more distinct datapoints. The term “datapoint” can also refer to a narrative sub-element of a Disclosure Requirement."
+    },
+    {
+      "tag": "ESRS 1 17",
+      "text": "17. In addition to Disclosure Requirements most ESRS also contain Application Requirements. Application Requirements support the application of Disclosure Requirements and have the same authority as other parts of an ESRS."
+    },
+    {
+      "tag": "ESRS 1 18",
+      "text": "18. ESRS use the following terms to distinguish between different degrees of obligation on the undertaking to disclose information:\n(a) “shall disclose” – indicates that the provision is prescribed by a Disclosure Requirement or datapoint;\n(b) “may disclose” – indicates voluntary disclosure to encourage good practice.\nIn addition, ESRS use the term “shall consider” when referring to issues, resources or methodologies that the undertaking is expected to take into account or to use in the preparation of a given disclosure if applicable."
+    },
+    {
+      "tag": "ESRS 1 19",
+      "text": "2. Qualitative characteristics of information\n19. When preparing its sustainability statement, the undertaking shall apply:\n(a) the fundamental qualitative characteristics of information, i.e. relevance and faithful representation; and\n(b) the enhancing qualitative characteristics of information, i.e. comparability, verifiability and understandability."
+    },
+    {
+      "tag": "ESRS 1 20",
+      "text": "20. These qualitative characteristics of information are defined and described in Appendix B of this Standard."
+    },
+    {
+      "tag": "ESRS 1 21",
+      "text": "3. Double materiality as the basis for sustainability disclosures\n21. The undertaking shall report on sustainability matters based on the double materiality principle as defined and explained in this chapter."
+    },
+    {
+      "tag": "ESRS 1 22",
+      "text": "3.1 Stakeholders and their relevance to the materiality assessment process\n22. Stakeholders are those who can affect or be affected by the undertaking. There are two main groups of stakeholders:\n(a) affected stakeholders: individuals or groups whose interests are affected or could be affected – positively or negatively – by the undertaking’s activities and its direct and indirect business relationships across its value chain; and\n(b) users of sustainability statements: primary users of general-purpose financial reporting (existing and potential investors, lenders and other creditors, including asset managers, credit institutions, insurance undertakings), and other users of sustainability statements, including the undertaking’s business partners, trade unions and social partners, civil society and non-governmental organisations, governments, analysts and academics."
+    },
+    {
+      "tag": "ESRS 1 23",
+      "text": "23. Some, but not all, stakeholders may belong to both groups referred to in paragraph 22."
+    },
+    {
+      "tag": "ESRS 1 24",
+      "text": "24. Engagement with affected stakeholders is central to the undertaking’s on-going due diligence process (see chapter 4 Due diligence) and sustainability materiality assessment. This includes its processes to identify and assess actual and potential negative impacts, which then inform the assessment process to identify the material impacts for the purposes of sustainability reporting (see section 3.4 of this Standard)."
+    },
+    {
+      "tag": "ESRS 1 25",
+      "text": "3.2 Material matters and materiality of information\n25. Performing a materiality assessment (see sections 3.4 Impact materiality and 3.5 Financial materiality) is necessary for the undertaking to identify the material impacts, risks and opportunities to be reported."
+    },
+    {
+      "tag": "ESRS 1 26",
+      "text": "26. Materiality assessment is the starting point for sustainability reporting under ESRS. IRO-1 in section 4.1 of ESRS 2, includes general disclosure requirements about the undertaking’s process to identify impacts, risks and opportunities and assess their materiality. SBM-3 of ESRS 2 provides general disclosure requirements on the material impacts, risks and opportunities resulting from the undertaking’s materiality assessment."
+    },
+    {
+      "tag": "ESRS 1 27",
+      "text": "27. The Application Requirements in Appendix A of this Standard include a list of sustainability matters covered in topical ESRS, categorised by topics, sub-topics and sub-sub-topics, to support the materiality assessment. Appendix E Flowchart for determining disclosures to be included of this Standard provides an illustration of the materiality assessment described in this section."
+    },
+    {
+      "tag": "ESRS 1 28",
+      "text": "28. A sustainability matter is “material” when it meets the criteria defined for impact materiality (see section 3.4 of this Standard) or financial materiality (see section 3.5 of this Standard), or both."
+    },
+    {
+      "tag": "ESRS 1 29",
+      "text": "29. Irrespective of the outcome of its materiality assessment, the undertaking shall always disclose the information required by: ESRS 2 General Disclosures (i.e. all the Disclosure Requirements and data points specified in ESRS 2) and the Disclosure Requirements (including their datapoints) in topical ESRS related to the Disclosure Requirement IRO-1 Description of the process to identify and assess material impacts, risks and opportunities, as listed in ESRS 2 Appendix C Disclosure/Application Requirements in topical ESRS that are applicable jointly with ESRS 2 General Disclosures."
+    },
+    {
+      "tag": "ESRS 1 30",
+      "text": "30. When the undertaking concludes that a sustainability matter is material as a result of its materiality assessment, on which ESRS 2 IRO-1, IRO-2 and SBM-3 set disclosure requirements, it shall:\n(a) disclose information according to the Disclosure Requirements (including Application Requirements) related to that specific sustainability matter in the corresponding topical and sector-specific ESRS; and\n(b) disclose additional entity-specific disclosures (see paragraph 11 and AR 1 to AR 5 of this Standard) when the material sustainability matter is not covered by an ESRS or is covered with insufficient granularity."
+    },
+    {
+      "tag": "ESRS 1 31",
+      "text": "31. The applicable information prescribed within a Disclosure Requirement, including its datapoints, or an entity-specific disclosure, shall be disclosed when the undertaking assesses, as part of its assessment of material information, that the information is relevant from one or more of the following perspectives:\n(a) the significance of the information in relation to the matter it purports to depict or explain; or\n(b) the capacity of such information to meet the users’ decision-making needs, including the needs of primary users of general-purpose financial reporting described in paragraph 48 and/or the needs of users whose principal interest is in information about the undertaking’s impacts."
+    },
+    {
+      "tag": "ESRS 1 32",
+      "text": "32. If the undertaking concludes that climate change is not material and therefore omits all disclosure requirements in ESRS E1 Climate change, it shall disclose a detailed explanation of the conclusions of its materiality assessment with regard to climate change (see ESRS 2 IRO-2 Disclosure Requirements in ESRS covered by the undertaking’s sustainability statement), including a forward-looking analysis of the conditions that could lead the undertaking to conclude that climate change is material in the future. If the undertaking concludes that a topic other than climate change is not material and therefore it omits all the Disclosure Requirements in the corresponding topical ESRS, it may briefly explain the conclusions of its materiality assessment for that topic."
+    },
+    {
+      "tag": "ESRS 1 33",
+      "text": "33. When disclosing information on policies, actions and targets in relation to a sustainability matter that has been assessed to be material, the undertaking shall include the information prescribed by all the Disclosure Requirements and datapoints in the topical and sector-specific ESRS related to that matter and in the corresponding Minimum Disclosure Requirement on policies, actions, and targets required under ESRS 2. If the undertaking cannot disclose the information prescribed by either the Disclosure Requirements and datapoints in the topical or sector-specific ESRS, or the Minimum Disclosure Requirements in ESRS 2 on policies, actions and targets, because it has not adopted the respective policies, implemented the respective actions or set the respective targets, it shall disclose this to be the case and it may report a timeframe in which it aims to have these in place."
+    },
+    {
+      "tag": "ESRS 1 34",
+      "text": "34. When disclosing information on metrics for a material sustainability matter according to the Metrics and Targets section of the relevant topical ESRS, the undertaking:\n(a) shall include the information prescribed by a Disclosure Requirement if it assesses such information to be material; and\n(b) may omit the information prescribed by a datapoint of a Disclosure Requirement if it assesses such information to be not material and concludes that such information is not needed to meet the objective of the Disclosure Requirement."
+    },
+    {
+      "tag": "ESRS 1 35",
+      "text": "35. If the undertaking omits the information prescribed by a datapoint that derives from other EU legislation listed in Appendix B of ESRS 2, it shall explicitly state that the information in question is “not material”."
+    },
+    {
+      "tag": "ESRS 1 36",
+      "text": "36. The undertaking shall establish how it applies criteria, including appropriate thresholds, to determine:\n(a) the information it discloses on metrics for a material sustainability matter according to the Metrics and Targets section of the relevant topical ESRS, in accordance with paragraph 34; and\n(b) the information to be disclosed as entity-specific disclosures."
+    },
+    {
+      "tag": "ESRS 1 37",
+      "text": "3.3 Double materiality\n37. Double materiality has two dimensions, namely: impact materiality and financial materiality. Unless specified otherwise, the terms “material” and “materiality” are used throughout ESRS to refer to double materiality."
+    },
+    {
+      "tag": "ESRS 1 38",
+      "text": "38. Impact materiality and financial materiality assessments are inter-related and the interdependencies between these two dimensions shall be considered. In general, the starting point is the assessment of impacts, although there may also be material risks and opportunities that are not related to the undertaking’s impacts. A sustainability impact may be financially material from inception or become financially material, when it could reasonably be expected to affect the undertaking’s financial position, financial performance, cash flows, its access to finance or cost of capital over the short-, medium- or long-term. Impacts are captured by the impact materiality perspective irrespective of whether or not they are financially material."
+    },
+    {
+      "tag": "ESRS 1 39",
+      "text": "39. In identifying and assessing the impacts, risks and opportunities in the undertaking’s value chain to determine their materiality, the undertaking shall focus on areas where impacts, risks and opportunities are deemed likely to arise, based on the nature of the activities, business relationships, geographies or other factors concerned."
+    },
+    {
+      "tag": "ESRS 1 40",
+      "text": "40. The undertaking shall consider how it is affected by its dependencies on the availability of natural, human and social resources at appropriate prices and quality, irrespective of its potential impacts on those resources."
+    },
+    {
+      "tag": "ESRS 1 41",
+      "text": "41. An undertaking’s principal impacts, risks and opportunities are understood to be the same as the material impacts, risks and opportunities identified under the double materiality principle and therefore reported on in its sustainability statement."
+    },
+    {
+      "tag": "ESRS 1 42",
+      "text": "42. The undertaking shall apply the criteria set under sections 3.4 and 3.5 in this Standard, using appropriate quantitative and/or qualitative thresholds. Appropriate thresholds are necessary to determine which impacts, risks and opportunities are identified and addressed by the undertaking as material and to determine which sustainability matters are material for reporting purposes. Some existing standards and frameworks use the term \"most significant impacts” when referring to the threshold used to identify the impacts that are described in ESRS as \"material impacts.\""
+    },
+    {
+      "tag": "ESRS 1 43",
+      "text": "3.4 Impact materiality\n43. A sustainability matter is material from an impact perspective when it pertains to the undertaking’s material actual or potential, positive or negative impacts on people or the environment over the short-, medium- or long-term. Impacts include those connected with the undertaking’s own operations and upstream and downstream value chain, including through its products and services, as well as through its business relationships. Business relationships include those in the undertaking’s upstream and downstream value chain and are not limited to direct contractual relationships."
+    },
+    {
+      "tag": "ESRS 1 44",
+      "text": "44. In this context, impacts on people or the environment include impacts in relation to environmental, social and governance matters."
+    },
+    {
+      "tag": "ESRS 1 45",
+      "text": "45. The materiality assessment of a negative impact is informed by the due diligence process defined in the international instruments of the UN Guiding Principles on Business and Human Rights and the OECD Guidelines for Multinational Enterprises. For actual negative impacts, materiality is based on the severity of the impact, while for potential negative impacts it is based on the severity and likelihood of the impact. Severity is based on the following factors:\n(a) the scale;\n(b) scope; and\n(c) irremediable character of the impact.\nIn the case of a potential negative human rights impact, the severity of the impact takes precedence over its likelihood."
+    },
+    {
+      "tag": "ESRS 1 46",
+      "text": "46. For positive impacts, materiality is based on:\n(a) the scale and scope of the impact for actual impacts; and\n(b) the scale, scope and likelihood of the impact for potential impacts."
+    },
+    {
+      "tag": "ESRS 1 47",
+      "text": "3.5 Financial materiality\n47. The scope of financial materiality for sustainability reporting is an expansion of the scope of materiality used in the process of determining which information should be included in the undertaking’s financial statements."
+    },
+    {
+      "tag": "ESRS 1 48",
+      "text": "48. The financial materiality assessment corresponds to the identification of information that is considered material for primary users of general-purpose financial reports in making decisions relating to providing resources to the entity. In particular, information is considered material for primary users of general-purpose financial reports if omitting, misstating or obscuring that information could reasonably be expected to influence decisions that they make on the basis of the undertaking’s sustainability statement."
+    },
+    {
+      "tag": "ESRS 1 49",
+      "text": "49. A sustainability matter is material from a financial perspective if it triggers or could reasonably be expected to trigger material financial effects on the undertaking. This is the case when a sustainability matter generates risks or opportunities that have a material influence, or could reasonably be expected to have a material influence, on the undertaking’s development, financial position, financial performance, cash flows, access to finance or cost of capital over the short-, medium- or long-term. Risks and opportunities may derive from past events or future events. The financial materiality of a sustainability matter is not constrained to matters that are within the control of the undertaking but includes information on material risks and opportunities attributable to business relationships beyond the scope of consolidation used in the preparation of financial statements."
+    },
+    {
+      "tag": "ESRS 1 50",
+      "text": "50. Dependencies on natural, human and social resources can be sources of financial risks or opportunities. Dependencies may trigger effects in two possible ways:\n(a) they may influence the undertaking’s ability to continue to use or obtain the resources needed in its business processes, as well as the quality and pricing of those resources; and\n(b) they may affect the undertaking’s ability to rely on relationships needed in its business processes on acceptable terms."
+    },
+    {
+      "tag": "ESRS 1 51",
+      "text": "51. The materiality of risks and opportunities is assessed based on a combination of the likelihood of occurrence and the potential magnitude of the financial effects."
+    },
+    {
+      "tag": "ESRS 1 52",
+      "text": "3.6 Material impacts or risks arising from actions to address sustainability matters\n52. The undertaking’s materiality assessment may lead to the identification of situations in which its actions to address certain impacts or risks, or to benefit from certain opportunities in relation to a sustainability matter, might have material negative impacts or cause material risks in relation to one or more other sustainability matters. For example:\n(a) an action plan to decarbonise production that involves abandoning certain products might have material negative impacts on the undertaking’s own workforce and result in material risks due to redundancy payments; or\n(b) an action plan of an automotive supplier to focus on the supply of e-vehicles might lead to stranded assets for the production of supply parts for conventional vehicles."
+    },
+    {
+      "tag": "ESRS 1 53",
+      "text": "53. In such situations, the undertaking shall:\n(a) disclose the existence of material negative impacts or material risks together with the actions that generate them, with a cross-reference to the topic to which the impacts or risks relate; and\n(b) provide a description of how the material negative impacts or material risks are addressed under the topic to which they relate."
+    },
+    {
+      "tag": "ESRS 1 54",
+      "text": "3.7 Level of disaggregation\n54. When needed for a proper understanding of its material impacts, risks and opportunities, the undertaking shall disaggregate the reported information:\n(a) by country, when there are significant variations of material impacts, risks and opportunities across countries and when presenting the information at a higher level of aggregation would obscure material information about impacts, risks or opportunities; or\n(b) by significant site or by significant asset, when material impacts, risks and opportunities are highly dependent on a specific location or asset."
+    },
+    {
+      "tag": "ESRS 1 55",
+      "text": "55. When defining the appropriate level of disaggregation for reporting, the undertaking shall consider the disaggregation adopted in its materiality assessment. Depending on the undertaking’s specific facts and circumstances, a disaggregation by subsidiary may be necessary."
+    },
+    {
+      "tag": "ESRS 1 56",
+      "text": "56. Where data from different levels, or multiple locations within a level, is aggregated, the undertaking shall ensure that this aggregation does not obscure the specificity and context necessary to interpret the information. The undertaking shall not aggregate material items that differ in nature."
+    },
+    {
+      "tag": "ESRS 1 57",
+      "text": "57. When the undertaking presents information disaggregated by sectors, it shall adopt the ESRS sector classification to be specified in a delegated act adopted by the Commission pursuant to article 29b(1) third subparagraph, point (ii), of Directive 2013/34/EU. When a topical or sector-specific ESRS requires that a specific level of disaggregation is adopted in preparing a specific item of information, the requirement in the topical or sector-specific ESRS shall prevail."
+    },
+    {
+      "tag": "ESRS 1 58",
+      "text": "4. Due diligence\n58. The outcome of the undertaking’s sustainability due diligence process (referred to as “due diligence” in the international instruments mentioned below) informs the undertaking’s assessment of its material impacts, risks and opportunities. ESRS do not impose any conduct requirements in relation to due diligence; nor do they extend or modify the role of the administrative, management or supervisory bodies of the undertaking with regard to the conduct of due diligence."
+    },
+    {
+      "tag": "ESRS 1 59",
+      "text": "59. Due diligence is the process by which undertakings identify, prevent, mitigate and account for how they address the actual and potential negative impacts on the environment and people connected with their business. These include negative impacts connected with the undertaking’s own operations and its upstream and downstream value chain, including through its products or services, as well as through its business relationships. Due diligence is an on-going practice that responds to and may trigger changes in the undertaking’s strategy, business model, activities, business relationships, operating, sourcing and selling contexts. This process is described in the international instruments of the UN Guiding Principles on Business and Human Rights and the OECD Guidelines for Multinational Enterprises."
+    },
+    {
+      "tag": "ESRS 1 60",
+      "text": "60. These international instruments identify a number of steps in the due diligence process, including the identification and assessment of negative impacts connected with the undertaking’s own operations and its upstream and downstream value chain, including through its products or services, as well as through its business relationships. Where the undertaking cannot address all impacts at once, the due diligence process allows for action to be prioritised based on the severity and likelihood of the impacts. It is this aspect of the due diligence process that informs the assessment of material impacts (see section 3.4 of this Standard). The identification of material impacts also supports the identification of material sustainability risks and opportunities, which are often a product of such impacts."
+    },
+    {
+      "tag": "ESRS 1 61",
+      "text": "61. The core elements of due diligence are reflected directly in Disclosure Requirements set out in ESRS 2 and in the topical ESRS, as illustrated below:\n(a) embedding due diligence in governance, strategy and business model (3). This is addressed under:\ni. ESRS 2 GOV-2: Information provided to and sustainability matters addressed by the undertaking’s administrative, management and supervisory bodies;\nii. ESRS 2 GOV-3: Integration of sustainability-related performance in incentive schemes; and\niii. ESRS 2 SBM-3: Material impacts, risks and opportunities and their interaction with strategy and business model.\n(b) engaging with affected stakeholders (4). This is addressed under:\ni. ESRS 2 GOV-2;\nii. ESRS 2 SBM-2: Interests and views of stakeholders;\niii. ESRS 2 IRO-1;\niv. ESRS 2 MDR-P; and\nv. Topical ESRS: reflecting the different stages and purposes of stakeholder engagement throughout the due diligence process."
+    },
+    {
+      "tag": "ESRS 1 62",
+      "text": "5. Value chain\n5.1 Reporting undertaking and value chain\n62. The sustainability statement shall be for the same reporting undertaking as the financial statements. For example, if the reporting undertaking is a parent company required to prepare consolidated financial statements, the sustainability statement will be for the group. This requirement does not apply where the reporting undertaking is not required to draw-up financial statements or where the reporting undertaking is preparing consolidated sustainability reporting pursuant to Article 48i of Directive 2013/34/EU."
+    },
+    {
+      "tag": "ESRS 1 63",
+      "text": "63. The information about the reporting undertaking provided in the sustainability statement shall be extended to include information on the material impacts, risks and opportunities connected with the undertaking through its direct and indirect business relationships in the upstream and/or downstream value chain (“value chain information”). In extending the information about the reporting undertaking, the undertaking shall include material impacts, risks and opportunities connected with its upstream and downstream value chain:\n(a) following the outcome of its due diligence process and of its materiality assessment; and\n(b) in accordance with any specific requirements related to the value chain in other ESRS."
+    },
+    {
+      "tag": "ESRS 1 64",
+      "text": "64. Paragraph 63 does not require information on each and every actor in the value chain, but only the inclusion of material upstream and downstream value chain information. Different sustainability matters can be material in relation to different parts of the undertaking’s upstream and downstream value chain. The information shall be extended to include value chain information only in relation to the parts of the value chain for which the matter is material."
+    },
+    {
+      "tag": "ESRS 1 65",
+      "text": "65. The undertaking shall include material value chain information when this is necessary to:\n(a) allow users of sustainability statements to understand the undertaking’s material impacts, risks and opportunities; and/or\n(b) produce a set of information that meets the qualitative characteristics of information (see Appendix B of this Standard)."
+    },
+    {
+      "tag": "ESRS 1 66",
+      "text": "66. When determining at which level within its own operations and its upstream and downstream value chain a material sustainability matter arises, the undertaking shall use its assessment of impacts, risks and opportunities following the double materiality principle (see chapter 3 of this Standard)."
+    },
+    {
+      "tag": "ESRS 1 67",
+      "text": "67. When associates or joint ventures, accounted for under the equity method or proportionally consolidated in the financial statements, are part of the undertaking’s value chain, for example as suppliers, the undertaking shall include information related to those associates or joint ventures in accordance with paragraph 63 consistent with the approach adopted for the other business relationships in the value chain. In this case, when determining impact metrics, the data of the associate or joint venture are not limited to the share of equity held, but shall be taken into account on the basis of the impacts that are connected with the undertaking’s products and services through its business relationships."
+    },
+    {
+      "tag": "ESRS 1 68",
+      "text": "5.2 Estimation using sector averages and proxies\n68. The undertaking’s ability to obtain the necessary upstream and downstream value chain information may vary depending on various factors, such as the undertaking’s contractual arrangements, the level of control that it exercises on the operations outside the consolidation scope and its buying power. When the undertaking does not have the ability to control the activities of its upstream and/or downstream value chain and its business relationships, obtaining value chain information may be more challenging."
+    },
+    {
+      "tag": "ESRS 1 69",
+      "text": "69. There are circumstances where the undertaking cannot collect the information about its upstream and downstream value chain as required by paragraph 63 after making reasonable efforts to do so. In these circumstances, the undertaking shall estimate the information to be reported about its upstream and downstream value chain, by using all reasonable and supportable information, such as sector-average data and other proxies."
+    },
+    {
+      "tag": "ESRS 1 70",
+      "text": "70. Obtaining value chain information could also be challenging in the case of SMEs and other upstream and/or downstream value chain entities that are not in the scope of the sustainability reporting required by Articles 19a and 29a of Directive 2013/34/EU (see ESRS 2 BP-2 Disclosures in relation to specific circumstances)."
+    },
+    {
+      "tag": "ESRS 1 71",
+      "text": "71. With reference to policies, actions and targets, the undertaking’s reporting shall include upstream and/or downstream value chain information to the extent that those policies, actions and targets involve actors in the value chain. With reference to metrics, in many cases, in particular for environmental matters for which proxies are available, the undertaking may be able to comply with the reporting requirements without collecting data from the actors in its upstream and downstream value chain, especially from SMEs, for example, when calculating the undertaking’s GHG Scope 3 emissions."
+    },
+    {
+      "tag": "ESRS 1 72",
+      "text": "72. The incorporation of estimates made using sector-average data or other proxies shall not result in information that does not meet the qualitative characteristics of information (see chapter 2 and section 7.2 Sources of estimation and outcome uncertainty of this Standard)."
+    },
+    {
+      "tag": "ESRS 1 73",
+      "text": "6. Time horizons\n6.1 Reporting period\n73. The reporting period for the undertaking’s sustainability statement shall be consistent with that of its financial statements."
+    },
+    {
+      "tag": "ESRS 1 74",
+      "text": "6.2 Linking past, present and future\n74. The undertaking shall establish appropriate linkages in its sustainability statement between retrospective and forward-looking information, when relevant, to foster a clear understanding of how historical information relates to future-oriented information."
+    },
+    {
+      "tag": "ESRS 1 75",
+      "text": "6.3 Reporting progress against the base year\n75. A base year is the historical reference date or period for which information is available and against which subsequent information can be compared over time."
+    },
+    {
+      "tag": "ESRS 1 76",
+      "text": "76. The undertaking shall present comparative information in respect of the base year for amounts reported in the current period when reporting the developments and progress towards a target, unless the relevant Disclosure Requirement already defines how to report progress. The undertaking may also include historical information about achieved milestones between the base year and the reporting period when this is relevant information."
+    },
+    {
+      "tag": "ESRS 1 77",
+      "text": "6.4 Definition of short-, medium- and long-term for reporting purposes\n77. When preparing its sustainability statement, the undertaking shall adopt the following time intervals as of the end of the reporting period:\n(a) for the short-term time horizon: the period adopted by the undertaking as the reporting period in its financial statements;\n(b) for the medium-term time horizon: from the end of the short-term reporting period defined in (a) up to 5 years; and\n(c) for the long-term time horizon: more than 5 years."
+    },
+    {
+      "tag": "ESRS 1 78",
+      "text": "78. The undertaking shall use an additional breakdown for the long-term time horizon when impacts or actions are expected in a period longer than 5 years if necessary to provide relevant information to users of sustainability statements."
+    },
+    {
+      "tag": "ESRS 1 79",
+      "text": "79. If different definitions of medium- or long-term time horizons are required for specific items of disclosure in other ESRS, the definitions in those ESRS shall prevail."
+    },
+    {
+      "tag": "ESRS 1 80",
+      "text": "80. There may be circumstances where the use of the medium- or long-term time horizons defined in paragraph 77 results in non-relevant information, as the undertaking uses a different definition for (i) its processes of identification and management of material impacts, risks and opportunities or (ii) the definition of its actions and setting targets. These circumstances may be due to industry-specific characteristics, such as cash flow and business cycles, the expected duration of capital investments, the time horizons over which the users of sustainability statements conduct their assessments or the planning horizons typically used in the undertaking’s industry for decision-making. In these circumstances, the undertaking may adopt a different definition of medium- and/or long- term time horizons (see ESRS 2 BP–2, paragraph 9)."
+    },
+    {
+      "tag": "ESRS 1 81",
+      "text": "81. References to “short-term”, “medium-term”, and “long-term” in ESRS refer to the time horizon as determined by the undertaking according to the provisions in paragraphs 77 to 80."
+    },
+    {
+      "tag": "ESRS 1 82",
+      "text": "7. Preparation and presentation of sustainability information\n82. This chapter provides general requirements to be applied when preparing and presenting sustainability information."
+    },
+    {
+      "tag": "ESRS 1 83",
+      "text": "7.1 Presenting comparative information\n83. The undertaking shall disclose comparative information in respect of the previous period for all quantitative metrics and monetary amounts disclosed in the current period. When relevant to an understanding of the current period’s sustainability statement, the undertaking shall also disclose comparative information for narrative disclosures."
+    },
+    {
+      "tag": "ESRS 1 84",
+      "text": "84. When the undertaking reports comparative information that differs from the information reported in the previous period it shall disclose:\n(a) the difference between the figure reported in the previous period and the revised comparative figure; and\n(b) the reasons for the revision of the figure."
+    },
+    {
+      "tag": "ESRS 1 85",
+      "text": "85. Sometimes, it is impracticable to adjust comparative information for one or more prior periods to achieve comparability with the current period. For example, data might not have been collected in the prior period(s) in a way that allows either retrospective application of a new definition of a metric or target, or retrospective restatement to correct a prior period error, and it may be impracticable to recreate the information (see ESRS 2 BP-2). When it is impracticable to adjust comparative information for one or more prior periods, the undertaking shall disclose this fact."
+    },
+    {
+      "tag": "ESRS 1 86",
+      "text": "86. When an ESRS requires the undertaking to present more than one comparative period for a metric or datapoint, the requirements of that ESRS shall prevail."
+    },
+    {
+      "tag": "ESRS 1 87",
+      "text": "7.2 Sources of estimation and outcome uncertainty\n87. When quantitative metrics and monetary amounts, including upstream and downstream value chain information (see chapter 5 of this Standard), cannot be measured directly and can only be estimated, measurement uncertainty may arise."
+    },
+    {
+      "tag": "ESRS 1 88",
+      "text": "88. An undertaking shall disclose information to enable users to understand the most significant uncertainties affecting the quantitative metrics and monetary amounts reported in its sustainability statement."
+    },
+    {
+      "tag": "ESRS 1 89",
+      "text": "89. The use of reasonable assumptions and estimates, including scenario or sensitivity analysis, is an essential part of preparing sustainability-related information and does not undermine the usefulness of that information, provided that the assumptions and estimates are accurately described and explained. Even a high level of measurement uncertainty would not necessarily prevent such an assumption or estimate from providing useful information or meeting the qualitative characteristics of information (see Appendix B of this Standard)."
+    },
+    {
+      "tag": "ESRS 1 90",
+      "text": "90. Data and assumptions used in preparing the sustainability statement shall be consistent to the extent possible with the corresponding financial data and assumptions used in the undertaking’s financial statements."
+    },
+    {
+      "tag": "ESRS 1 91",
+      "text": "91. Some ESRS require the disclosure of information such as explanations about possible future events that have uncertain outcomes. In judging whether information about such possible future events is material, the undertaking shall refer to the criteria in Chapter 3 of this Standard and consider:\n(a) the potential financial effects of the events (the possible outcome);\n(b) the severity and likelihood of the impacts on people or the environment resulting from the possible events, taking account of the factors of severity specified in paragraph 45; and\n(c) the full range of possible outcomes and the likelihood of the possible outcomes within that range."
+    },
+    {
+      "tag": "ESRS 1 92",
+      "text": "92. When assessing the possible outcomes, the undertaking shall consider all relevant facts and circumstances, including information about low-probability and high-impact outcomes, which, when aggregated, could become material. For example, the undertaking might be exposed to several impacts or risks, each of which could cause the same type of disruption, such as disruptions to the undertaking’s supply chain. Information about an individual source of risk might not be material if disruption from that source is highly unlikely to occur. However, information about the aggregate risk of supply chain disruption from all sources might be material (see ESRS 2 BP-2)."
+    },
+    {
+      "tag": "ESRS 1 93",
+      "text": "7.3 Updating disclosures about events after the end of the reporting period\n93. In some cases, the undertaking may receive information after the reporting period but before the management report is approved for issuance. If such information provides evidence or insights about conditions existing at period end, the undertaking shall, where appropriate, update estimates and sustainability disclosures, in the light of the new information."
+    },
+    {
+      "tag": "ESRS 1 94",
+      "text": "94. When such information provides evidence or insights about material transactions, other events and conditions that arise after the end of the reporting period, the undertaking shall, where appropriate, provide narrative information indicating the existence, nature and potential consequences of these post-year end events."
+    },
+    {
+      "tag": "ESRS 1 95",
+      "text": "7.4 Changes in preparation or presentation of sustainability information\n95. The definition and calculation of metrics, including metrics used to set targets and monitor progress towards them, shall be consistent over time. The undertaking shall provide restated comparative figures, unless it is impracticable to do so (see ESRS 2 BP-2), when it has:\n(a) redefined or replaced a metric or target;\n(b) identified new information in relation to the estimated figures disclosed in the preceding period and the new information provides evidence of circumstances that existed in that period."
+    },
+    {
+      "tag": "ESRS 1 96",
+      "text": "7.5 Reporting errors in prior periods\n96. The undertaking shall correct material prior period errors by restating the comparative amounts for the prior period(s) disclosed, unless it is impracticable to do so. This requirement does not extend to reporting periods before the first year of application of ESRS by the undertaking."
+    },
+    {
+      "tag": "ESRS 1 97",
+      "text": "97. Prior period errors are omissions from, and misstatements in, the undertaking’s sustainability statement for one or more prior periods. Such errors arise from a failure to use, or misuse of, reliable information that:\n(a) was available when the management report that includes the sustainability statement for those periods was authorised for issuance; and\n(b) could reasonably be expected to have been obtained and considered in the preparation of sustainability disclosures included in these reports."
+    },
+    {
+      "tag": "ESRS 1 98",
+      "text": "98. Such errors include: the effects of mathematical mistakes, mistakes in applying the definitions for metrics or targets, oversights or misinterpretations of facts, and fraud."
+    },
+    {
+      "tag": "ESRS 1 99",
+      "text": "99. Potential errors in the current period discovered in that period are corrected before the management report is authorised for issuance. However, material errors are sometimes only discovered in a subsequent period."
+    },
+    {
+      "tag": "ESRS 1 100",
+      "text": "100. When it is impracticable to determine the effect of an error on all prior periods presented, the undertaking shall restate the comparative information to correct the error from the earliest date practicable. When correcting disclosures for a prior period, the undertaking shall not use hindsight either in making assumptions about what the management’s intentions would have been in a prior period or in estimating the amounts disclosed in a prior period. This requirement applies to correction of both backward-looking and forward- looking disclosures."
+    },
+    {
+      "tag": "ESRS 1 101",
+      "text": "101. Corrections of errors are distinguished from changes in estimates. Estimates may need to be revised as additional information becomes known (see ESRS 2 BP-2)."
+    },
+    {
+      "tag": "ESRS 1 102",
+      "text": "7.6 Consolidated reporting and subsidiary exemption\n102. When the undertaking is reporting at a consolidated level, it shall perform its assessment of material impacts, risks and opportunities for the entire consolidated group, regardless of its group legal structure. It shall ensure that all subsidiaries are covered in a way that allows for the unbiased identification of material impacts, risks and opportunities. Criteria and thresholds for assessing an impact, risk or opportunity as material shall be determined based on chapter 3 of this Standard."
+    },
+    {
+      "tag": "ESRS 1 103",
+      "text": "103. Where the undertaking identifies significant differences between material impacts, risks or opportunities at group level and material impacts, risks or opportunities of one or more of its subsidiaries, the undertaking shall provide an adequate description of the impacts, risks and opportunities, as appropriate, of the subsidiary or subsidiaries concerned."
+    },
+    {
+      "tag": "ESRS 1 104",
+      "text": "104. When assessing whether the differences between material impacts, risks or opportunities at group level and material impacts, risks or opportunities of one or more of its subsidiaries are significant, the undertaking may consider different circumstances, such as whether the subsidiary or subsidiaries operate in a different sector than the rest of the group or the circumstances reflected in section 3.7 Level of disaggregation."
+    },
+    {
+      "tag": "ESRS 1 105",
+      "text": "7.7 Classified and sensitive information, and information on intellectual property, know-how or results of innovation\n105. The undertaking is not required to disclose classified information or sensitive information, even if such information is considered material."
+    },
+    {
+      "tag": "ESRS 1 106",
+      "text": "106. When disclosing information about its strategy, plans and actions, where a specific piece of information corresponding to intellectual property, know-how or the results of innovation is relevant to meet the objective of a Disclosure Requirement, the undertaking may nevertheless omit that specific piece of information if it:\n(a) is secret in the sense that it is not, as a body or in the precise configuration and assembly of its components, generally known among or readily accessible to persons within the circles that normally deal with the kind of information in question;\n(b) has commercial value because it is secret; and\n(c) has been subject to reasonable steps by the undertaking to keep it secret."
+    },
+    {
+      "tag": "ESRS 1 107",
+      "text": "107. If the undertaking omits classified information or sensitive information, or a specific piece of information corresponding to intellectual property, know-how or the results of innovation because it meets the criteria established in the previous paragraph, it shall comply with the disclosure requirement in question by disclosing all other required information."
+    },
+    {
+      "tag": "ESRS 1 108",
+      "text": "108. The undertaking shall make every reasonable effort to ensure that beyond the omission of the classified information or sensitive information, or of the specific piece of information corresponding to intellectual property, know-how or the results of innovation, the overall relevance of the disclosure in question is not impaired."
+    },
+    {
+      "tag": "ESRS 1 109",
+      "text": "7.8 Reporting on opportunities\n109. When reporting on opportunities, the disclosure should consist of descriptive information allowing the reader to understand the opportunity for the undertaking or the entire sector. When reporting on opportunities, the undertaking shall consider the materiality of the information to be disclosed. In this context, it shall consider, among other factors:\n(a) whether the opportunity is currently being pursued and is incorporated in its general strategy, as opposed to a general opportunity for the undertaking or the sector; and\n(b) whether the inclusion of quantitative measures of anticipated financial effects is appropriate, taking into account the number of assumptions that it could require and consequential uncertainty."
+    },
+    {
+      "tag": "ESRS 1 110",
+      "text": "8. Structure of the sustainability statement\n110. This chapter provides the basis for the presentation of the information about sustainability matters prepared in compliance with Articles 19a and 29a of Directive 2013/34/EU (i.e., the sustainability statement) within the undertaking’s management report. Such information is presented in a dedicated section of the management report identified as the sustainability statement. Appendix F Example of structure of ESRS sustainability statement of this Standard provides an illustrative example of a sustainability statement structured according to the requirements of this chapter."
+    },
+    {
+      "tag": "ESRS 1 111",
+      "text": "8.1 General presentation requirement\n111. Sustainability information shall be presented:\n(a) in a way that allows a distinction between information required by disclosures in ESRS and other information included in the management report; and\n(b) under a structure that facilitates access to and understanding of the sustainability statement, in a format that is both human-readable and machine-readable."
+    },
+    {
+      "tag": "ESRS 1 112",
+      "text": "8.2 Content and structure of the sustainability statement\n112. Except for the possibility to incorporate information by reference in accordance with section 9.1 Incorporation by reference of this Standard, the undertaking shall report all the applicable disclosures required by ESRS in accordance with chapter 1 of this Standard, within a dedicated section of the management report."
+    },
+    {
+      "tag": "ESRS 1 113",
+      "text": "113. The undertaking shall include in its sustainability statement the disclosures pursuant to Article 8 of Regulation (EU) 2020/852 of the European Parliament and the Council (8) and to the Commission Delegated Regulations that specify the content and other modalities of those disclosures. The undertaking shall ensure that these disclosures are separately identifiable within the sustainability statement. The disclosures relating to each of the environmental objectives defined in the Taxonomy Regulation shall be presented together in a clearly identifiable part of the environmental section of the sustainability statement. These disclosures are not subject to the provisions of ESRS, with the exception of this paragraph and the first sentence of paragraph 115 of this standard."
+    },
+    {
+      "tag": "ESRS 1 114",
+      "text": "114. When the undertaking includes in its sustainability statement additional disclosures stemming from (i) other legislation which requires the undertaking to disclose sustainability information, or (ii) generally accepted sustainability reporting standards and frameworks, including non-mandatory guidance and sector-specific guidance, published by other standard-setting bodies (such as technical material issued by the International Sustainability Standards Board or the Global Reporting Initiative), such disclosures shall:\n(a) be clearly identified with an appropriate reference to the related legislation, standard or framework (see ESRS 2 BP-2, paragraph 15);\n(b) meet the requirements for qualitative characteristics of information specified in chapter 2 and Appendix B of this standard."
+    },
+    {
+      "tag": "ESRS 1 115",
+      "text": "115. The undertaking shall structure its sustainability statement in four parts, in the following order: general information, environmental information (including disclosures pursuant to Article 8 of Regulation (EU) 2020/852), social information and governance information. Respecting the provision in section 3.6 Material impacts or risks arising from actions to address sustainability matters of this Standard, when information provided in one part contains information to be reported in another part, the undertaking may refer in one part to information presented in another part, avoiding duplications. The undertaking may apply the detailed structure illustrated in Appendix F of this Standard."
+    },
+    {
+      "tag": "ESRS 1 116",
+      "text": "116. The disclosures required by sector-specific ESRS shall be grouped by reporting area and, where applicable, by sustainability topic. They shall be presented alongside the disclosures required by ESRS 2 and the corresponding topical ESRS."
+    },
+    {
+      "tag": "ESRS 1 117",
+      "text": "117. Where the undertaking develops material entity-specific disclosures in accordance with paragraph 11 it shall report those disclosures alongside the most relevant sector-agnostic and sector-specific disclosures."
+    },
+    {
+      "tag": "ESRS 1 118",
+      "text": "9. Linkages with other parts of corporate reporting and connected information\n118. The undertaking shall provide information that enables users of its sustainability statement to understand the connections between different pieces of information in the statement, and the connections between the information in the sustainability statement and other information that the undertaking discloses in other parts of its corporate reporting."
+    },
+    {
+      "tag": "ESRS 1 119",
+      "text": "9.1 Incorporation by reference\n119. Provided that the conditions in paragraph 120 are met, information prescribed by a Disclosure Requirement of an ESRS, including a specific datapoint prescribed by a Disclosure Requirement, may be incorporated in the sustainability statement by reference to:\n(a) another section of the management report;\n(b) the financial statements;\n(c) the corporate governance statement (if not part of the management report);\n(d) the remuneration report required by Directive 2007/36/EC of the European Parliament and of the Council (9);\n(e) the universal registration document, as referred to in Article 9 of Regulation (EU) 2017/1129 (10); and\n(f) public disclosures under Regulation (EU) No 575/2013 of the European Parliament and of the Council (Pillar 3 disclosures) (11). If the undertaking incorporates by reference information from Pillar 3 disclosures, it shall ensure that the information matches the scope of consolidation used for the sustainability statement by complementing the incorporated information with additional elements as necessary."
+    },
+    {
+      "tag": "ESRS 1 120",
+      "text": "120. The undertaking may incorporate information by reference to the documents, or part of the documents, listed in paragraph 119, provided that the disclosures incorporated by reference:\n(a) constitute a separate element of information and are clearly identified in the document concerned as addressing the relevant Disclosure Requirement, or the relevant specific datapoint prescribed by a Disclosure Requirement;\n(b) are published before or at the same time as the management report;\n(c) are in the same language as the sustainability statement;\n(d) are subject to at least the same level of assurance as the sustainability statement; and\n(e) meet the same technical digitalisation requirements as the sustainability statement."
+    },
+    {
+      "tag": "ESRS 1 121",
+      "text": "121. Provided that the conditions established in paragraph 120 are met, information prescribed by a Disclosure Requirement of an ESRS, including a specific datapoint prescribed by a Disclosure Requirement, may be incorporated in the sustainability statement by reference to the undertaking’s report prepared according to EU Eco-Management and Audit Scheme (EMAS) Regulation (EU) No 1221/2009 (12). In this case, the undertaking shall ensure that the information incorporated by reference is produced using the same basis for preparation of ESRS information, including scope of consolidation and treatment of value chain information."
+    },
+    {
+      "tag": "ESRS 1 122",
+      "text": "122. In the preparation of its sustainability statement using incorporation by reference, the undertaking shall consider the overall cohesiveness of the reported information and ensure that the incorporation by reference does not impair the readability of the sustainability statement. Appendix G Example of incorporation by reference of this Standard is an illustrative example of incorporation by reference (See ESRS 2 BP-2)."
+    },
+    {
+      "tag": "ESRS 1 123",
+      "text": "9.2 Connected information and connectivity with financial statements\n123. The undertaking shall describe the relationships between different pieces of information. Doing so could require connecting narrative information on governance, strategy and risk management to related metrics and targets. For example, in providing connected information, the undertaking may need to explain the effect or likely effect of its strategy on its financial statements or financial plans, or explain how its strategy relates to metrics and targets used to measure progress against performance. Furthermore, the undertaking may need to explain how its use of natural resources and changes within its supply chain could amplify, change or reduce its material impacts, risks and opportunities. It may need to link this information to information about current or anticipated financial effects on its production costs, to its strategic response to mitigate such impacts or risks, and to its related investment in new assets. The undertaking may also need to link narrative information to the related metrics and targets and to information in the financial statements. Information that describes connections shall be clear and concise."
+    },
+    {
+      "tag": "ESRS 1 124",
+      "text": "124. When the sustainability statement includes monetary amounts or other quantitative data points that exceed a threshold of materiality and that are presented in the financial statements (direct connectivity between information disclosed in sustainability statement and information disclosed in financial statements), the undertaking shall include a reference to the relevant paragraph of its financial statements where the corresponding information can be found."
+    },
+    {
+      "tag": "ESRS 1 125",
+      "text": "125. The sustainability statement may include monetary amounts or other quantitative datapoints that exceed a threshold of materiality and that are either an aggregation of, or a part of, monetary amounts or quantitative data presented in the undertaking’s financial statements (indirect connectivity between information disclosed in sustainability statement and information disclosed in financial statements). If this is the case, the undertaking shall explain how these amounts or datapoints in the sustainability statement relate to the most relevant amounts presented in the financial statements. This disclosure shall include a reference to the line item and/or to the relevant paragraphs of its financial statements where the corresponding information can be found. Where appropriate, a reconciliation may be provided, and it may be presented in a tabular form."
+    },
+    {
+      "tag": "ESRS 1 126",
+      "text": "126. In the case of information not covered by paragraphs 124 and 125, the undertaking shall explain, based on a threshold of materiality, the consistency of significant data, assumptions, and qualitative information included in its sustainability statement with the corresponding data, assumptions and qualitative information included in the financial statements. This may occur when the sustainability statement includes:\n(a) monetary amounts or other quantitative data linked to monetary amounts or other quantitative data presented in the financial statements; or\n(b) qualitative information linked to qualitative information presented in the financial statements."
+    },
+    {
+      "tag": "ESRS 1 127",
+      "text": "127. Consistency as required by paragraph 126 shall be at the level of a single datapoint and shall include a reference to the relevant line item or paragraph of notes to the financial statements. When significant data, assumptions and qualitative information are not consistent, the undertaking shall state that fact and explain the reason."
+    },
+    {
+      "tag": "ESRS 1 128",
+      "text": "128. Examples of items for which the explanation in paragraph 126 is required, are:\n(a) when the same metric is presented as of the reporting date in financial statements and as a forecast for future periods in the sustainability statement; and\n(b) when macroeconomic or business projections are used to develop metrics in the sustainability statement and they are also relevant in estimating the recoverable amount of assets, the amount of liabilities or provisions in financial statements."
+    },
+    {
+      "tag": "ESRS 1 129",
+      "text": "129. Topical and sector-specific ESRS may include requirements to include reconciliations or to illustrate consistency of data and assumptions for specific Disclosure Requirements. In such cases, the requirements in those ESRS shall prevail."
+    },
+    {
+      "tag": "ESRS 1 130",
+      "text": "10 Transitional provisions\n10.1 Transitional provision related to entity-specific disclosures\n130. The extent to which sustainability matters are covered by ESRS is expected to evolve as further Disclosure Requirements are developed. Therefore, the need for entity-specific disclosures is likely to decrease over time, in particular as a result of the future adoption of sector specific standards."
+    },
+    {
+      "tag": "ESRS 1 131",
+      "text": "131. When defining its entity-specific disclosures, the undertaking may adopt transitional measures for their preparation in the first three annual sustainability statements under which it may as a priority:\n(a) introduce in its reporting those entity-specific disclosures that it reported in prior periods, if these disclosures meet or are adapted to meet the qualitative characteristics of information referred to under chapter 2 of this Standard; and\n(b) complement its disclosures prepared on the basis of the topical ESRS with an appropriate set of additional disclosures to cover sustainability matters that are material for the undertaking in its sector(s), using available best practice and/or available frameworks or reporting standards, such as IFRS industry-based guidance and GRI Sector Standards."
+    },
+    {
+      "tag": "ESRS 1 132",
+      "text": "10.2 Transitional provision related to chapter 5 Value chain\n132. For the first 3 years of the undertaking’s sustainability reporting under the ESRS, in the event that not all the necessary information regarding its upstream and downstream value chain is available, the undertaking shall explain the efforts made to obtain the necessary information about its upstream and downstream value chain, the reasons why not all of the necessary information could be obtained, and its plans to obtain the necessary information in the future."
+    },
+    {
+      "tag": "ESRS 1 133",
+      "text": "133. For the first 3 years of its sustainability reporting under the ESRS, in order to take account of the difficulties that undertakings may encounter in gathering information from actors throughout their value chain and in order to limit the burden for SMEs in the value chain:\n(a) when disclosing information on policies, actions and targets in accordance with ESRS2 and other ESRS, the undertaking may limit upstream and downstream value chain information to information available in-house, such as data already available to the undertaking and publicly available information; and\n(b) when disclosing metrics, the undertaking is not required to include upstream and downstream value chain information, except for datapoints derived from other EU legislation, as listed in ESRS 2 Appendix B."
+    },
+    {
+      "tag": "ESRS 1 134",
+      "text": "134. Paragraphs 132 and 133 apply irrespective of whether or not the relevant actor in the value chain is an SME."
+    },
+    {
+      "tag": "ESRS 1 135",
+      "text": "135. Starting from the fourth year of its reporting under the ESRS, the undertaking shall include upstream and/or downstream value chain information according to paragraph 63. In this context, the information required by ESRS to be obtained from SME undertakings in the undertaking’s upstream and/or downstream value chain will not exceed the content of the future ESRS for listed SMEs."
+    },
+    {
+      "tag": "ESRS 1 136",
+      "text": "10.3 Transitional provision related to section 7.1 Presenting comparative information\n136. To ease the first-time application of this Standard, the undertaking is not required to disclose the comparative information required by section 7.1 Presenting comparative information in the first year of preparation of the sustainability statement under the ESRS. For disclosure requirements listed in Appendix C List of phased-in Disclosure Requirements, this transitional provision applies with reference to the first year of mandatory application of the phased-in disclosure requirement."
+    },
+    {
+      "tag": "ESRS 1 137",
+      "text": "10.4 Transitional provision: List of Disclosure Requirements that are phased-in\n137. Appendix C List of phased-in Disclosure Requirements in this Standard sets phase-in provisions for the Disclosure Requirements or datapoints of Disclosure Requirements in ESRS that may be omitted or that are not applicable in the first year(s) of preparation of the sustainability statement under the ESRS."
+    }
+  ]
+  
