@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from "./ui/card";
+import LoadingDots from "./LoadingDots";
 
 interface Message {
   text: string;
@@ -11,6 +12,7 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const [ws, setWs] = useState<WebSocket | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
@@ -21,6 +23,7 @@ export default function Chat() {
     };
 
     websocket.onmessage = (event) => {
+      setIsLoading(false);
       const message = event.data;
       if (message.startsWith('[USER_ID]:')) {
         localStorage.setItem('userId', message.split(':')[1].trim());
@@ -44,6 +47,7 @@ export default function Chat() {
     e.preventDefault();
     if (!input.trim() || !ws) return;
 
+    setIsLoading(true);
     ws.send(input);
     setMessages(prev => [...prev, { text: input, isUser: true }]);
     setInput('');
@@ -70,6 +74,7 @@ export default function Chat() {
               {message.text}
             </div>
           ))}
+          {isLoading && <LoadingDots />}
           <div ref={messagesEndRef} />
         </div>
         <form onSubmit={sendMessage} className="flex gap-2">
