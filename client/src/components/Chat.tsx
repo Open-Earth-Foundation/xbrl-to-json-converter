@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from "./ui/card";
 import LoadingDots from "./LoadingDots";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface Message {
   text: string;
@@ -71,7 +75,51 @@ export default function Chat() {
                   : 'bg-gray-100 mr-auto max-w-[80%]'
               }`}
             >
-              {message.text}
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || '');
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        style={vscDarkPlus}
+                        language={match[1]}
+                        PreTag="div"
+                        className="rounded-md my-2"
+                        {...props}
+                      >
+                        {String(children).replace(/\n$/, '')}
+                      </SyntaxHighlighter>
+                    ) : (
+                      <code
+                        className={`${inline ? 'bg-opacity-20 bg-gray-500 rounded px-1' : 
+                          'block bg-opacity-10 bg-gray-500 p-2 rounded-lg my-2'}`}
+                        {...props}
+                      >
+                        {children}
+                      </code>
+                    )
+                  },
+                  // Style links
+                  a: ({ node, ...props }) => (
+                    <a 
+                      className="text-blue-500 hover:underline" 
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      {...props}
+                    />
+                  ),
+                  // Style lists
+                  ul: ({ node, ...props }) => (
+                    <ul className="list-disc ml-4 my-2" {...props} />
+                  ),
+                  ol: ({ node, ...props }) => (
+                    <ol className="list-decimal ml-4 my-2" {...props} />
+                  ),
+                }}
+              >
+                {message.text}
+              </ReactMarkdown>
             </div>
           ))}
           {isLoading && <LoadingDots />}

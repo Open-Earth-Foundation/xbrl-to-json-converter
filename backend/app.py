@@ -68,15 +68,18 @@ uploaded_data = {}
 
 class ConnectionManager:
     def __init__(self):
-        self.active_connections: Dict[WebSocket, str] = {}
+        self.active_connections: Dict[WebSocket, dict] = {}
 
     async def connect(self, websocket: WebSocket, user_id: str):
-            # Create a new Thread for the user
-            thread = assistant_service.create_thread()
-            thread_id = thread.id
-
-            # Store the user_id and thread_id for this connection
-            self.active_connections[websocket] = {'user_id': user_id, 'thread_id': thread_id}
+        thread = assistant_service.create_thread()
+        thread_id = thread.id
+        
+        # Store additional metadata including the file_uploaded flag
+        self.active_connections[websocket] = {
+            'user_id': user_id,
+            'thread_id': thread_id,
+            'file_uploaded': False
+        }
 
     def disconnect(self, websocket: WebSocket):
         self.active_connections.pop(websocket, None)
@@ -138,7 +141,14 @@ async def upload_file(file: UploadFile = File(...)):
         # Clean up the uploaded file
         os.remove(file_path)
 
-        # Return success response without json_data
+        # Update the file_uploaded flag for the user's websocket connection
+        for ws, connection_info in manager.active_connections.items():
+            if connection_info['user_id'] == user_id:
+                connection_info['file_uploaded'] = True
+                # Optionally notify the client that the file is ready
+                await manager.send_personal_message("[FILE_READY]", ws)
+                break
+
         return JSONResponse(
             content={
                 "message": "File uploaded and converted successfully",
@@ -208,6 +218,17 @@ async def process_message(message: str, websocket: WebSocket):
         if not connection_info:
             await websocket.send_text("Error: Connection not found.")
             return
+
+        # You can check the flag here
+        file_uploaded = connection_info.get('file_uploaded', False)
+        
+        # Later you can use this to alter the chat behavior
+        if file_uploaded:
+            # Handle chat with converted data
+            pass
+        else:
+            # Handle regular chat
+            pass
 
         thread_id = connection_info['thread_id']
 
