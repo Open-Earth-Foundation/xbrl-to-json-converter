@@ -22,6 +22,7 @@ assistant_service = AssistantService()
 app = FastAPI()
 
 # Allow CORS for the frontend origin
+# TODO: Change to the actual frontend origin once it is deployed
 origins = [
     "http://localhost:3000",
     "http://localhost:5173"
