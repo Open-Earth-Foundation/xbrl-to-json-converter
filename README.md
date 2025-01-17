@@ -29,6 +29,7 @@ cd <repository-name>
 Create and activate virtual environment:
 ```bash
 # Windows
+cd backend
 python -m venv venv
 venv\Scripts\activate
 
@@ -48,9 +49,7 @@ uvicorn app:app --reload --port 8000
 
 Create new virtual environment:
 ```bash
-cd ..
 cd arelle_service
-
 # Windows
 python -m venv venv
 venv\Scripts\activate
