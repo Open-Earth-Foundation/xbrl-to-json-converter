@@ -2,7 +2,7 @@ import os
 import json
 ESRS_DIRECTORY = os.path.join(os.path.dirname(__file__), '..', 'esrs_data')
 
-def reference_endpoint(reference: str):
+def reference_endpoint(reference):
     """
     Endpoint to process the 'references' field only if it mentions ESRS and use the ESRS documents.
     """

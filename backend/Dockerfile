@@ -1,7 +1,7 @@
 # backend/Dockerfile
 
-FROM python:3.10-slim
-
+FROM python:3.10-alpine
+# not good for JS projects
 WORKDIR /app
 
 COPY requirements.txt .

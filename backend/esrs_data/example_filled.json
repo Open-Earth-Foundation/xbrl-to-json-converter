@@ -1,0 +1,1643 @@
+{
+    "documentInfo": {
+      "documentType": "https://xbrl.org/2021/xbrl-json",
+      "features": {
+        "xbrl:canonicalValues": true
+      },
+      "namespaces": {
+        "esrs": "https://xbrl.efrag.org/taxonomy/esrs/2023-12-22",
+        "iso4217": "http://www.xbrl.org/2003/iso4217",
+        "scheme": "http://standards.iso.org/iso/17442",
+        "xbrl": "https://xbrl.org/2021",
+        "xbrli": "http://www.xbrl.org/2003/instance"
+      },
+      "taxonomy": [
+        "https://xbrl.efrag.org/taxonomy/esrs/2023-12-22/esrs_all.xsd"
+      ]
+    },
+    "facts": {
+      "fact-10": {
+        "value": "esrs:ConsumersAndEndusersOfServicesThatPotentiallyNegativelyImpactTheirRightsToPrivacyHaveTheirPersonalDataProtectedFreedomOfExpressionAndNondiscriminationMember",
+        "dimensions": {
+          "concept": "esrs:TypesOfConsumersAndEndusersSubjectToMaterialImpactsByOwnOperationsOrThroughValueChain",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+      },
+      "fact-13": {
+        "value": "esrs:RelatedToSpecificBusinessRelationshipsMember",
+        "dimensions": {
+          "concept": "esrs:MaterialNegativeImpactsOccurrenceWorkersInValueChainWorkersAffectedCommunitiesConsumersAndEndUsers",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+      },
+      "fact-31": {
+        "value": "esrs:CulturalRightsMember",
+        "dimensions": {
+          "concept": "esrs:SustainabilityMattersAddressedByPolicy",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+      },
+      "fact-45": {
+        "value": "esrs:LegitimateRepresentativesMember",
+        "dimensions": {
+          "concept": "esrs:GroupsForWhichEngagementOccursConsumersAndEndusers",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+      },
+      "fact-58": {
+        "value": "esrs:EstablishedThroughParticipationInThirdpartyMechanismsMember",
+        "dimensions": {
+          "concept": "esrs:EstablishmentOfSpecificChannelsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersToRaiseConcernsOrNeeds",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+      },
+      "fact-59": {
+        "value": "esrs:IndividualsOrOrganisationsActingOnConsumersAndEndusersBehalfOrWhoAreOtherwiseInPositionToBeAwareOfNegativeImpactsMember",
+        "dimensions": {
+          "concept": "esrs:AccessibilityOfThirdPartyMechanismsForConsumersAndEndusers",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+      },
+      "fact-81": {
+        "value": "esrs:ReduceInequalityWithinAndAmongCountriesMember",
+        "dimensions": {
+          "concept": "esrs:SustainableDevelopmentGoalsWhichInitiativesOrProcessesWhosePrimaryAimIsToDeliverPositiveImpactsForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreDesignedToSupportAchievementOf",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+        }
+      },
+      "fact-106": {
+        "value": "esrs:SelfdeterminationMember",
+        "dimensions": {
+          "concept": "esrs:SustainabilityMattersAddressedByAction",
+          "entity": "scheme:efrag",
+          "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+          "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+        }
+      },  
+    "fact-107": {
+        "value": "esrs:TakenMember",
+        "dimensions": {
+            "concept": "esrs:StatusOfKeyAction",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+        }
+    },
+    "fact-108": {
+        "value": "esrs:ShorttermMember",
+        "dimensions": {
+            "concept": "esrs:TimeHorizonsUnderWhichKeyActionIsToBeCompleted",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+        }
+    },
+    "fact-113": {
+        "value": "esrs:DownstreamValueChainMember",
+        "dimensions": {
+            "concept": "esrs:KeyActionCoverage",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+        }
+    },
+    "fact-136": {
+        "value": "esrs:AdvancingPositiveImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndUsersMember",
+        "dimensions": {
+            "concept": "esrs:TargetRelationshipToImpactsRisksAndOpportunities",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-137": {
+        "value": "esrs:SelfdeterminationMember",
+        "dimensions": {
+            "concept": "esrs:SustainabilityMattersAddressedByTarget",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-139": {
+        "value": "330",
+        "decimals": 4,
+        "dimensions": {
+            "concept": "esrs:MeasurableTargetAbsoluteValue",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-141": {
+        "value": "esrs:AbsoluteTargetMember",
+        "dimensions": {
+            "concept": "esrs:AbsoluteOrRelativeTarget",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-142": {
+        "value": "esrs:AbsoluteValueOfTotalGreenhouseGasEmissionsReduction",
+        "dimensions": {
+            "concept": "esrs:ESRSMetricsAndMonetaryAmountsUsedForTarget",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-143": {
+        "value": "esrs:UpstreamValueChainMember",
+        "dimensions": {
+            "concept": "esrs:TargetCoverage",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+    },
+    "fact-165": {
+        "value": "_0:BE",
+        "dimensions": {
+            "concept": "esrs:CountriesWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccur",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-1": {
+        "value": "Name of impact, risk and opportunity is Impact1 . Maecenas orci justo, congue vitae vulputate eget, egestas nec odio. Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat . Vestibulum molestie sem scelerisque sapien condimentum, eget vulputate purus euismod. Vestibulum in purus sit amet nisl pharetra egestas. Sed semper mauris eu lacus pretium imperdiet. Praesent euismod, diam vitae sagittis feugiat, velit mi commodo sapien, eu lobortis turpis nibh eget mi. Nullam ac sapien felis. Sed in nisi id tellus pharetra dictum. Pellentesque vehicula augue eget laoreet lacinia. Suspendisse laoreet sagittis est et consequat. Proin a quam quis nunc dignissim bibendum et vitae turpis. Phasellus pharetra luctus mi in ultrices. Mauris fermentum ut magna vitae fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat. Morbi eu pharetra dolor. Sed sit amet vestibulum nisl. Morbi pretium massa ex, sit amet pretium neque rutrum in. Vivamus nisl nisl, lacinia id cursus at, pharetra non felis. Nam in lorem et nibh imperdiet molestie nec id felis. Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas. Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac. Suspendisse eu diam porta, hendrerit metus eget, maximus metus. Maecenas massa libero, mollis eu pulvinar quis, sagittis vel lorem. Maecenas faucibus id neque a faucibus. Fusce viverra dolor eu nisi dignissim, in dapibus odio facilisis. Fusce tellus diam, bibendum ut sollicitudin at, congue non neque. Sed ullamcorper mi a blandit semper. Donec non libero tristique, convallis lorem eu, pulvinar augue. Cras euismod elit quis nibh porttitor posuere in sit amet ligula. Suspendisse eu libero suscipit, interdum erat a, vulputate nisl. Ut nulla nibh, condimentum ac pellentesque eget, feugiat pretium sapien. Vestibulum urna turpis, laoreet laoreet ligula et, varius ullamcorper est. Vivamus in diam egestas erat iaculis venenatis . Donec nulla massa , laoreet at interdum luctus , porttitor et neque . Pellentesque eget aliquam nunc , id imperdiet libero. Suspendisse tincidunt mi dui, ut scelerisque risus interdum ut. Sed viverra sodales urna , in venenatis felis lacinia et. Nam fermentum molestie enim , vel gravida nulla finibus sed. Nullam elit magna, accumsan at aliquet at, feugiat vestibulum nunc . Donec id cursus nisl , quis aliquam nisi. Fusce imperdiet tortor a commodo cursus. Donec auctor, lectus a euismod bibendum , mauris odio vestibulum erat , nec pulvinar nisi nunc in nisi. Donec interdum ante vitae sem suscipit venenatis . Nullam feugiat rutrum velit , ac porttitor sapien tempor sit amet . Mauris fermentum turpis id feugiat faucibus . Donec mattis mi a dapibus consectetur . Ut laoreet ante quis vulputate consectetur . Phasellus diam ex, rutrum in sem at, ornare efficitur massa.Mauris tincidunt urna et metus pulvinar rutrum",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfMaterialImpactsRisksAndOpportunitiesAndHowTheyInteractWithStrategyAndBusinessModelExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+        }
+    },
+    "fact-2": {
+        "value": "Impact1",
+        "dimensions": {
+            "concept": "esrs:NameOfImpactRiskAndOpportunity",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-3": {
+        "value": "Maecenas orci justo, congue vitae vulputate eget, egestas nec odio. Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat . Vestibulum molestie sem scelerisque sapien condimentum, eget vulputate purus euismod. Vestibulum in purus sit amet nisl pharetra egestas. Sed semper mauris eu lacus pretium imperdiet. Praesent euismod, diam vitae sagittis feugiat, velit mi commodo sapien, eu lobortis turpis nibh eget mi. Nullam ac sapien felis. Sed in nisi id tellus pharetra dictum. Pellentesque vehicula augue eget laoreet lacinia. Suspendisse laoreet sagittis est et consequat. Proin a quam quis nunc dignissim bibendum et vitae turpis. Phasellus pharetra luctus mi in ultrices. Mauris fermentum ut magna vitae fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat. Morbi eu pharetra dolor. Sed sit amet vestibulum nisl. Morbi pretium massa ex, sit amet pretium neque rutrum in. Vivamus nisl nisl, lacinia id cursus at, pharetra non felis. Nam in lorem et nibh imperdiet molestie nec id felis. Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas. Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfMaterialImpactsResultingFromMaterialityAssessmentExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-4": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:ActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOriginateFromOrAreConnectedToStrategyAndBusinessModels",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-5": {
+        "value": "Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOriginateFromOrAreConnectedToStrategyAndBusinessModelsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-6": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:ActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModel",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-7": {
+        "value": "Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModelExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-8": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:AllPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersWhoCouldBeMateriallyImpactedByUndertakingAreIncludedInScopeOfDisclosureUnderESRS2",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-9": {
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersSubjectToMaterialImpactsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-11": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:UnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDeveloped",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-12": {
+        "value": "Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowUnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDevelopedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-14": {
+        "value": "Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfActivitiesThatResultInPositiveImpactsAndTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersThatArePositivelyAffectedOrCouldBePositivelyAffectedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-15": {
+        "value": "Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfSpecificCountriesOrRegionsWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccurExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+    },
+    "fact-16": {
+        "value": "We identified a potential risk regarding data misuse in our supply chain, especially where sensitive user information is transferred to third-party partners. Additionally, we see an opportunity to differentiate our products by offering stronger data protections, thus increasing user trust and satisfaction.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfMaterialRisksAndOrOpportunitiesResultingFromMaterialityAssessmentExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+        },
+        "fact-18": {
+        "value": "These risks and opportunities directly inform our strategy, as any breach or data mishandling event could harm our brand. Conversely, proactively protecting users and engaging with local data authorities can strengthen our market position and align us with emerging global privacy standards.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfRelationshipBetweenMaterialRisksAndOpportunitiesArisingFromImpactsAndOrDependenciesOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndStrategyAndBusinessModelExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+        },
+        "fact-17": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:MaterialRisksAndOpportunitiesArisingFromImpactsAndOrDependenciesEitherOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersRelateToSpecificGroups",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+        }
+        },
+        "fact-19": {
+        "value": "We have adopted a Consumer & User Privacy Policy to address these identified risks, ensuring structured processes to mitigate any negative impacts for impacted stakeholders.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfPoliciesAdoptedToManageMaterialImpactsOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAsWellAsAssociatedMaterialRisksAndOpportunitiesExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-20": {
+        "value": "To monitor compliance with international frameworks, we conduct annual internal audits referencing the UN Guiding Principles on Business and Human Rights, and require third-party data processors to do the same.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfProcessesAndMechanismsToMonitorComplianceWithUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkAndOecdGuidelinesForMultinationalEnterprisesExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-21": {
+        "value": "Within this policy, protecting consumer and end-user rights is critical. We focus on data minimization, explicit consent, and transparent usage details that align with recognized international human rights standards.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToRespectForHumanRightsOfConsumersAndEndusersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-22": {
+        "value": "For stakeholder engagement, we organize quarterly open forums inviting employees, community representatives, and end-users to share concerns about data usage, ensuring that all material issues are discussed and addressed.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToEngagementWithPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-23": {
+        "value": "Where human rights impacts occur, our remedy approach includes direct support and compensation for those affected, plus a root-cause analysis to prevent recurrence. This includes cooperation with relevant organizations to ensure fairness in the redress process.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToMeasuresToProvideAndOrEnableRemedyForHumanRightsImpactsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-25": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:PoliciesAreAlignedWithRelevantInternationallyRecognisedInstruments",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-24": {
+        "value": "Our Consumer & User Privacy Policy aligns with GDPR, the OECD Privacy Framework, and the UN Guiding Principles, ensuring consistent global standards in how we manage user data and safeguard their rights.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfHowPoliciesAreAlignedWithRelevantInternationallyRecognisedInstrumentsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-27": {
+        "value": "No confirmed cases of non-compliance have been reported in our downstream value chain this year, but we maintain active monitoring with routine audits and partner interviews.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfExtentToWhichCasesOfNonrespectOfUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkOrOecdGuidelinesForMultinationalEnterprisesThatInvolveConsumersAndEndusersHaveBeenReportedInDownstreamValueChainExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-26": {
+        "value": "No specific violations were identified with respect to the UN Guiding Principles or ILO Fundamental Principles in the last reporting period. Nonetheless, we remain vigilant to potential issues related to data-sharing or labor rights among value-chain partners.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfNatureOfCasesOfNonrespectOfUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkOrOecdGuidelinesForMultinationalEnterprisesExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-28": {
+        "value": "A significant update to our Consumer & User Privacy Policy was introduced in Q3, adding explicit references to local child-protection laws. This step ensures stronger controls for minors’ data usage across multiple regions.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfExplanationsForSignificantChangesToPoliciesAdoptedDuringReportingYearExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-29": {
+        "value": "Policy 1 - Consumer & User Privacy Policy",
+        "dimensions": {
+            "concept": "esrs:NameOfPolicy",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-30": {
+        "value": "Impact1",
+        "dimensions": {
+            "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-32": {
+        "value": "This policy addresses the full scope of data usage across R&D, customer support, and marketing to mitigate privacy risks and ensure consistent protections for impacted users throughout our value chain.",
+        "dimensions": {
+            "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
+        }
+        },
+        "fact-33": {
+        "value": "Key contents of our Consumer & User Privacy Policy include explicit data encryption standards, mandatory employee training on privacy, and robust breach notification protocols, all aligned with recognized international frameworks.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfKeyContentsOfPolicyExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-34": {
+        "value": "This policy applies enterprise-wide, including all internal teams and primary vendors. We exclude minor outsourced tasks if those suppliers never handle end-user data. Risk-based audits help ensure coverage remains aligned with changing supplier engagements.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfScopeOfPolicyOrOfItsExclusionsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-35": {
+        "value": "Overall accountability sits with our Chief Privacy Officer, who reports quarterly to the Board’s Sustainability Committee, ensuring any identified policy gaps are promptly addressed.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfMostSeniorLevelInOrganisationThatIsAccountableForImplementationOfPolicyExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-36": {
+        "value": "We reference ISO 27001 and the UN Global Compact in addition to the UNGP for data security and ethical considerations, verifying that our policy is in sync with widely recognized standards.",
+        "dimensions": {
+            "concept": "esrs:ReferenceToThirdpartyStandardsOrInitiativesThatAreRespectedThroughImplementationOfPolicy",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+
+        "fact-37": {
+        "value": "When developing this policy, we considered input from key stakeholders, including user advocacy groups and community representatives, ensuring that concerns about data handling and privacy were adequately addressed.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfConsiderationGivenToInterestsOfKeyStakeholdersInSettingPolicyExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-38": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:PolicyIsMadeAvailableToPotentiallyAffectedStakeholdersAndOrStakeholdersWhoNeedToHelpImplementIt",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-39": {
+        "value": "We publicly post our Consumer & User Privacy Policy on our intranet for employees and on our corporate website for external stakeholders. We also distribute a summary document to any partner organizations handling sensitive data.",
+        "dimensions": {
+            "concept": "esrs:ExplanationOfHowPolicyIsMadeAvailableToPotentiallyAffectedStakeholdersAndOrStakeholdersWhoNeedToHelpImplementItExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-40": {
+        "value": "To demonstrate compliance with ESRS disclosure requirements, references to relevant sections of our policy (e.g., breach notification clauses) are included in our annual reporting. Each policy aspect aligns with local and international user-protection mandates.",
+        "dimensions": {
+            "concept": "esrs:ReferenceForIdentificationOfAspectsOfPolicyThatSatisfyRequirementsOfDisclosureOfPoliciesRelatedToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusers",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-41": {
+        "value": "We share policy updates via webinars, email bulletins, and online training modules, ensuring employees, suppliers, and user advocacy groups understand its implications. We also remove barriers by offering localized translations where needed.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfCommunicationToolsAndChannelsAimedAtEnsuringThatPolicyIsAccessibleAndThatDifferentAudiencesUnderstandItsImplicationsAsWellAsExplanationOfHowPotentialBarriersForDisseminationAreIdentifiedAndRemovedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfPolicyTypedAxis": "1"
+        }
+        },
+        "fact-42": {
+        "value": "We maintain a general engagement process with our consumers and end-users via quarterly feedback surveys and user forums, where participants can discuss both positive and negative impacts they observe.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfGeneralProcessesForEngagingWithPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAndTheirRepresentativesAboutActualAndPotentialImpactsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-43": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:PerspectivesOfOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformDecisionsAndOrActivitiesAimedAtManagingActualAndPotentialImpacts",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-44": {
+        "value": "By analyzing user complaints and suggestions, we prioritize data-privacy enhancements in our product roadmap, ensuring we address real consumer issues. This feedback loop has led to improved encryption measures and clearer consent forms.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowPerspectivesOfOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformDecisionsAndOrActivitiesAimedAtManagingActualAndPotentialImpactsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-46": {
+        "value": "Engagement starts during initial product design (collecting requirements and concerns), continues at beta testing (validating user feedback), and recurs post-launch at six-month intervals. We typically combine online surveys with virtual user panels.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfStagesAtWhichEngagementOccursTypeOfEngagementAndFrequencyOfEngagementExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-47": {
+        "value": "Operational responsibility rests with our Head of User Trust & Safety, who ensures user forums are scheduled and that relevant feedback is escalated to the Product Council and Board if needed.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfFunctionAndMostSeniorRoleWithinUndertakingThatHasOperationalResponsibilityForEnsuringThatEngagementHappensAndThatResultsInformUndertakingSApproachExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-48": {
+        "value": "We measure engagement success by tracking user satisfaction scores, response times to inquiries, and the adoption rate of suggested improvements. A dedicated team reviews monthly metrics and refines our engagement strategy accordingly.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowEffectivenessOfEngagementWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsAssessedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-49": {
+        "value": "We specifically reach out to vulnerable user groups, such as seniors and minors, via specialized focus groups. This approach helps us uncover hidden risks like potential data misuse or unclear consent forms, ensuring more inclusive product design.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfStepsTakenToGainInsightIntoPerspectivesOfPeopleInOwnWorkforceNOValueChainWorkersNOConsumersAndEndusersThatMayBeParticularlyVulnerableToImpactsAndOrMarginalisedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-50": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:NoGeneralProcessToEngageWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersHasBeenAdopted",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-51": {
+        "value": "We plan to finalize a more formal, general engagement framework by Q2 2027, consolidating our user panels and feedback surveys into a single reporting system for easier tracking.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfTimeframeForAdoptionOfGeneralProcessToEngageWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-52": {
+        "value": "Currently, we have a Remediation & Resolution Team that collaborates with external mediators when negative impacts on end-users arise, ensuring any complaints are managed promptly and fairly.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfProcessesInPlaceToProvideForOrCooperateInRemediationOfNegativeImpactsOnPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThatUndertakingIsConnectedWithAsWellAsChannelsAvailableToRaiseConcernsAndHaveThemAddressedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-53": {
+        "value": "When we determine that we have caused or contributed to a material negative impact, we offer direct remedy through individualized compensation or service upgrades, plus an internal investigation to prevent recurrence.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfGeneralApproachToAndProcessesForProvidingOrContributingToRemedyWhereUndertakingHasCausedOrContributedToMaterialNegativeImpactOnPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-55": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:UndertakingAssessesThatRemedyProvidedForMaterialNegativeImpactOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsEffective",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-54": {
+        "value": "We gauge remedy effectiveness by surveying affected parties after resolution. If satisfaction is below our benchmark, we re-examine whether the remedy approach or compensation offered was adequate.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowUndertakingAssessesThatRemedyProvidedForMaterialNegativeImpactOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsEffectiveExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-56": {
+        "value": "We provide multiple channels: a dedicated phone helpline, an online portal for complaints, and a community liaison officer who collects feedback at local user events. Each channel is documented in our user support guidelines.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfSpecificChannelsInPlaceForOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersToRaiseConcernsOrNeedsDirectlyWithUndertakingAndHaveThemAddressedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-57": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:UndertakingIsRelyingSolelyOnInformationProvidedByItsBusinessRelationshipsAboutExistenceOfChannelsToRaiseConcernsOrNeeds",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-61": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:AffectedCommunitiesConsumersAndEndusersThatMayBeAffectedAreAbleToAccessChannelsAtLevelOfUndertakingTheyAreAffectedBy",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-60": {
+        "value": "We ensure these channels are easily accessible at the local facility or subsidiary level by posting contact info on our websites, in app disclaimers, and within partner distribution outlets.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowAffectedCommunitiesConsumersAndEndusersThatMayBeAffectedAreAbleToAccessChannelsAtLevelOfUndertakingTheyAreAffectedByExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-62": {
+        "value": "We require business partners to adopt or integrate similar channels. As part of our partner onboarding, we verify they comply with our minimum grievance procedures, ensuring consistent complaint handling across the value chain.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfProcessesThroughWhichUndertakingSupportsOrRequiresAvailabilityOfChannelsByItsBusinessRelationshipsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-63": {
+        "value": "We track all issues raised in an internal database, categorize them by severity, and monitor resolution times. Quarterly audits verify whether users feel their concerns are addressed. We refine processes based on these findings.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowIssuesRaisedAndAddressedAreTrackedAndMonitoredAndHowEffectivenessOfChannelsIsEnsuredIncludingThroughInvolvementOfStakeholdersWhoAreIntendedUsersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-64": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:UndertakingAssessesThatPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreAwareOfAndTrustStructuresOrProcessesAsWayToRaiseTheirConcernsOrNeedsAndHaveThemAddressed",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-65": {
+        "value": "We conduct periodic surveys to confirm awareness of these channels. If users show low familiarity or trust, we increase direct outreach (e.g., notifications and training) to ensure they know how to raise concerns safely.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowUndertakingAssessesThatPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreAwareOfAndTrustStructuresOrProcessesAsWayToRaiseTheirConcernsOrNeedsAndHaveThemAddressedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-66": {
+        "value": "20",
+        "decimals": 4,
+        "dimensions": {
+            "concept": "esrs:NumberOfComplaintsReceivedFromConsumersAndEndusers",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+            "unit": "iso4217:EUR"
+        }
+        },
+        "fact-67": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:PoliciesRegardingProtectionAgainstRetaliationForIndividualsThatUseChannelsToRaiseConcernsOrNeedsAreInPlace",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+        },
+        "fact-68": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:GrievancesAreTreatedConfidentiallyAndOrWithRespectToRightsOfPrivacyAndDataProtection",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+        }
+    },
+
+            "fact-69": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:NoChannelForRaisingConcernsEitherForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersHasBeenAdopted",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+            }
+            },
+            "fact-70": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:ChannelsToRaiseConcernsOrNeedsAllowValueChainWorkersAffectedCommunitiesConsumersAndEndusersToUseThemAnonymously",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+            }
+            },
+            "fact-71": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:AvailabilityOfChannelForRaisingConcernsIsNotSupportedForPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusers",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+            }
+            },
+            "fact-72": {
+            "value": "We intend to roll out a universal channel for raising concerns by Q4 2027. This process will centralize how all employees, communities, and end-users can report issues securely and anonymously, bridging current gaps.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfTimeframeForChannelForRaisingConcernsToBeInPlaceExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
+            }
+            },
+            "fact-73": {
+            "value": "Our current plan focuses on ensuring negative impacts (e.g., data misuse) are mitigated through immediate response protocols, while also amplifying positive impacts (e.g., inclusive product design). This action plan’s effectiveness is gauged by user satisfaction metrics and decreased complaint rates.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowActionIsTakenToAddressMaterialNegativeAndPositiveImpactsAndToManageMaterialRisksAndPursueMaterialOpportunitiesRelatedToOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndEffectivenessOfThoseActionsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-75": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:UndertakingSeeksToUseLeverageInBusinessRelationshipsToManageMaterialNegativeImpactsAffectingOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusers",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-74": {
+            "value": "We engage our partners through joint training sessions and contractual clauses requiring data-privacy compliance, enabling us to steer their practices toward risk mitigation and better user protections.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowUndertakingSeeksToUseLeverageInBusinessRelationshipsToManageMaterialNegativeImpactsAffectingOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-76": {
+            "value": "We actively participate in the Global Privacy Taskforce, working alongside NGOs and other tech companies to standardize best practices for user data handling, thereby reducing negative impacts across the industry.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowParticipationInIndustryOrMultistakeholderInitiativeAndUndertakingsOwnInvolvementIsAimingToAddressMaterialNegativeImpactsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-77": {
+            "value": "We have launched a Digital Inclusion Initiative that offers free accessibility features to underrepresented consumer groups, aiming to enhance social outcomes by ensuring everyone can safely utilize our digital services.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfAdditionalActionsOrInitiativesWithPrimaryPurposeOfPositivelyContributingToImprovedSocialOutcomesForConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-79": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrLegitimateRepresentativesOrTheirCredibleProxiesPlayRoleInDecisionsRegardingDesignAndImplementationOfProgrammesOrProcesses",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-78": {
+            "value": "We regularly invite community associations and user representatives to co-develop our Digital Inclusion Initiative, ensuring their feedback shapes how features are prioritized and rolled out.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrLegitimateRepresentativesOrTheirCredibleProxiesPlayRoleInDecisionsRegardingDesignAndImplementationOfProgrammesOrProcessesExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-80": {
+            "value": "This program has already boosted accessibility usage by 35% among visually impaired users, while also improving overall customer satisfaction scores in pilot regions.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfIntendedOrAchievedPositiveOutcomesOfProgrammesOrProcessesForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-82": {
+            "value": "We track usage metrics of new accessibility features and gather direct feedback from target user groups to assess outcome effectiveness. Results guide subsequent feature improvements each quarter.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfHowEffectivenessOfActionsAndInitiativesInDeliveringOutcomesForOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersIsTrackedAndAssessedExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-83": {
+            "value": "Through our incident response process, we identify each negative impact’s cause, assess severity, and then determine if immediate or long-term actions are required. This ensures timely and appropriate solutions.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfProcessesThroughWhichUndertakingIdentifiesWhatActionIsNeededAndAppropriateInResponseToParticularActualOrPotentialNegativeImpactOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-84": {
+            "value": "We prioritize immediate remedies, such as rapid patching of security flaws or direct compensation for impacted consumers. Concurrently, we review internal practices to prevent repeated issues.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfApproachToTakingActionInRelationToSpecificMaterialNegativeImpactsOnValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-85": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:WiderIndustryOrCollaborativeActionWithOtherRelevantPartiesWillBeRequired",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-86": {
+            "value": "We ensure remedy processes are accessible and transparent: we publish guidelines, and each remediation outcome is co-reviewed by external monitors from relevant advocacy groups.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfHowItIsEnsuredThatProcessesToProvideOrEnableRemedyInEventOfMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAreAvailableAndEffectiveInTheirImplementationAndOutcomesExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-88": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:ActionIsTakenToAvoidCausingOrContributingToMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThroughOwnPractices",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-87": {
+            "value": "We review product features in an internal Ethics & Privacy Board before deployment, ensuring we avoid practices that might unintentionally harm communities or end-users.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowActionIsTakenToAvoidCausingOrContributingToMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThroughOwnPracticesExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-89": {
+            "value": "We have allocated dedicated funds for user privacy solutions, training programs, and stakeholder consultations, all embedded in our annual sustainability budget.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfResourcesAllocatedToManagementOfMaterialImpactsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-90": {
+            "value": "Our Ethics & Privacy Board works with Compliance, R&D, and Legal teams to detect, address, and monitor negative impacts. Each team provides specialized actions ranging from policy updates to technical fixes.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfInternalFunctionsThatAreInvolvedInManagingImpactsAndTypesOfActionTakenByInternalFunctionsToAddressNegativeAndAdvancePositiveImpactsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-91": {
+            "value": "We rely on a combination of staff training, internal reviews, and a multi-tier escalation system to handle potential or actual negative impacts, ensuring swift accountability and corrective measures.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfGeneralAndSpecificApproachesToAddressingMaterialNegativeImpactsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-92": {
+            "value": "Beyond risk mitigation, we champion additional user well-being initiatives, such as mental health resources integrated into our digital services, thereby generating positive outcomes for communities.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfInitiativesAimedAtContributingToAdditionalMaterialPositiveImpactsExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-93": {
+            "value": "This reporting period, we rolled out new data-encryption standards in 80% of products and expanded stakeholder dialogues, meeting the timeline set by Action1’s mid-year milestone.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfHowFarUndertakingHasProgressedInEffortsDuringReportingPeriodExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-94": {
+            "value": "We aim to further refine our engagement processes, integrating advanced analytics and user feedback to achieve near real-time responsiveness to emerging risks.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfAimsForContinuedImprovementExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-95": {
+            "value": "We have scheduled third-party audits to help identify hidden data vulnerabilities, ensuring we stay ahead of potential breaches or misuses. These audits help us track action effectiveness.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfWhatActionIsPlannedOrUnderwayToMitigateMaterialRisksArisingFromImpactsAndDependenciesOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAndHowEffectivenessIsTrackedExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-96": {
+            "value": "We are currently exploring an expanded partnership with government agencies to leverage new tax incentives for accessible product development, broadening opportunities to serve more diverse consumer bases.",
+            "dimensions": {
+                "concept": "esrs:DescriptionOfWhatActionIsPlannedOrUnderwayToPursueMaterialOpportunitiesInRelationToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-97": {
+            "value": "true",
+            "dimensions": {
+                "concept": "esrs:SevereHumanRightsIssuesAndIncidentsConnectedToUpstreamAndDownstreamValueChainNOAffectedCommunitiesNOConsumersAndEndusersHaveBeenReported",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-98": {
+            "value": "We received a report alleging forced labor at a sub-tier supplier. An independent investigation is underway, and we’ve halted new orders from that supplier pending the outcome.",
+            "dimensions": {
+                "concept": "esrs:DisclosureOfSevereHumanRightsIssuesAndIncidentsConnectedToUpstreamAndDownstreamValueChainNOAffectedCommunitiesNOConsumersAndEndusersThatHaveBeenReportedExplanatory",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-99": {
+            "value": "Name of action plan is Action1.",
+            "dimensions": {
+                "concept": "esrs:NameOfActionPlan",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-100": {
+            "value": "Impact1",
+            "dimensions": {
+                "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-101": {
+            "value": "Name or related impact is Impact1.",
+            "dimensions": {
+                "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+            },
+            "fact-102": {
+            "value": "Policy1",
+            "dimensions": {
+                "concept": "esrs:IdentifiersOfRelatedPolicies",
+                "language": "en",
+                "entity": "scheme:efrag",
+                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+            }
+        },
+    "fact-103": {
+      "value": "The related policy is Policy1 – our Data Protection & User Privacy Policy.",
+      "dimensions": {
+        "concept": "esrs:NamesOfRelatedPolicies",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-104": {
+      "value": "Target1",
+      "dimensions": {
+        "concept": "esrs:IdentifiersOfRelatedTargets",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-105": {
+      "value": "Our user-trust enhancement target includes reducing privacy-related complaints by 40% by 2027.",
+      "dimensions": {
+        "concept": "esrs:NamesOfRelatedTargets",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-109": {
+      "value": "We launched a data-encryption program to address potential negative impacts of data breaches and ensure proactive user protection. This key action strengthens our overall security framework.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfKeyActionExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-110": {
+      "value": "Our expected outcomes include fewer reported data vulnerabilities and a measurable boost in user trust, supporting both policy objectives and our Target1 goal.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfExpectedOutcomesOfKeyActionAndHowItsImplementationContributesToAchievementOfPolicyObjectivesAndTargetsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-114": {
+      "value": "This action covers internal operations (R&D, data centers) and key downstream partners that manage user data. Primary geographies include EU, North America, and Asia.",
+      "dimensions": {
+        "concept": "esrs:DescriptionOfScopeOfKeyActionCoverageInTermsOfActivitiesUpstreamAndOrDownstreamValueChainGeographiesAndAffectedStakeholderGroupsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-111": {
+      "value": "Within our own operations, we introduced encryption standards for employee devices and internal product repositories.",
+      "dimensions": {
+        "concept": "esrs:DescriptionOfScopeOfKeyActionInOwnOperationsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-112": {
+      "value": "In the downstream chain, we require distributors to adopt our encryption protocols to ensure end-user data remains consistently protected.",
+      "dimensions": {
+        "concept": "esrs:DescriptionOfScopeOfKeyActionInUpstreamAndOrDownstreamValueChainExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-116": {
+      "value": "true",
+      "dimensions": {
+        "concept": "esrs:KeyActionIsTakenToEitherProvideForCooperateInOrInSupportProvisionOfRemedyForThoseHarmedByActualMaterialImpacts",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-115": {
+      "value": "true",
+      "dimensions": {
+        "concept": "esrs:ActionToProvideAndOrEnableRemedyInRelationToActualMaterialImpactOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndUsersHasBeenTaken",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
+      }
+    },
+    "fact-117": {
+      "value": "During 2025, we allocated €2 million to expand encryption capacity, reducing data complaints by 15% so far. These figures reflect consistent progress from prior-year benchmarks.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfQuantitativeAndQualitativeInformationRegardingProgressOfActionsOrActionPlansDisclosedInPriorPeriodsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1"
+      }
+    },
+    "fact-118": {
+      "value": "Action2: Enhanced Global Data Governance Program",
+      "dimensions": {
+        "concept": "esrs:NameOfActionPlan",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
+      }
+    },
+    "fact-119": {
+      "value": "We have earmarked €5 million for staff training and advanced data-audit tools to ensure long-term capacity for managing user privacy effectively.",
+      "dimensions": {
+        "concept": "esrs:DescriptionOfTypeOfCurrentAndFutureFinancialAndOtherResourcesAllocatedToActionPlanExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
+      }
+    },
+    "fact-120": {
+      "value": "true",
+      "dimensions": {
+        "concept": "esrs:AbilityToImplementActionOrActionPlanDependsOnSpecificPreconditions",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
+      }
+    },
+    "fact-121": {
+      "value": "These allocated resources align with the intangible assets and R&D expenses listed in our financial statements, facilitating direct tracking of project investments.",
+      "dimensions": {
+        "concept": "esrs:ExplanationOfHowCurrentFinancialResourcesRelateToMostRelevantAmountsPresentedInFinancialStatementsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
+      }
+    },
+    "fact-157": {
+      "value": "8000000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-158": {
+      "value": "9216000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:ShorttermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-159": {
+      "value": "121444000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:MediumtermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-160": {
+      "value": "20280000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:LongtermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-161": {
+      "value": "1987000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-162": {
+      "value": "2000000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:ShorttermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-163": {
+      "value": "3036000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:MediumtermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-164": {
+      "value": "5000000",
+      "decimals": 3,
+      "dimensions": {
+        "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfActionPlanTypedAxis": "1",
+        "esrs:ReportingScopeAxis": "esrs:LongtermMember",
+        "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
+        "unit": "iso4217:EUR"
+      }
+    },
+    "fact-122": {
+      "value": "We have set a timebound target to reduce confirmed data incidents by 50% within two years, aiming for tangible, outcome-oriented progress.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfTimeboundAndOutcomeOrientedTargetsRelatedToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfTargetTypedAxis": "Target1"
+      }
+    },
+    "fact-123": {
+      "value": "Our target-setting process involved cross-functional teams, user feedback sessions, and historical complaint analysis to ensure ambitious yet realistic goals consistent with stakeholder expectations.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfProcessForSettingTimeboundAndOutcomeorientedTargetsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfTargetTypedAxis": "Target1"
+      }
+    },
+    "fact-124": {
+      "value": "true",
+      "dimensions": {
+        "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInSettingTargets",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfTargetTypedAxis": "Target1"
+      }
+    },
+    "fact-125": {
+      "value": "We collaborated with consumer advocates in defining metrics and thresholds, ensuring that our target’s scope aligns with real-world community concerns.",
+      "dimensions": {
+        "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInSettingTargetsExplanatory",
+        "language": "en",
+        "entity": "scheme:efrag",
+        "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+        "esrs:IdentifierOfTargetTypedAxis": "Target1"
+      }
+    },
+        "fact-126": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInTrackingPerformanceAgainstTargets",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-127": {
+        "value": "We invited user advocacy groups to review quarterly progress reports, shaping how we track data-security improvements against established targets.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInTrackingPerformanceAgainstTargetsExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-128": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInIdentifyingLessonsOrImprovementsAsResultOfUndertakingsPerformance",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-129": {
+        "value": "Community feedback from our monthly advisory panel influenced how we refine encryption rollouts and user interface adjustments to meet evolving needs.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInIdentifyingLessonsOrImprovementsAsResultOfUndertakingsPerformanceExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-130": {
+        "value": "Our target (Target1) focuses on Impact1 (data-privacy risk), tied to Policy1. We plan to reduce data incidents by 30% (absolute measure) between 2025 and 2050, with a baseline year of 2026. This aligns with our broader corporate approach: we incorporate user feedback, apply encryption protocols, and measure progress yearly.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfMeasurableOutcomeorientedAndTimeboundTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-131": {
+        "value": "The target is named Target1.",
+        "dimensions": {
+            "concept": "esrs:NameOfTarget",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-132": {
+        "value": "Impact1",
+        "dimensions": {
+            "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-133": {
+        "value": "This relates to our data-privacy risk (Impact1).",
+        "dimensions": {
+            "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-134": {
+        "value": "Policy1",
+        "dimensions": {
+            "concept": "esrs:IdentifiersOfRelatedPolicies",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-135": {
+        "value": "That policy is our formal Data Protection & User Privacy Policy (Policy1).",
+        "dimensions": {
+            "concept": "esrs:NamesOfRelatedPolicies",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-138": {
+        "value": "Meeting this target helps fulfill Policy1 objectives, ensuring minimized data misuse and greater consumer confidence.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-140": {
+        "value": "0.20",
+        "decimals": 4,
+        "dimensions": {
+            "concept": "esrs:MeasurableTargetPercentage",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-144": {
+        "value": "This target covers both internal teams and external vendors, ensuring consistent data handling across the entire value chain.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-145": {
+        "value": "2026",
+        "dimensions": {
+            "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-146": {
+        "value": "2025",
+        "dimensions": {
+            "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-147": {
+        "value": "2050",
+        "dimensions": {
+            "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
+        }
+        },
+        "fact-148": {
+        "value": "We rely on incident rates, third-party audits, and user feedback to shape assumptions for target feasibility and progress measurement.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-149": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-150": {
+        "value": "We sought direct input from employees and consumer advocacy groups, ensuring that final metrics reflect the realities on the ground.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-151": {
+        "value": "We refined data-collection methodologies to unify internal and supplier incident reporting, providing more accurate, consistent metrics over time.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-152": {
+        "value": "Currently, we are on track to cut incident rates by 10% compared to the baseline, meeting our interim targets and validating our remediation approach.",
+        "dimensions": {
+            "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-153": {
+        "value": "true",
+        "dimensions": {
+            "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-154": {
+        "value": "We expect enhanced encryption and user-education campaigns to drive safer online behavior, improving both workforce and consumer data outcomes.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfIntendedOutcomesToBeAchievedInLivesOfPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-155": {
+        "value": "Our target definitions remain the same each period to enable clear year-over-year comparability, but we continue refining data sources for greater accuracy.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfStabilityOfTargetOverTimeInTermsOfDefinitionsAndMethodologiesToEnableComparabilityExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        },
+        "fact-156": {
+        "value": "We are guided by GDPR standards and recognized industry benchmarks, ensuring external validity for our data-privacy targets and performance thresholds.",
+        "dimensions": {
+            "concept": "esrs:DisclosureOfStandardsOrCommitmentsOnWhichTargetIsBasedExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
+        }
+        }
+    }
+}

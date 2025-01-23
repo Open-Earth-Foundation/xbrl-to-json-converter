@@ -1,5 +1,5 @@
 import json
-from find_concept import find_concept_group
+from find_concept_group import find_concept_group
 import os
 
 ESRS_DIRECTORY = os.path.join(os.path.dirname(__file__), '..', 'esrs_data')
