@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xbrl-frontend-deployment
+  labels:
+    app: xbrl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xbrl
+  template:
+    metadata:
+      labels:
+        app: xbrl
+    spec:
+      containers:
+      - name: xbrl-frontend
+        image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-frontend:latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5173
