@@ -17,6 +17,7 @@ spec:
       containers:
       - name: xbrl-backend
         image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-backend:latest
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
