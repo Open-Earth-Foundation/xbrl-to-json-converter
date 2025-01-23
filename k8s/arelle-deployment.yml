@@ -17,6 +17,7 @@ spec:
       containers:
       - name: xbrl-arelle
         image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-arelleservice:latest
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
@@ -25,4 +26,4 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8000
+        - containerPort: 8001
