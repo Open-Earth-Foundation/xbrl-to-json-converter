@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xbrl-backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: xbrl-backend
+        image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-backend:latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - mountPath: /app/converted_files
+          name: backend-storage
+      volumes:
+      - name: backend-storage
+        persistentVolumeClaim:
+          claimName: xbrl-backend-storage
