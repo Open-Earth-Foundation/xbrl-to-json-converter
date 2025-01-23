@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: xbrl-frontend-deployment
   labels:
-    app: xbrl
+    app: xbrl-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: xbrl
+      app: xbrl-frontend
   template:
     metadata:
       labels:
-        app: xbrl
+        app: xbrl-frontend
     spec:
       containers:
       - name: xbrl-frontend

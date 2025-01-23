@@ -2,15 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: xbrl-backend-deployment
+  labels:
+    app: xbrl-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: xbrl-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: xbrl-backend
     spec:
       containers:
       - name: xbrl-backend
