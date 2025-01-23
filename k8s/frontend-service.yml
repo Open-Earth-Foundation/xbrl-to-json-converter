@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xbrl-frontend-service
+  labels:
+    app: xbrl-frontend
+spec:
+  selector:
+    app: xbrl-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5173
+  type: ClusterIP
