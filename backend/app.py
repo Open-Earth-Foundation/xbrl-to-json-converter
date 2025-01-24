@@ -23,10 +23,8 @@ app = FastAPI()
 
 # Allow CORS for the frontend origin
 # TODO: Change to the actual frontend origin once it is deployed
-origins = [
-    "http://localhost:3000",
-    "http://localhost:5173"
-]
+cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000')
+origins = cors_origins.split(',')
 
 # Add the CORS middleware before any routes or other middleware
 app.add_middleware(
@@ -123,9 +121,10 @@ async def upload_file(file: UploadFile = File(...)):
 
     # Send the file to the arelle_service
     try:
+        arelle_url = os.getenv('ARELLE_URL', 'http://localhost:8001')
         with open(file_path, 'rb') as f:
             files = {'file': f}
-            response = requests.post('http://localhost:8001/convert/', files=files)
+            response = requests.post(f'{arelle_url}/convert/', files=files)
             response.raise_for_status()
             json_data = response.json()
 
