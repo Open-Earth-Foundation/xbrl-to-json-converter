@@ -35,7 +35,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v2
         with:
-          context: "{{defaultContext}}:frontend"
+          context: "{{defaultContext}}:client"
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.PREFIX }}-frontend:${{ steps.vars.outputs.commit_hash }}
