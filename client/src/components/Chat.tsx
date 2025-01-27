@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import EnhancedContextToggle from './EnhancedContextToggle';
 
 interface Message {
   text: string;
@@ -17,6 +18,7 @@ export default function Chat() {
   const [ws, setWs] = useState<WebSocket | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [enhancedContext, setEnhancedContext] = useState(false);
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
@@ -65,6 +67,10 @@ export default function Chat() {
     <Card>
       <CardContent className="p-4">
         <h2 className="text-xl font-semibold mb-4">Chat</h2>
+        <EnhancedContextToggle 
+          isEnabled={enhancedContext} 
+          onToggle={(enabled) => setEnhancedContext(enabled)} 
+        />
         <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
           {messages.map((message, index) => (
             <div

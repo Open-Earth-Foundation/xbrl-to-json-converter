@@ -188,64 +188,24 @@ async def get_converted_data(user_id: str):
             media_type="application/json"
         )
 
-@app.websocket("/ws/chat")
+@app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
-
+    
     try:
-        query_params = parse_qs(websocket.scope['query_string'].decode())
-        user_id = query_params.get('user_id', [None])[0]
-
-        if not user_id:
-            user_id = str(uuid.uuid4())
-            await websocket.send_text(f"[USER_ID]: {user_id}")
-
-        await manager.connect(websocket, user_id=user_id)
-
         while True:
-            data = await websocket.receive_text()
-            await process_message(data, websocket)
+            data = await websocket.receive_json()
+            message = data.get("message", "")
+            thread_id = data.get("threadId")
+            use_enhanced_context = data.get("enhancedContext", False)
+            
+            response = await assistant_service.process_message(
+                message, 
+                thread_id,
+                use_enhanced_context
+            )
+            
+            await websocket.send_json({"response": response})
+            
     except WebSocketDisconnect:
-        manager.disconnect(websocket)
-    except Exception as e:
-        print(f"Error: {e}")
-        traceback.print_exc()
-        await websocket.close()
-
-async def process_message(message: str, websocket: WebSocket):
-    try:
-        connection_info = manager.active_connections.get(websocket)
-        if not connection_info:
-            await websocket.send_text("Error: Connection not found.")
-            return
-
-        # You can check the flag here
-        file_uploaded = connection_info.get('file_uploaded', False)
-        
-        # Later you can use this to alter the chat behavior
-        if file_uploaded:
-            # Handle chat with converted data
-            pass
-        else:
-            # Handle regular chat
-            pass
-
-        thread_id = connection_info['thread_id']
-
-        assistant_service.add_user_message(thread_id, message)
-
-        run = await asyncio.to_thread(assistant_service.run_assistant, thread_id)
-
-        if run.status == 'completed':
-            assistant_message = assistant_service.get_latest_assistant_message(thread_id)
-            if assistant_message:
-                await manager.send_personal_message(assistant_message, websocket)
-            else:
-                await manager.send_personal_message("Error: No assistant response.", websocket)
-        else:
-            await manager.send_personal_message(f"Error: Run failed with status {run.status}", websocket)
-
-    except Exception as e:
-        print(f"Error processing message: {e}")
-        traceback.print_exc()
-        await manager.send_personDal_message("Error: Unable to process your request.", websocket)
+        print("Client disconnected")
