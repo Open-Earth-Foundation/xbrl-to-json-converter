@@ -35,7 +35,7 @@ jobs:
       - name: Build and push frontend image
         uses: docker/build-push-action@v2
         with:
-          context: ./frontend
+          context: "{{defaultContext}}:frontend"
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.PREFIX }}-frontend:${{ steps.vars.outputs.commit_hash }}
@@ -44,7 +44,7 @@ jobs:
       - name: Build and push backend image
         uses: docker/build-push-action@v2
         with:
-          context: ./backend
+          context: "{{defaultContext}}:backend"
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.PREFIX }}-backend:${{ steps.vars.outputs.commit_hash }}
@@ -53,7 +53,7 @@ jobs:
       - name: Build and push arelleservice image
         uses: docker/build-push-action@v2
         with:
-          context: ./arelle_service
+          context: "{{defaultContext}}:arelle_service"
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.PREFIX }}-arelleservice:${{ steps.vars.outputs.commit_hash }}
