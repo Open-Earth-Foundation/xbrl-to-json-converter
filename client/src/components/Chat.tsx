@@ -24,7 +24,7 @@ export default function Chat() {
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
-    const websocket = new WebSocket(`${WS_ORIGIN}/ws/chat?user_id=${userId}`);
+    const websocket = new WebSocket(`${WS_ORIGIN}/ws?user_id=${userId}`);
 
     websocket.onopen = () => {
       console.log('Connected to WebSocket');
