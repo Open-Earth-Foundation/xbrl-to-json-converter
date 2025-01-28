@@ -3,6 +3,7 @@
 import openai
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -15,6 +16,16 @@ class AssistantService:
         # Initialize the OpenAI client
         self.client = openai.OpenAI()
         self.assistant_id = assistant_id  # Use the existing Assistant ID
+        self.enhanced_context = None
+        self._load_enhanced_context()
+
+    def _load_enhanced_context(self):
+        try:
+            with open('esrs_data/enhanced_report.json', 'r') as file:
+                self.enhanced_context = json.load(file)
+        except Exception as e:
+            print(f"Error loading enhanced context: {e}")
+            self.enhanced_context = None
 
     def create_thread(self):
         thread = self.client.beta.threads.create()
@@ -66,3 +77,12 @@ class AssistantService:
                     content_text = str(message.content)
                 return content_text
         return None
+
+    async def process_message(self, message: str, thread_id: str = None, use_enhanced_context: bool = False):
+        try:
+            if use_enhanced_context and self.enhanced_context:
+                message = f"{message}\n\nESRS Context: {json.dumps(self.enhanced_context)}"
+            
+            # Rest of your existing process_message code
+        except Exception as e:
+            print(f"Error processing message: {e}")
