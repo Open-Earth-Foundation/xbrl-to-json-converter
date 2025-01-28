@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import EnhancedContextToggle from './EnhancedContextToggle';
+import { useToast } from "../hooks/use-toast";
 
 interface Message {
   text: string;
@@ -21,6 +22,7 @@ export default function Chat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [enhancedContext, setEnhancedContext] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
@@ -50,11 +52,21 @@ export default function Chat() {
           localStorage.setItem('userId', data.user_id);
           break;
         case 'personal_message':
-          // TODO: Handle personal messages
           console.log('Personal message:', data.message);
+          toast({
+            title: "Personal message from server",
+            description: data.message,
+            duration: 3000,
+
+          });
           break;
         case 'error':
           console.error('Server error:', data.error);
+          toast({
+            title: "Server error",
+            description: data.error,
+            variant: "destructive",
+          });
           break;
         default:
           console.error('Invalid message type:', data.type);
