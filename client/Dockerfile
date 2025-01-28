@@ -6,7 +6,10 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN npm run build
+
+ENV BACKEND_WS_URL=ws://localhost:8000
 
 EXPOSE 5173
 
-CMD ["npm", "run", "dev", "--", "--host"] 
+CMD ["run.sh"]

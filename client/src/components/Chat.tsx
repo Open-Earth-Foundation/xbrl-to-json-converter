@@ -12,6 +12,8 @@ interface Message {
   isUser: boolean;
 }
 
+const WS_ORIGIN = globalThis.config?.BACKEND_WS_ORIGIN || 'ws://localhost:8000';
+
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -22,7 +24,7 @@ export default function Chat() {
 
   useEffect(() => {
     const userId = localStorage.getItem('userId');
-    const websocket = new WebSocket(`ws://localhost:8000/ws/chat?user_id=${userId}`);
+    const websocket = new WebSocket(`${WS_ORIGIN}/ws/chat?user_id=${userId}`);
 
     websocket.onopen = () => {
       console.log('Connected to WebSocket');
@@ -67,9 +69,9 @@ export default function Chat() {
     <Card>
       <CardContent className="p-4">
         <h2 className="text-xl font-semibold mb-4">Chat</h2>
-        <EnhancedContextToggle 
-          isEnabled={enhancedContext} 
-          onToggle={(enabled) => setEnhancedContext(enabled)} 
+        <EnhancedContextToggle
+          isEnabled={enhancedContext}
+          onToggle={(enabled) => setEnhancedContext(enabled)}
         />
         <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
           {messages.map((message, index) => (
@@ -98,7 +100,7 @@ export default function Chat() {
                       </SyntaxHighlighter>
                     ) : (
                       <code
-                        className={`${inline ? 'bg-opacity-20 bg-gray-500 rounded px-1' : 
+                        className={`${inline ? 'bg-opacity-20 bg-gray-500 rounded px-1' :
                           'block bg-opacity-10 bg-gray-500 p-2 rounded-lg my-2'}`}
                         {...props}
                       >
@@ -108,10 +110,10 @@ export default function Chat() {
                   },
                   // Style links
                   a: ({ node, ...props }) => (
-                    <a 
-                      className="text-blue-500 hover:underline" 
+                    <a
+                      className="text-blue-500 hover:underline"
                       target="_blank"
-                      rel="noopener noreferrer" 
+                      rel="noopener noreferrer"
                       {...props}
                     />
                   ),
