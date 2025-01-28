@@ -12,4 +12,4 @@ ENV BACKEND_WS_URL=ws://localhost:8000
 
 EXPOSE 5173
 
-CMD ["run.sh"]
+CMD ["/bin/sh", "-c", "./run.sh"]
