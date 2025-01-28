@@ -85,7 +85,7 @@ class AssistantService:
 
             self.add_user_message(thread_id, message)
             run = self.run_assistant(thread_id)
-            if run.status == "completed" and run.data.status == "succeeded":
+            if run.status == "completed":
                 response = self.get_latest_assistant_message(thread_id)
                 return response
         except Exception as e:
