@@ -6,6 +6,8 @@ metadata:
     app: xbrl-backend
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: xbrl-backend
