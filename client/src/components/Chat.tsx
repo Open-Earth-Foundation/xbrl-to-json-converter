@@ -34,10 +34,30 @@ export default function Chat() {
       setIsLoading(false);
       const message = event.data;
       console.log('Received message:', message);
-      if (message.startsWith('[USER_ID]:')) {
-        localStorage.setItem('userId', message.split(':')[1].trim());
-      } else {
-        setMessages(prev => [...prev, { text: message, isUser: false }]);
+      let data = null;
+      try {
+        data = JSON.parse(message);
+        console.dir(data);
+      } catch (error) {
+        console.error('Failed to parse message:', error);
+        return;
+      }
+      switch (data.type) {
+        case 'message':
+          setMessages(prev => [...prev, { text: data.message, isUser: false }]);
+          break;
+        case 'user_id':
+          localStorage.setItem('userId', data.user_id);
+          break;
+        case 'personal_message':
+          // TODO: Handle personal messages
+          console.log('Personal message:', data.message);
+          break;
+        case 'error':
+          console.error('Server error:', data.error);
+          break;
+        default:
+          console.error('Invalid message type:', data.type);
       }
     };
 
@@ -58,7 +78,7 @@ export default function Chat() {
 
     setIsLoading(true);
     console.log('Sending message:', input);
-    ws.send(input);
+    ws.send(JSON.stringify({ message: input }));
     setMessages(prev => [...prev, { text: input, isUser: true }]);
     setInput('');
   };

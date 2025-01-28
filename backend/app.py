@@ -84,7 +84,7 @@ class ConnectionManager:
         self.active_connections.pop(websocket, None)
 
     async def send_personal_message(self, message: str, websocket: WebSocket):
-        await websocket.send_text(message)
+        await websocket.send_json({"type": "personal_message", "message": message})
 
     async def broadcast_status(self, user_id: str, message: str):
         websocket = None
@@ -205,7 +205,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 message, thread_id, use_enhanced_context
             )
 
-            await websocket.send_json({"response": response})
+            await websocket.send_json({"type": "message", "message": response})
         except WebSocketDisconnect:
             print("Client disconnected")
             break
