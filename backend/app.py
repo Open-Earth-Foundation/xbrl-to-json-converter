@@ -16,8 +16,6 @@ import threading
 import asyncio
 import queue  # Add this import
 from chat_service import AssistantService
-# Import the AI function
-assistant_service = AssistantService()
 
 app = FastAPI()
 
@@ -66,11 +64,13 @@ async def validation_exception_handler(request, exc):
 uploaded_data = {}
 
 class ConnectionManager:
-    def __init__(self):
+
+    def __init__(self, assistant_service: AssistantService):
         self.active_connections: Dict[WebSocket, dict] = {}
+        self.assistant_service = assistant_service
 
     async def connect(self, websocket: WebSocket, user_id: str):
-        thread = assistant_service.create_thread()
+        thread = self.assistant_service.create_thread()
         thread_id = thread.id
 
         # Store additional metadata including the file_uploaded flag
@@ -98,7 +98,22 @@ class ConnectionManager:
         else:
             print(f"No active WebSocket connection for user_id {user_id}")
 
-manager = ConnectionManager()
+    async def process_message(
+        self, ws: WebSocket, message: str, use_enhanced_context: bool = False
+    ):
+        conn = self.active_connections.get(ws)
+        if not conn:
+            raise Exception("Connection not found")
+        user_id = conn["user_id"]
+        thread_id = conn["thread_id"]
+        return await self.assistant_service.process_message(
+            message, thread_id, use_enhanced_context
+        )
+
+
+# Import the AI function
+assistant_service = AssistantService()
+manager = ConnectionManager(assistant_service)
 
 # Root endpoint
 @app.get("/")
@@ -192,17 +207,20 @@ async def get_converted_data(user_id: str):
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
 
+    user_id = websocket.query_params.get("user_id")
+
+    await manager.connect(websocket, user_id=user_id)
+
     while True:
         try:
             data = await websocket.receive_json()
             print(f"Received data: {data}")
             message = data.get("message", "")
             print(f"Message: {message}")
-            thread_id = data.get("threadId")
             use_enhanced_context = data.get("enhancedContext", False)
 
-            response = await assistant_service.process_message(
-                message, thread_id, use_enhanced_context
+            response = await manager.process_message(
+                websocket, message, use_enhanced_context
             )
 
             await websocket.send_json({"type": "message", "message": response})

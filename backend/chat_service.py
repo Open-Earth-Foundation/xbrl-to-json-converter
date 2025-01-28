@@ -82,7 +82,11 @@ class AssistantService:
         try:
             if use_enhanced_context and self.enhanced_context:
                 message = f"{message}\n\nESRS Context: {json.dumps(self.enhanced_context)}"
-            
-            # Rest of your existing process_message code
+
+            self.add_user_message(thread_id, message)
+            run = self.run_assistant(thread_id)
+            if run.status == "completed" and run.data.status == "succeeded":
+                response = self.get_latest_assistant_message(thread_id)
+                return response
         except Exception as e:
             print(f"Error processing message: {e}")
