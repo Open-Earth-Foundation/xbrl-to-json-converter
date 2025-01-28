@@ -18,6 +18,11 @@ spec:
       - name: xbrl-frontend
         image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-frontend:latest
         imagePullPolicy: Always
+        env:
+        - name: VITE_BACKEND_URL
+          value: http://xbrl-backend-service
+        - name: BACKEND_WS_ORIGIN
+          value: wss://xbrl-backend-service
         resources:
           requests:
             memory: "512Mi"
