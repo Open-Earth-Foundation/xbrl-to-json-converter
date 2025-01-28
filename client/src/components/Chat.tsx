@@ -33,6 +33,7 @@ export default function Chat() {
     websocket.onmessage = (event) => {
       setIsLoading(false);
       const message = event.data;
+      console.log('Received message:', message);
       if (message.startsWith('[USER_ID]:')) {
         localStorage.setItem('userId', message.split(':')[1].trim());
       } else {
@@ -56,6 +57,7 @@ export default function Chat() {
     if (!input.trim() || !ws) return;
 
     setIsLoading(true);
+    console.log('Sending message:', input);
     ws.send(input);
     setMessages(prev => [...prev, { text: input, isUser: true }]);
     setInput('');

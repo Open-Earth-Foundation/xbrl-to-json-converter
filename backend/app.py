@@ -72,7 +72,7 @@ class ConnectionManager:
     async def connect(self, websocket: WebSocket, user_id: str):
         thread = assistant_service.create_thread()
         thread_id = thread.id
-        
+
         # Store additional metadata including the file_uploaded flag
         self.active_connections[websocket] = {
             'user_id': user_id,
@@ -191,21 +191,31 @@ async def get_converted_data(user_id: str):
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
-    
-    try:
-        while True:
+
+    while True:
+        try:
             data = await websocket.receive_json()
+            print(f"Received data: {data}")
             message = data.get("message", "")
+            print(f"Message: {message}")
             thread_id = data.get("threadId")
             use_enhanced_context = data.get("enhancedContext", False)
-            
+
             response = await assistant_service.process_message(
-                message, 
-                thread_id,
-                use_enhanced_context
+                message, thread_id, use_enhanced_context
             )
-            
+
             await websocket.send_json({"response": response})
-            
-    except WebSocketDisconnect:
-        print("Client disconnected")
+        except WebSocketDisconnect:
+            print("Client disconnected")
+            break
+        except Exception as e:
+            print(f"Error processing message: {e}")
+            traceback.print_exc()
+            try:
+                await websocket.send_json(
+                    {"error": "An error occurred while processing the message."}
+                )
+            except WebSocketDisconnect:
+                print("Client disconnected")
+                break
