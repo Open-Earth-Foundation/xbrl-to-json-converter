@@ -17,8 +17,9 @@ from arelle.SocketUtils import INTERNET_CONNECTIVITY, OFFLINE, warnSocket
 from arelle.BetaFeatures import BETA_OBJECT_MODEL_FEATURE, enableNewObjectModel
 from arelle import CntlrCmdLine, CntlrComServer
 
+
 def convert(args):
-    logger.debug("Convert called with args = " + args)
+    logger.debug("convert() called")
     internetConnectivityArgPattern = rf'--({INTERNET_CONNECTIVITY}|{INTERNET_CONNECTIVITY.lower()})'
     internetConnectivityArgRegex = re.compile(internetConnectivityArgPattern)
     internetConnectivityOfflineEqualsRegex = re.compile(f"{internetConnectivityArgPattern}={OFFLINE}")
@@ -31,8 +32,6 @@ def convert(args):
             warnSocket()
             break
         prevArg = arg
-
-    logger.debug("prevArg = " + prevArg)
     # Model transition must be enabled before any other imports to avoid mixing base classes.
     if f"--{BETA_OBJECT_MODEL_FEATURE}" in args or f"--{BETA_OBJECT_MODEL_FEATURE.lower()}" in args:
         logger.debug("Enabling new object model")
