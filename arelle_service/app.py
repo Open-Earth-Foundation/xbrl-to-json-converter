@@ -31,11 +31,11 @@ async def convert_file(file: UploadFile = File(...)):
     try:
         convert(command)
     except Exception as e:
-        print("An error occurred during conversion:", e)        
+        print("An error occurred during conversion:", e)
         os.remove(upload_path)
         os.remove(json_output_path)
         return JSONResponse(content={"error": "An error occurred during conversion"})
-        
+
     # Read the generated JSON file
     with open(json_output_path, 'r') as json_file:
         json_content = json_file.read()
@@ -49,5 +49,4 @@ async def convert_file(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-    
+    uvicorn.run(app, host="0.0.0.0", port=8001)
