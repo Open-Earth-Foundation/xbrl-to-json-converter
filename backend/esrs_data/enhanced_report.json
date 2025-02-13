@@ -13,7 +13,11 @@
         },
         "taxonomy": [
             "https://xbrl.efrag.org/taxonomy/esrs/2023-12-22/esrs_all.xsd"
-        ]
+        ],
+        "company": {
+            "name": "EOF",
+            "id": "OEF"
+        }
     },
     "facts": {
         "fact-10": {
@@ -269,7 +273,7 @@
             }
         },
         "fact-136": {
-            "value": "esrs:AdvancingPositiveImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndUsersMember",
+            "value": "esrs:TargetRelationshipToImpactsRisksAndOpportunities",
             "dimensions": {
                 "concept": "esrs:TargetRelationshipToImpactsRisksAndOpportunities",
                 "entity": "scheme:efrag",
@@ -402,7 +406,7 @@
             }
         },
         "fact-165": {
-            "value": "_0:BE",
+            "value": "PL, USA",
             "dimensions": {
                 "concept": "esrs:CountriesWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccur",
                 "entity": "scheme:efrag",
@@ -444,7 +448,7 @@
             }
         },
         "fact-1": {
-            "value": "Name of impact, risk and opportunity is Impact1 . Maecenas orci justo, congue vitae vulputate eget, egestas nec odio. Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat . Vestibulum molestie sem scelerisque sapien condimentum, eget vulputate purus euismod. Vestibulum in purus sit amet nisl pharetra egestas. Sed semper mauris eu lacus pretium imperdiet. Praesent euismod, diam vitae sagittis feugiat, velit mi commodo sapien, eu lobortis turpis nibh eget mi. Nullam ac sapien felis. Sed in nisi id tellus pharetra dictum. Pellentesque vehicula augue eget laoreet lacinia. Suspendisse laoreet sagittis est et consequat. Proin a quam quis nunc dignissim bibendum et vitae turpis. Phasellus pharetra luctus mi in ultrices. Mauris fermentum ut magna vitae fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat. Morbi eu pharetra dolor. Sed sit amet vestibulum nisl. Morbi pretium massa ex, sit amet pretium neque rutrum in. Vivamus nisl nisl, lacinia id cursus at, pharetra non felis. Nam in lorem et nibh imperdiet molestie nec id felis. Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas. Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac. Suspendisse eu diam porta, hendrerit metus eget, maximus metus. Maecenas massa libero, mollis eu pulvinar quis, sagittis vel lorem. Maecenas faucibus id neque a faucibus. Fusce viverra dolor eu nisi dignissim, in dapibus odio facilisis. Fusce tellus diam, bibendum ut sollicitudin at, congue non neque. Sed ullamcorper mi a blandit semper. Donec non libero tristique, convallis lorem eu, pulvinar augue. Cras euismod elit quis nibh porttitor posuere in sit amet ligula. Suspendisse eu libero suscipit, interdum erat a, vulputate nisl. Ut nulla nibh, condimentum ac pellentesque eget, feugiat pretium sapien. Vestibulum urna turpis, laoreet laoreet ligula et, varius ullamcorper est. Vivamus in diam egestas erat iaculis venenatis . Donec nulla massa , laoreet at interdum luctus , porttitor et neque . Pellentesque eget aliquam nunc , id imperdiet libero. Suspendisse tincidunt mi dui, ut scelerisque risus interdum ut. Sed viverra sodales urna , in venenatis felis lacinia et. Nam fermentum molestie enim , vel gravida nulla finibus sed. Nullam elit magna, accumsan at aliquet at, feugiat vestibulum nunc . Donec id cursus nisl , quis aliquam nisi. Fusce imperdiet tortor a commodo cursus. Donec auctor, lectus a euismod bibendum , mauris odio vestibulum erat , nec pulvinar nisi nunc in nisi. Donec interdum ante vitae sem suscipit venenatis . Nullam feugiat rutrum velit , ac porttitor sapien tempor sit amet . Mauris fermentum turpis id feugiat faucibus . Donec mattis mi a dapibus consectetur . Ut laoreet ante quis vulputate consectetur . Phasellus diam ex, rutrum in sem at, ornare efficitur massa.Mauris tincidunt urna et metus pulvinar rutrum",
+            "value": "Name of impact, risk and opportunity is Climate Transition. Our company is proactively managing its exposure to climate-related risks and leveraging opportunities to accelerate our energy transition. We have conducted a comprehensive materiality assessment that identifies regulatory changes, physical climate risks, and market shifts as key challenges, while innovations in renewable energy and digitalization offer significant growth potential. These findings have been integrated into our strategic planning and risk management frameworks to ensure that sustainability considerations are embedded across our business model.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfMaterialImpactsRisksAndOpportunitiesAndHowTheyInteractWithStrategyAndBusinessModelExplanatory",
                 "language": "en",
@@ -483,7 +487,7 @@
             }
         },
         "fact-3": {
-            "value": "Maecenas orci justo, congue vitae vulputate eget, egestas nec odio. Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec . Lorem ipsum dolor sit amet, consectetur adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat . Vestibulum molestie sem scelerisque sapien condimentum, eget vulputate purus euismod. Vestibulum in purus sit amet nisl pharetra egestas. Sed semper mauris eu lacus pretium imperdiet. Praesent euismod, diam vitae sagittis feugiat, velit mi commodo sapien, eu lobortis turpis nibh eget mi. Nullam ac sapien felis. Sed in nisi id tellus pharetra dictum. Pellentesque vehicula augue eget laoreet lacinia. Suspendisse laoreet sagittis est et consequat. Proin a quam quis nunc dignissim bibendum et vitae turpis. Phasellus pharetra luctus mi in ultrices. Mauris fermentum ut magna vitae fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat. Morbi eu pharetra dolor. Sed sit amet vestibulum nisl. Morbi pretium massa ex, sit amet pretium neque rutrum in. Vivamus nisl nisl, lacinia id cursus at, pharetra non felis. Nam in lorem et nibh imperdiet molestie nec id felis. Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas. Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac.",
+            "value": "Impact1: Our materiality assessment has revealed that climate-related risks and opportunities are predominantly concentrated within our energy-intensive operations and across our supply chain. Key impacts include regulatory compliance challenges, physical risks from extreme weather, and significant opportunities in renewable energy and resource efficiency. These findings have prompted strategic adjustments—such as enhanced investment in sustainable technologies, process optimization, and proactive stakeholder engagement—to bolster our resilience and drive long-term value creation. The assessment also highlights the need to continuously monitor these impacts, ensuring that our business model adapts effectively to evolving environmental and market conditions.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfMaterialImpactsResultingFromMaterialityAssessmentExplanatory",
                 "language": "en",
@@ -556,7 +560,7 @@
             }
         },
         "fact-5": {
-            "value": "Suspendisse varius rutrum sagittis . Suspendisse commodo dignissim magna, a interdum massa vestibulum in. Quisque dictum convallis tellus non euismod . Morbi placerat nisi magna, id pulvinar nisi consequat nec",
+            "value": "Impact2: Sustainable Stakeholder Engagement. Our strategic approach embeds sustainability into all aspects of our operations—ensuring that our workforce, value chain workers, local communities, and consumers benefit from our initiatives. We prioritize employee well-being and ethical labor practices, actively support community development, and emphasize product safety and transparency to build lasting trust. This integrated strategy not only fosters resilience across our value chain but also drives long-term competitive advantage.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOriginateFromOrAreConnectedToStrategyAndBusinessModelsExplanatory",
                 "language": "en",
@@ -641,13 +645,13 @@
             }
         },
         "fact-7": {
-            "value": "Duis ultricies at sem sit amet tristique . Duis eget commodo lorem. Vestibulum consectetur massa sed ante vestibulum, eu luctus massa iaculis . Donec ac pharetra quam . Fusce ultrices placerat enim , quis vehicula sem dapibus at. Integer imperdiet enim in diam scelerisque iaculis . Curabitur vitae diam velit . Phasellus egestas sem sit amet dapibus volutpat",
+            "value": "Impact3: Integrating Stakeholder Impact Insights for Strategic Adaptation. Our continuous sustainability assessments reveal that both actual and potential impacts on our workforce, value chain workers, affected communities, and consumers play a pivotal role in shaping our business strategy. Feedback from employee engagement, supplier collaboration, and community outreach initiatives has led us to refine training programs, optimize operational processes, and enhance product safety and transparency. These insights inform our decision-making processes, ensuring that our strategy and business model are continually adapted to mitigate risks and seize emerging opportunities.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModelExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact3"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModelExplanatory",
@@ -726,13 +730,13 @@
             }
         },
         "fact-9": {
-            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nibh lacus, rutrum vitae sapien sed, ultricies condimentum erat. Pellentesque pellentesque lorem arcu, sed pretium tortor semper in. Vivamus aliquam velit purus, nec malesuada metus rutrum non. Aliquam neque massa, pharetra sit amet leo id, interdum convallis tortor. Nullam finibus finibus tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pulvinar felis ac tortor egestas, at pharetra arcu cursus. Quisque eget tellus enim. Nullam tellus ipsum, cursus sed aliquet id, vestibulum quis arcu. Etiam in mi egestas, rhoncus elit eu, auctor massa. Phasellus eget tempor massa. Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla . Aliquam erat volutpat.",
+            "value": "Impact4: Our materiality assessment has identified a diverse range of stakeholders who are subject to material impacts. In our own workforce, this includes full-time employees, self-employed individuals, and workers provided by third-party organizations, all of whom are monitored for both potential risks—such as exposure to unsafe conditions—and opportunities for upskilling and career development. Similarly, in our value chain, workers in extraction, manufacturing, logistics, and distribution are evaluated for adverse impacts, including those related to forced or child labor, as well as for positive outcomes like improved working conditions through capacity-building initiatives. Furthermore, affected communities—whether those living near our operational sites or those connected to our supply network—are assessed for socio-economic and environmental impacts, while consumers and end-users are considered in terms of product safety, information accessibility, and overall impact on quality of life. This comprehensive mapping informs our strategy to mitigate risks and enhance positive impacts throughout our entire value chain.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersSubjectToMaterialImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact4"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DescriptionOfTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersSubjectToMaterialImpactsExplanatory",
@@ -774,7 +778,7 @@
                 "concept": "esrs:UnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDeveloped",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact5"
             },
             "esrs_data_reference": {
                 "concept": "esrs:UnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDeveloped",
@@ -793,13 +797,13 @@
             }
         },
         "fact-12": {
-            "value": "Pellentesque vitae porta sem , non maximus lorem. Nullam cursus justo accumsan mi volutpat volutpat . Vestibulum vitae pharetra ligula. Fusce in nisl at odio venenatis maximus. Donec posuere tincidunt ex, ac ultricies ligula. Donec at lorem turpis . Integer eget est blandit , tincidunt est et, porta nulla",
+            "value": "Impact5: Enhanced Understanding of Consumer Vulnerability. Through our comprehensive materiality assessment, we have identified that certain groups of consumers and end‐users—such as the elderly, children, and individuals with preexisting conditions—may be at a greater risk of harm from specific products or services. In response, we have developed targeted measures including improved product safety standards, clear and accessible labeling, and dedicated consumer education initiatives. These actions are integrated into our overall strategy to ensure that our offerings are both safe and beneficial, thereby mitigating risks and enhancing positive outcomes.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfHowUnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDevelopedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact5"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DisclosureOfHowUnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDevelopedExplanatory",
@@ -818,13 +822,13 @@
             }
         },
         "fact-14": {
-            "value": "Donec nisl augue, placerat luctus tortor ac, interdum maximus eros. Nulla dictum finibus ipsum, non tristique sem imperdiet sed. Integer consectetur aliquet ante ac maximus. Maecenas ac ante ut elit sodales viverra et eget mauris. Curabitur pellentesque, velit nec lobortis tempor, eros arcu tristique massa, a fermentum odio lectus a mauris. Aenean ac vehicula arcu. Suspendisse eu bibendum nibh, sollicitudin blandit elit. Sed vitae erat volutpat nibh porttitor egestas.",
+            "value": "Impact7: Positive Impact Initiatives. Our operations implement targeted activities that generate positive outcomes for our workforce, value chain workers, affected communities, and consumers. Key initiatives include comprehensive training programs, health and safety enhancements, and community development projects that drive job creation and upskilling. These actions not only improve working conditions but also foster innovation and long-term resilience across our value chain, thereby contributing to sustainable growth and stakeholder well-being.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfActivitiesThatResultInPositiveImpactsAndTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersThatArePositivelyAffectedOrCouldBePositivelyAffectedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact7"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DescriptionOfActivitiesThatResultInPositiveImpactsAndTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersThatArePositivelyAffectedOrCouldBePositivelyAffectedExplanatory",
@@ -861,13 +865,13 @@
             }
         },
         "fact-15": {
-            "value": "Aliquam eros libero, sagittis a eleifend quis, rutrum ac neque. Suspendisse cursus auctor nisi, vitae cursus mauris dictum et. Nam sed nisl vitae mi commodo ornare a non ante. Praesent sed lacinia nunc . Praesent posuere , sapien vitae efficitur finibus , eros nibh consequat enim , ut elementum libero magna sit amet purus . Fusce vel congue neque . Fusce non blandit elit , et tempor turpis . Pellentesque vitae accumsan nunc , eget dapibus odio . Nullam lacinia aliquam rutrum . Ut venenatis semper lorem, sed vulputate lectus tristique sit amet . Duis ac tortor rhoncus eros vulputate viverra luctus id risus. Nam imperdiet orci nulla, eget elementum enim hendrerit ac.",
+            "value": "Impact11: Region-Specific Positive Outcomes. Our targeted sustainability initiatives have yielded significant positive impacts in specific regions, particularly in emerging markets. Localized capacity-building programs, enhanced labor standards, and community development projects have contributed to increased employment opportunities and improved working conditions. By tailoring our efforts to the unique needs of these regions, we are able to drive socio-economic upliftment and ensure that our sustainability strategy creates lasting value where it is needed most.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfSpecificCountriesOrRegionsWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccurExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
                 "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
+                "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact11"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DisclosureOfSpecificCountriesOrRegionsWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccurExplanatory",
@@ -904,7 +908,7 @@
             }
         },
         "fact-16": {
-            "value": "We identified a potential risk regarding data misuse in our supply chain, especially where sensitive user information is transferred to third-party partners. Additionally, we see an opportunity to differentiate our products by offering stronger data protections, thus increasing user trust and satisfaction.",
+            "value": "We identified a potential risk regarding data misuse in our supply chain, which can negatively affect user privacy and trust (impact materiality) as well as expose us to regulatory fines, legal costs, and lost revenue (financial materiality). We also see an opportunity to differentiate our products through stronger data protections, building user trust and reducing potential financial liabilities.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfMaterialRisksAndOrOpportunitiesResultingFromMaterialityAssessmentExplanatory",
                 "language": "en",
@@ -953,7 +957,7 @@
             }
         },
         "fact-18": {
-            "value": "These risks and opportunities directly inform our strategy, as any breach or data mishandling event could harm our brand. Conversely, proactively protecting users and engaging with local data authorities can strengthen our market position and align us with emerging global privacy standards.",
+            "value": "These risks and opportunities inform our strategy from both a social impact angle (maintaining user privacy and trust) and a financial perspective (reducing potential legal, operational, and reputational costs). By safeguarding user data, we reduce negative social impacts on privacy while also mitigating possible financial liabilities and leveraging brand differentiation.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfRelationshipBetweenMaterialRisksAndOpportunitiesArisingFromImpactsAndOrDependenciesOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndStrategyAndBusinessModelExplanatory",
                 "language": "en",
@@ -1456,7 +1460,7 @@
             }
         },
         "fact-35": {
-            "value": "Overall accountability sits with our Chief Privacy Officer, who reports quarterly to the Board’s Sustainability Committee, ensuring any identified policy gaps are promptly addressed.",
+            "value": "Overall accountability sits with our Chief Privacy Officer, who reports quarterly to the Board’s Sustainability Committee. The Committee includes representatives from Legal, Compliance, R&D, and CSR teams to oversee sustainability impacts, risks, and opportunities. This structure clarifies roles, ensures cross-functional awareness, and strengthens board-level accountability for data privacy and broader ESG matters.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfMostSeniorLevelInOrganisationThatIsAccountableForImplementationOfPolicyExplanatory",
                 "language": "en",
@@ -2530,7 +2534,7 @@
             }
         },
         "fact-73": {
-            "value": "Our current plan focuses on ensuring negative impacts (e.g., data misuse) are mitigated through immediate response protocols, while also amplifying positive impacts (e.g., inclusive product design). This action plan’s effectiveness is gauged by user satisfaction metrics and decreased complaint rates.",
+            "value": "Our current plan focuses on mitigating negative impacts (e.g., data misuse) while strengthening resilience to systemic risks such as large-scale cyberattacks or major regulatory shifts. We run annual scenario analyses to test our capacity to sustain operations, protect user data centers under extreme conditions, and maintain continuity. Effectiveness is measured by incident response completion times, user satisfaction metrics, and decreased complaint rates.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfHowActionIsTakenToAddressMaterialNegativeAndPositiveImpactsAndToManageMaterialRisksAndPursueMaterialOpportunitiesRelatedToOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndEffectivenessOfThoseActionsExplanatory",
                 "language": "en",
@@ -3552,7 +3556,7 @@
             }
         },
         "fact-111": {
-            "value": "Within our own operations, we introduced encryption standards for employee devices and internal product repositories.",
+            "value": "Within our upstream operations, we conduct quarterly audits and require mandatory compliance training to ensure suppliers meet our data privacy protocols. We also introduced enterprise-wide encryption standards for employee devices and internal product repositories.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfScopeOfKeyActionInOwnOperationsExplanatory",
                 "language": "en",
@@ -3567,7 +3571,7 @@
             }
         },
         "fact-112": {
-            "value": "In the downstream chain, we require distributors to adopt our encryption protocols to ensure end-user data remains consistently protected.",
+            "value": "In our downstream operations, we ensure distributors adopt our encryption protocols and data-handling policies. We conduct semiannual compliance checks to verify that all downstream partners maintain consistent user data protections across each region where our products and services operate.",
             "dimensions": {
                 "concept": "esrs:DescriptionOfScopeOfKeyActionInUpstreamAndOrDownstreamValueChainExplanatory",
                 "language": "en",
@@ -4042,7 +4046,7 @@
             }
         },
         "fact-122": {
-            "value": "We have set a timebound target to reduce confirmed data incidents by 50% within two years, aiming for tangible, outcome-oriented progress.",
+            "value": "We have set a timebound target to reduce confirmed data incidents by 50% within two years, incorporating forward-looking scenario analyses of stricter data regulations and evolving cyber risks. This ensures our target remains outcome-oriented, comprehensive, and aligned with future conditions.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfTimeboundAndOutcomeOrientedTargetsRelatedToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
@@ -4396,7 +4400,7 @@
             }
         },
         "fact-147": {
-            "value": "2050",
+            "value": "2050 (including scenario analyses)",
             "dimensions": {
                 "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
                 "entity": "scheme:efrag",
@@ -4533,111 +4537,6 @@
                         "tag": "ESRS 2 80",
                         "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
                         "reference": "ESRS 2 80 j MDR-T"
-                    }
-                ]
-            }
-        },
-        "fact-154": {
-            "value": "We expect enhanced encryption and user-education campaigns to drive safer online behavior, improving both workforce and consumer data outcomes.",
-            "dimensions": {
-                "concept": "esrs:DisclosureOfIntendedOutcomesToBeAchievedInLivesOfPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
-            },
-            "esrs_data_reference": {
-                "concept": "esrs:DisclosureOfIntendedOutcomesToBeAchievedInLivesOfPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-401050",
-                    "definition": "[401050] S1-5 Targets related to managing material negative impacts, advancing positive impacts, and managing material risks and opportunities"
-                },
-                "parsed_references": [
-                    {
-                        "message": "Tag not found in ESRS S4 (or no text for 'AR 42 a S4-5')",
-                        "reference": "ESRS S4 AR 42 a S4-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S1 (or no text for 'AR 49 a S1-5')",
-                        "reference": "ESRS S1 AR 49 a S1-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S2 (or no text for 'AR 45 a S2-5')",
-                        "reference": "ESRS S2 AR 45 a S2-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S3 (or no text for 'AR 44 a S3-5')",
-                        "reference": "ESRS S3 AR 44 a S3-5"
-                    }
-                ]
-            }
-        },
-        "fact-155": {
-            "value": "Our target definitions remain the same each period to enable clear year-over-year comparability, but we continue refining data sources for greater accuracy.",
-            "dimensions": {
-                "concept": "esrs:DisclosureOfStabilityOfTargetOverTimeInTermsOfDefinitionsAndMethodologiesToEnableComparabilityExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
-            },
-            "esrs_data_reference": {
-                "concept": "esrs:DisclosureOfStabilityOfTargetOverTimeInTermsOfDefinitionsAndMethodologiesToEnableComparabilityExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-401050",
-                    "definition": "[401050] S1-5 Targets related to managing material negative impacts, advancing positive impacts, and managing material risks and opportunities"
-                },
-                "parsed_references": [
-                    {
-                        "message": "Tag not found in ESRS S4 (or no text for 'AR 42 b S4-5')",
-                        "reference": "ESRS S4 AR 42 b S4-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S2 (or no text for 'AR 45 b S2-5')",
-                        "reference": "ESRS S2 AR 45 b S2-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S3 (or no text for 'AR 44 b S3-5')",
-                        "reference": "ESRS S3 AR 44 b S3-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S1 (or no text for 'AR 49 b S1-5')",
-                        "reference": "ESRS S1 AR 49 b S1-5"
-                    }
-                ]
-            }
-        },
-        "fact-156": {
-            "value": "We are guided by GDPR standards and recognized industry benchmarks, ensuring external validity for our data-privacy targets and performance thresholds.",
-            "dimensions": {
-                "concept": "esrs:DisclosureOfStandardsOrCommitmentsOnWhichTargetIsBasedExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
-            },
-            "esrs_data_reference": {
-                "concept": "esrs:DisclosureOfStandardsOrCommitmentsOnWhichTargetIsBasedExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-401050",
-                    "definition": "[401050] S1-5 Targets related to managing material negative impacts, advancing positive impacts, and managing material risks and opportunities"
-                },
-                "parsed_references": [
-                    {
-                        "message": "Tag not found in ESRS S4 (or no text for 'AR 42 c S4-5')",
-                        "reference": "ESRS S4 AR 42 c S4-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S2 (or no text for 'AR 45 c S2-5')",
-                        "reference": "ESRS S2 AR 45 c S2-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S3 (or no text for 'AR 44 c S3-5')",
-                        "reference": "ESRS S3 AR 44 c S3-5"
-                    },
-                    {
-                        "message": "Tag not found in ESRS S1 (or no text for 'AR 49 c S1-5')",
-                        "reference": "ESRS S1 AR 49 c S1-5"
                     }
                 ]
             }
