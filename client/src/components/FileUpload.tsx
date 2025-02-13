@@ -10,19 +10,19 @@ export default function FileUpload() {
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length) return;
-    
+
     setFile(e.target.files[0]);
     setLoading(true);
 
     try {
       const data = await api.upload(e.target.files[0]);
       localStorage.setItem('userId', data.user_id);
-      
+
       toast({
         title: "Success",
         description: "File uploaded successfully!",
         duration: 3000,
-        
+
       });
     } catch (err) {
       toast({
@@ -42,7 +42,7 @@ export default function FileUpload() {
         <input
           type="file"
           onChange={handleFileUpload}
-          accept=".xml,.xbrl"
+          accept=".xml,.xbrl,.zip"
           className="block w-full text-sm text-gray-500
             file:mr-4 file:py-2 file:px-4
             file:rounded-full file:border-0
