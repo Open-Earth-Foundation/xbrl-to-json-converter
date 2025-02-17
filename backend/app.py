@@ -16,10 +16,14 @@ import json
 import asyncio
 import threading
 import queue
+import logging
 
 from chat_service import AssistantService
 
 app = FastAPI()
+
+# Add these lines at the top after imports
+logging.getLogger("multipart.multipart").setLevel(logging.WARNING)
 
 # CORS
 cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000')
@@ -129,25 +133,37 @@ class ConnectionManager:
 
     async def process_message(self, websocket: WebSocket, message: str):
         """
-        Process a message from the websocket
+        Process a message from the websocket.
+        If mode is 'preloaded', use the preloaded thread.
+        If mode is 'user_json' (or similar), use the file_search thread.
         """
-        info = self.active_connections[websocket]
-        current_mode = info['mode']
-        
         try:
+            info = self.active_connections[websocket]
+            current_mode = info['mode']
+            print(f"Processing message in mode: {current_mode}")
+            
             if current_mode == "preloaded":
-                thread_id = info['preloaded_thread_id']  # Match the key from connect
-                response = await self.assistant_service.send_message(message, thread_id)
-            elif current_mode == "user_json":
-                thread_id = info['file_search_thread_id']  # Match the key from connect
-                response = await self.assistant_service.send_message(message, thread_id)
+                thread_id = info['preloaded_thread_id']
+                print(f"Using preloaded thread: {thread_id}")
+                response = await self.assistant_service.send_message(message, thread_id, mode="preloaded")
+            elif current_mode in ["user_json", "converted_xbrl"]:
+                thread_id = info['file_search_thread_id']
+                print(f"Using file search thread: {thread_id} with mode: {current_mode}")
+                response = await self.assistant_service.send_message(message, thread_id, mode=current_mode)
             else:
                 response = "Error: Invalid mode"
             
+            if not response:
+                print("Warning: Empty response received")
+                response = "No response received from assistant"
+            
+            print(f"Final response to send: {response[:100]}...")
             return response
         except Exception as e:
             print(f"Error in process_message: {e}")
+            traceback.print_exc()
             return f"Error processing message: {str(e)}"
+
 
 
 assistant_service = AssistantService()
