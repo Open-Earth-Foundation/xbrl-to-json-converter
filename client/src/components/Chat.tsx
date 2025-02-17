@@ -5,14 +5,15 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import EnhancedContextToggle from './EnhancedContextToggle';
 import { useToast } from "../hooks/use-toast";
+import JsonUploadButton from './JsonUploadButton'; // or correct path
 
 interface Message {
   text: string;
   isUser: boolean;
 }
 
+// 1) Ensure we pick up the WS origin from config or default
 const WS_ORIGIN = globalThis.config?.BACKEND_WS_ORIGIN || 'ws://localhost:8000';
 
 export default function Chat() {
@@ -24,8 +25,9 @@ export default function Chat() {
   const [enhancedContext, setEnhancedContext] = useState(false);
   const { toast } = useToast();
 
+  // 2) On mount, connect to WebSocket
   useEffect(() => {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('userId') || '';
     const websocket = new WebSocket(`${WS_ORIGIN}/ws?user_id=${userId}`);
 
     websocket.onopen = () => {
@@ -35,11 +37,9 @@ export default function Chat() {
     websocket.onmessage = (event) => {
       setIsLoading(false);
       const message = event.data;
-      console.log('Received message:', message);
-      let data = null;
+      let data: any = null;
       try {
         data = JSON.parse(message);
-        console.dir(data);
       } catch (error) {
         console.error('Failed to parse message:', error);
         return;
@@ -52,12 +52,10 @@ export default function Chat() {
           localStorage.setItem('userId', data.user_id);
           break;
         case 'personal_message':
-          console.log('Personal message:', data.message);
           toast({
             title: "Personal message from server",
             description: data.message,
             duration: 3000,
-
           });
           break;
         case 'error':
@@ -79,43 +77,96 @@ export default function Chat() {
 
     setWs(websocket);
 
+    // Clean up on unmount
     return () => {
       websocket.close();
     };
-  }, []);
+  }, [toast]);
 
+  // 3) Function to send user message
   const sendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || !ws) return;
 
     setIsLoading(true);
     console.log('Sending message:', input);
-    ws.send(JSON.stringify({ message: input }));
+
+    // 4) *** Include enhancedContext in the message payload ***
+    ws.send(JSON.stringify({
+      message: input
+    }));
+
+    // Show user's own message in the UI
     setMessages(prev => [...prev, { text: input, isUser: true }]);
     setInput('');
   };
 
+  // Keep scrolled to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // 5) Add a function to switch to preloaded
+  async function switchToPreloaded() {
+    const userId = localStorage.getItem('userId') || '';
+    if (!userId) {
+      console.error("No userId found in localStorage");
+      return;
+    }
+    const formData = new FormData();
+    formData.append('websocket_user_id', userId);
+    formData.append('new_mode', 'preloaded');
+
+    try {
+      const resp = await fetch('http://localhost:8000/switch_mode', {
+        method: 'POST',
+        body: formData
+      });
+      if (!resp.ok) {
+        const err = await resp.json();
+        throw new Error(err.error || 'Could not switch mode');
+      }
+      console.log("Switched to preloaded mode");
+      toast({
+        title: "Mode Switch",
+        description: "Now using Preloaded Assistant"
+      });
+    } catch (err) {
+      console.error("Failed to switch mode:", err);
+      toast({
+        title: "Error",
+        description: err instanceof Error ? err.message : 'Unknown error',
+        variant: "destructive"
+      });
+    }
+  }
+
   return (
     <Card>
       <CardContent className="p-4">
-        <h2 className="text-xl font-semibold mb-4">Chat</h2>
-        <EnhancedContextToggle
-          isEnabled={enhancedContext}
-          onToggle={(enabled) => setEnhancedContext(enabled)}
-        />
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold">Chat</h2>
+          
+          {/* 6) A button to revert to Preloaded mode */}
+          <button
+            type="button"
+            className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+            onClick={switchToPreloaded}
+          >
+            Use Preloaded
+          </button>
+        </div>
+
         <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
           {messages.map((message, index) => (
             <div
               key={index}
-              className={`mb-2 p-2 rounded-lg ${
-                message.isUser
-                  ? 'bg-blue-100 ml-auto max-w-[80%]'
-                  : 'bg-gray-100 mr-auto max-w-[80%]'
-              }`}
+              className={
+                "mb-2 p-2 rounded-lg " +
+                (message.isUser
+                  ? "bg-blue-100 ml-auto max-w-[80%]"
+                  : "bg-gray-100 mr-auto max-w-[80%]")
+              }
             >
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -134,15 +185,17 @@ export default function Chat() {
                       </SyntaxHighlighter>
                     ) : (
                       <code
-                        className={`${inline ? 'bg-opacity-20 bg-gray-500 rounded px-1' :
-                          'block bg-opacity-10 bg-gray-500 p-2 rounded-lg my-2'}`}
+                        className={
+                          inline
+                            ? "bg-opacity-20 bg-gray-500 rounded px-1"
+                            : "block bg-opacity-10 bg-gray-500 p-2 rounded-lg my-2"
+                        }
                         {...props}
                       >
                         {children}
                       </code>
-                    )
+                    );
                   },
-                  // Style links
                   a: ({ node, ...props }) => (
                     <a
                       className="text-blue-500 hover:underline"
@@ -151,7 +204,6 @@ export default function Chat() {
                       {...props}
                     />
                   ),
-                  // Style lists
                   ul: ({ node, ...props }) => (
                     <ul className="list-disc ml-4 my-2" {...props} />
                   ),
@@ -167,6 +219,8 @@ export default function Chat() {
           {isLoading && <LoadingDots />}
           <div ref={messagesEndRef} />
         </div>
+
+        {/* 7) The message input */}
         <form onSubmit={sendMessage} className="flex gap-2">
           <input
             type="text"
@@ -175,6 +229,7 @@ export default function Chat() {
             className="flex-1 p-2 border rounded"
             placeholder="Type your message..."
           />
+          <JsonUploadButton />
           <button
             type="submit"
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"

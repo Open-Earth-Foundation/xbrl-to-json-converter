@@ -4540,6 +4540,281 @@
                     }
                 ]
             }
+        },
+        "fact-200": {
+    "value": "400000", 
+    "dimensions": {
+      "concept": "esrs:GrossScope1GHGEmissions",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GrossScope1GHGEmissions",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+        "definition": "[410044] E1-5 GHG Emissions"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 44",
+          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (a) gross Scope 1 GHG emissions...",
+          "reference": "ESRS E1 44 (a)"
         }
+      ]
+    }
+  },
+
+  "fact-201": {
+    "value": "340000", 
+    "dimensions": {
+      "concept": "esrs:GrossScope2GHGEmissions",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GrossScope2GHGEmissions",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+        "definition": "[410044] E1-5 GHG Emissions"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 44",
+          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (b) gross Scope 2 GHG emissions...",
+          "reference": "ESRS E1 44 (b)"
+        },
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 49",
+          "text": "The disclosure on gross Scope 2 GHG emissions required by paragraph 44 (b) shall include both location-based and market-based emissions.",
+          "reference": "ESRS E1 49"
+        }
+      ]
+    }
+  },
+
+  "fact-202": {
+    "value": "1250000",
+    "dimensions": {
+      "concept": "esrs:GrossScope3GHGEmissions",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GrossScope3GHGEmissions",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+        "definition": "[410044] E1-5 GHG Emissions"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 44",
+          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (c) gross Scope 3 GHG emissions...",
+          "reference": "ESRS E1 44 (c)"
+        },
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 51",
+          "text": "The disclosure of gross Scope 3 GHG emissions shall include each significant Scope 3 category.",
+          "reference": "ESRS E1 51"
+        }
+      ]
+    }
+  },
+
+  "fact-203": {
+    "value": "1990000",
+    "dimensions": {
+      "concept": "esrs:TotalGHGEmissions",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:TotalGHGEmissions",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+        "definition": "[410044] E1-5 GHG Emissions"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 44",
+          "text": "The undertaking shall disclose its total GHG emissions in metric tonnes of CO2eq...",
+          "reference": "ESRS E1 44 (d)"
+        },
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 52",
+          "text": "The total GHG emissions shall be the sum of Scope 1, 2, and 3 GHG emissions and disaggregated for location-based and market-based Scope 2...",
+          "reference": "ESRS E1 52"
+        }
+      ]
+    }
+  },
+
+  "fact-204": {
+    "value": "1.9",
+    "dimensions": {
+      "concept": "esrs:GHGEmissionsIntensity",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "unit": "Other_per_million_EUR_revenue"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GHGEmissionsIntensity",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410053",
+        "definition": "[410053] E1-6 GHG Emission Intensity"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 53",
+          "text": "The undertaking shall disclose its GHG emissions intensity (total GHG emissions per net revenue).",
+          "reference": "ESRS E1 53"
+        }
+      ]
+    }
+  },
+
+  "fact-205": {
+    "value": "true",
+    "dimensions": {
+      "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+        "definition": "[410060] E1-7 GHG Targets"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 34",
+          "text": "If the undertaking has set GHG emission reduction targets, it shall disclose them in absolute and/or intensity value...",
+          "reference": "ESRS E1 34"
+        }
+      ]
+    }
+  },
+
+  "fact-206": {
+    "value": "2.5",
+    "dimensions": {
+      "concept": "esrs:GHGEmissionReductionTargetShortTerm",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2027-01-01T00:00:00/2030-01-01T00:00:00", 
+      "unit": "Percentage"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:GHGEmissionReductionTargetShortTerm",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+        "definition": "[410060] E1-7 GHG Targets"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 34",
+          "text": "GHG emission reduction targets shall at least include 2030 and, if available, 2050, updated every 5-year period...",
+          "reference": "ESRS E1 34 (d)"
+        }
+      ]
+    }
+  },
+
+  "fact-207": {
+    "value": "5000000",
+    "dimensions": {
+      "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "unit": "MWh"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410035",
+        "definition": "[410035] E1-3 Energy Consumption"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 35",
+          "text": "The undertaking shall provide information on its energy consumption...",
+          "reference": "ESRS E1 35"
+        },
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 37",
+          "text": "Disclosure shall include total energy consumption in MWh from fossil, nuclear, and renewable sources...",
+          "reference": "ESRS E1 37"
+        }
+      ]
+    }
+  },
+
+  "fact-208": {
+    "value": "45.0",
+    "dimensions": {
+      "concept": "esrs:ProportionOfRenewableEnergyUsed",
+      "language": "en",
+      "entity": "scheme:efrag",
+      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "unit": "Percentage"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:ProportionOfRenewableEnergyUsed",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410035",
+        "definition": "[410035] E1-3 Energy Consumption"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 35",
+          "text": "The undertaking shall provide information on its energy consumption and mix...",
+          "reference": "ESRS E1 35"
+        }
+      ]
+    }
+  },
+
+  "fact-209": {
+    "value": "true",
+    "dimensions": {
+      "concept": "esrs:NetZeroTargetHasBeenSet",
+      "entity": "scheme:efrag",
+      "period": "2027-01-01T00:00:00/2050-01-01T00:00:00"
+    },
+    "esrs_data_reference": {
+      "concept": "esrs:NetZeroTargetHasBeenSet",
+      "concept_group": {
+        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+        "definition": "[410060] E1-7 GHG Targets"
+      },
+      "parsed_references": [
+        {
+          "document": "ESRS E1",
+          "tag": "ESRS E1 60",
+          "text": "In the case where the undertaking discloses a net-zero target in addition to the gross GHG emission reduction targets...",
+          "reference": "ESRS E1 60"
+        }
+      ]
+    }
+  }
     }
 }
