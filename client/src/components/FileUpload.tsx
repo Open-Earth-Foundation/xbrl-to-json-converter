@@ -15,14 +15,24 @@ export default function FileUpload() {
     setLoading(true);
 
     try {
-      const data = await api.upload(e.target.files[0]);
-      localStorage.setItem('userId', data.user_id);
+      // CHANGED: get userId from localStorage or fallback
+      const userId = localStorage.getItem('userId') || '';
+      if (!userId) {
+        toast({
+          title: "Warning",
+          description: "No user ID found in localStorage; please open chat first or generate one",
+        });
+      }
+
+      const data = await api.upload(e.target.files[0], userId);  // <-- pass userId
+      // If needed, you could refresh localStorage userId. 
+      // But we are no longer updating userId with data.user_id, because the server doesn't generate it.
+      // localStorage.setItem('userId', data.user_id);
 
       toast({
         title: "Success",
-        description: "File uploaded successfully!",
+        description: "XBRL File uploaded & converted successfully!",
         duration: 3000,
-
       });
     } catch (err) {
       toast({
