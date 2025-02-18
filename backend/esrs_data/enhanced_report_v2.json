@@ -4276,545 +4276,531 @@
             }
         },
         "fact-135": {
-            "value": "That policy is our formal Data Protection & User Privacy Policy (Policy1).",
+            "value": "We have implemented the robust Privacy & Data Security Policy (PDS-Delta) to safeguard user information.",
             "dimensions": {
-                "concept": "esrs:NamesOfRelatedPolicies",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:NamesOfRelatedPolicies",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:NamesOfRelatedPolicies",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:NamesOfRelatedPolicies",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-138": {
-            "value": "Meeting this target helps fulfill Policy1 objectives, ensuring minimized data misuse and greater consumer confidence.",
+            "value": "This target under PDS-Delta drives our commitment to secure data practices and builds robust consumer confidence.",
             "dimensions": {
-                "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-140": {
-            "value": "0.20",
+            "value": "0.2500",
             "decimals": 4,
             "dimensions": {
-                "concept": "esrs:MeasurableTargetPercentage",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:MeasurableTargetPercentage",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:MeasurableTargetPercentage",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 b MDR-T"
-                    }
-                ]
+            "concept": "esrs:MeasurableTargetPercentage",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets ...",
+                "reference": "ESRS 2 80 b MDR-T"
+                }
+            ]
             }
         },
         "fact-144": {
-            "value": "This target covers both internal teams and external vendors, ensuring consistent data handling across the entire value chain.",
+            "value": "The scope of this target spans our internal units and external collaborators, driving consistent data management across all touchpoints.",
             "dimensions": {
-                "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 c MDR-T"
-                    }
-                ]
+            "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. ... (c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain...",
+                "reference": "ESRS 2 80 c MDR-T"
+                }
+            ]
             }
         },
         "fact-145": {
-            "value": "2026",
+            "value": "2024",
             "dimensions": {
-                "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 81",
-                        "text": "81. If the undertaking has not set any measurable outcome-oriented targets:\n(a) it may disclose whether such targets will be set and the timeframe for setting them, or the reasons why the undertaking does not plan to set such targets;\n(b) it shall disclose whether it nevertheless tracks the effectiveness of its policies and actions in relation to the material sustainability-related impact, risk and opportunity, and if so:\ni. any processes through which it does so;\nii. the defined level of ambition to be achieved and any qualitative or quantitative indicators it uses to evaluate progress, including the base period from which progress is measured.",
-                        "reference": "ESRS 2 81 b ii MDR-T"
-                    },
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 d MDR-T"
-                    }
-                ]
+            "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 81",
+                "text": "81. ... (d) the baseline value and base year from which progress is measured;",
+                "reference": "ESRS 2 81 b ii MDR-T"
+                }
+            ]
             }
         },
         "fact-146": {
-            "value": "2025",
+            "value": "2023",
             "dimensions": {
-                "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-147": {
-            "value": "2050 (including scenario analyses)",
+            "value": "2060 (scenario analysis incorporated)",
             "dimensions": {
-                "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "Target1"
+            "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-148": {
-            "value": "We rely on incident rates, third-party audits, and user feedback to shape assumptions for target feasibility and progress measurement.",
+            "value": "We integrate operational incident data, external evaluations, and stakeholder surveys to continuously adjust our target assumptions.",
             "dimensions": {
-                "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 f MDR-T"
-                    }
-                ]
+            "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. ... (f) the methodologies and significant assumptions used to define targets ...",
+                "reference": "ESRS 2 80 f MDR-T"
+                }
+            ]
             }
         },
         "fact-149": {
-            "value": "true",
+            "value": "false",
             "dimensions": {
-                "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-150": {
-            "value": "We sought direct input from employees and consumer advocacy groups, ensuring that final metrics reflect the realities on the ground.",
+            "value": "We engaged extensively with community representatives and consumer organizations to align our metrics with ground realities.",
             "dimensions": {
-                "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
-                "concept_group": null,
-                "parsed_references": null
+            "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
+            "concept_group": null,
+            "parsed_references": null
             }
         },
         "fact-151": {
-            "value": "We refined data-collection methodologies to unify internal and supplier incident reporting, providing more accurate, consistent metrics over time.",
+            "value": "We have streamlined our incident reporting systems across departments and suppliers to enhance the reliability of our performance metrics.",
             "dimensions": {
-                "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 i MDR-T"
-                    }
-                ]
+            "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. ... (i) any changes in targets and corresponding metrics or underlying measurement methodologies ...",
+                "reference": "ESRS 2 80 i MDR-T"
+                }
+            ]
             }
         },
         "fact-152": {
-            "value": "Currently, we are on track to cut incident rates by 10% compared to the baseline, meeting our interim targets and validating our remediation approach.",
+            "value": "We are achieving an 8% reduction in incident rates relative to our baseline, which aligns with our interim goals and supports our ongoing improvement efforts.",
             "dimensions": {
-                "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
-                "language": "en",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 j MDR-T"
-                    }
-                ]
+            "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. ... (j) the performance against its disclosed targets, including ...",
+                "reference": "ESRS 2 80 j MDR-T"
+                }
+            ]
             }
         },
         "fact-153": {
             "value": "true",
             "dimensions": {
-                "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
-                "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-                "esrs:IdentifierOfTargetTypedAxis": "1"
+            "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
-                "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
-                "concept_group": {
-                    "role": "https://xbrl.efrag.org/taxonomy/role-201410",
-                    "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
-                },
-                "parsed_references": [
-                    {
-                        "document": "ESRS 2",
-                        "tag": "ESRS 2 80",
-                        "text": "80. The undertaking shall disclose the measurable, outcome-oriented and time-bound targets on material sustainability matters it has set to assess progress. For each target, the disclosure shall include the following information:\n(a) a description of the relationship of the target to the policy objectives;\n(b) the defined target level to be achieved, including, where applicable, whether the target is absolute or relative and in which unit it is measured;\n(c) the scope of the target, including the undertaking’s activities and/or its upstream and/or downstream value chain where applicable and geographical boundaries;\n(d) the baseline value and base year from which progress is measured;\n(e) the period to which the target applies and if applicable, any milestones or interim targets;\n(f) the methodologies and significant assumptions used to define targets, including where applicable, the selected scenario, data sources, alignment with national, EU or international policy goals and how the targets consider the wider context of sustainable development and/or local situation in which impacts take place;\n(g) whether the undertaking’s targets related to environmental matters are based on conclusive scientific evidence;\n(h) whether and how stakeholders have been involved in target setting for each material sustainability matter;\n(i) any changes in targets and corresponding metrics or underlying measurement methodologies, significant assumptions, limitations, sources and processes to collect data adopted within the defined time horizon. This includes an explanation of the rationale for those changes and their effect on comparability; and\n(j) the performance against its disclosed targets, including information on how the target is monitored and reviewed and the metrics used, whether the progress is in line with what had been initially planned, and an analysis of trends or significant changes in the performance of the undertaking towards achieving the target.",
-                        "reference": "ESRS 2 80 j MDR-T"
-                    }
-                ]
+            "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-201410",
+                "definition": "[201410] ESRS2.MDR-T.1 Minimum Disclosure Requirement - Targets MDR-T - general"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS 2",
+                "tag": "ESRS 2 80",
+                "text": "80. ... (j) the performance against its disclosed targets ...",
+                "reference": "ESRS 2 80 j MDR-T"
+                }
+            ]
             }
         },
         "fact-200": {
-    "value": "400000", 
-    "dimensions": {
-      "concept": "esrs:GrossScope1GHGEmissions",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GrossScope1GHGEmissions",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
-        "definition": "[410044] E1-5 GHG Emissions"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 44",
-          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (a) gross Scope 1 GHG emissions...",
-          "reference": "ESRS E1 44 (a)"
-        }
-      ]
-    }
-  },
-
-  "fact-201": {
-    "value": "340000", 
-    "dimensions": {
-      "concept": "esrs:GrossScope2GHGEmissions",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GrossScope2GHGEmissions",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
-        "definition": "[410044] E1-5 GHG Emissions"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 44",
-          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (b) gross Scope 2 GHG emissions...",
-          "reference": "ESRS E1 44 (b)"
+            "value": "450000",
+            "dimensions": {
+            "concept": "esrs:GrossScope1GHGEmissions",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GrossScope1GHGEmissions",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+                "definition": "[410044] E1-5 GHG Emissions"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 44",
+                "text": "The undertaking shall disclose in metric tonnes of CO2eq its (a) gross Scope 1 GHG emissions...",
+                "reference": "ESRS E1 44 (a)"
+                }
+            ]
+            }
         },
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 49",
-          "text": "The disclosure on gross Scope 2 GHG emissions required by paragraph 44 (b) shall include both location-based and market-based emissions.",
-          "reference": "ESRS E1 49"
-        }
-      ]
-    }
-  },
-
-  "fact-202": {
-    "value": "1250000",
-    "dimensions": {
-      "concept": "esrs:GrossScope3GHGEmissions",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GrossScope3GHGEmissions",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
-        "definition": "[410044] E1-5 GHG Emissions"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 44",
-          "text": "The undertaking shall disclose in metric tonnes of CO2eq its (c) gross Scope 3 GHG emissions...",
-          "reference": "ESRS E1 44 (c)"
+        "fact-201": {
+            "value": "380000",
+            "dimensions": {
+            "concept": "esrs:GrossScope2GHGEmissions",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GrossScope2GHGEmissions",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+                "definition": "[410044] E1-5 GHG Emissions"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 44",
+                "text": "The undertaking shall disclose in metric tonnes of CO2eq its (b) gross Scope 2 GHG emissions...",
+                "reference": "ESRS E1 44 (b)"
+                },
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 49",
+                "text": "The disclosure on gross Scope 2 GHG emissions required by paragraph 44 (b) shall include both location-based and market-based emissions.",
+                "reference": "ESRS E1 49"
+                }
+            ]
+            }
         },
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 51",
-          "text": "The disclosure of gross Scope 3 GHG emissions shall include each significant Scope 3 category.",
-          "reference": "ESRS E1 51"
-        }
-      ]
-    }
-  },
-
-  "fact-203": {
-    "value": "1990000",
-    "dimensions": {
-      "concept": "esrs:TotalGHGEmissions",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:TotalGHGEmissions",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410044",
-        "definition": "[410044] E1-5 GHG Emissions"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 44",
-          "text": "The undertaking shall disclose its total GHG emissions in metric tonnes of CO2eq...",
-          "reference": "ESRS E1 44 (d)"
+        "fact-202": {
+            "value": "1300000",
+            "dimensions": {
+            "concept": "esrs:GrossScope3GHGEmissions",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GrossScope3GHGEmissions",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+                "definition": "[410044] E1-5 GHG Emissions"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 44",
+                "text": "The undertaking shall disclose in metric tonnes of CO2eq its (c) gross Scope 3 GHG emissions...",
+                "reference": "ESRS E1 44 (c)"
+                },
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 51",
+                "text": "The disclosure of gross Scope 3 GHG emissions shall include each significant Scope 3 category.",
+                "reference": "ESRS E1 51"
+                }
+            ]
+            }
         },
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 52",
-          "text": "The total GHG emissions shall be the sum of Scope 1, 2, and 3 GHG emissions and disaggregated for location-based and market-based Scope 2...",
-          "reference": "ESRS E1 52"
-        }
-      ]
-    }
-  },
-
-  "fact-204": {
-    "value": "1.9",
-    "dimensions": {
-      "concept": "esrs:GHGEmissionsIntensity",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-      "unit": "Other_per_million_EUR_revenue"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GHGEmissionsIntensity",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410053",
-        "definition": "[410053] E1-6 GHG Emission Intensity"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 53",
-          "text": "The undertaking shall disclose its GHG emissions intensity (total GHG emissions per net revenue).",
-          "reference": "ESRS E1 53"
-        }
-      ]
-    }
-  },
-
-  "fact-205": {
-    "value": "true",
-    "dimensions": {
-      "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
-        "definition": "[410060] E1-7 GHG Targets"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 34",
-          "text": "If the undertaking has set GHG emission reduction targets, it shall disclose them in absolute and/or intensity value...",
-          "reference": "ESRS E1 34"
-        }
-      ]
-    }
-  },
-
-  "fact-206": {
-    "value": "2.5",
-    "dimensions": {
-      "concept": "esrs:GHGEmissionReductionTargetShortTerm",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2027-01-01T00:00:00/2030-01-01T00:00:00", 
-      "unit": "Percentage"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:GHGEmissionReductionTargetShortTerm",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
-        "definition": "[410060] E1-7 GHG Targets"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 34",
-          "text": "GHG emission reduction targets shall at least include 2030 and, if available, 2050, updated every 5-year period...",
-          "reference": "ESRS E1 34 (d)"
-        }
-      ]
-    }
-  },
-
-  "fact-207": {
-    "value": "5000000",
-    "dimensions": {
-      "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-      "unit": "MWh"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410035",
-        "definition": "[410035] E1-3 Energy Consumption"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 35",
-          "text": "The undertaking shall provide information on its energy consumption...",
-          "reference": "ESRS E1 35"
+        "fact-203": {
+            "value": "2100000",
+            "dimensions": {
+            "concept": "esrs:TotalGHGEmissions",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:TotalGHGEmissions",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410044",
+                "definition": "[410044] E1-5 GHG Emissions"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 44",
+                "text": "The undertaking shall disclose its total GHG emissions in metric tonnes of CO2eq...",
+                "reference": "ESRS E1 44 (d)"
+                },
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 52",
+                "text": "The total GHG emissions shall be the sum of Scope 1, 2, and 3 GHG emissions...",
+                "reference": "ESRS E1 52"
+                }
+            ]
+            }
         },
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 37",
-          "text": "Disclosure shall include total energy consumption in MWh from fossil, nuclear, and renewable sources...",
-          "reference": "ESRS E1 37"
+        "fact-204": {
+            "value": "2.1",
+            "dimensions": {
+            "concept": "esrs:GHGEmissionsIntensity",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "unit": "Other_per_million_EUR_revenue"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GHGEmissionsIntensity",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410053",
+                "definition": "[410053] E1-6 GHG Emission Intensity"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 53",
+                "text": "The undertaking shall disclose its GHG emissions intensity (total GHG emissions per net revenue).",
+                "reference": "ESRS E1 53"
+                }
+            ]
+            }
+        },
+        "fact-205": {
+            "value": "true",
+            "dimensions": {
+            "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+                "definition": "[410060] E1-7 GHG Targets"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 34",
+                "text": "If the undertaking has set GHG emission reduction targets, it shall disclose them...",
+                "reference": "ESRS E1 34"
+                }
+            ]
+            }
+        },
+        "fact-206": {
+            "value": "3.0",
+            "dimensions": {
+            "concept": "esrs:GHGEmissionReductionTargetShortTerm",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2027-01-01T00:00:00/2030-01-01T00:00:00",
+            "unit": "Percentage"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:GHGEmissionReductionTargetShortTerm",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+                "definition": "[410060] E1-7 GHG Targets"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 34",
+                "text": "GHG emission reduction targets shall at least include 2030 and, if available, 2050, updated every 5-year period...",
+                "reference": "ESRS E1 34 (d)"
+                }
+            ]
+            }
+        },
+        "fact-207": {
+            "value": "5200000",
+            "dimensions": {
+            "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "unit": "MWh"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410035",
+                "definition": "[410035] E1-3 Energy Consumption"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 35",
+                "text": "The undertaking shall provide information on its energy consumption...",
+                "reference": "ESRS E1 35"
+                },
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 37",
+                "text": "Disclosure shall include total energy consumption in MWh from fossil, nuclear, and renewable sources...",
+                "reference": "ESRS E1 37"
+                }
+            ]
+            }
+        },
+        "fact-208": {
+            "value": "40.0",
+            "dimensions": {
+            "concept": "esrs:ProportionOfRenewableEnergyUsed",
+            "language": "en",
+            "entity": "scheme:efrag",
+            "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+            "unit": "Percentage"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:ProportionOfRenewableEnergyUsed",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410035",
+                "definition": "[410035] E1-3 Energy Consumption"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 35",
+                "text": "The undertaking shall provide information on its energy consumption and mix...",
+                "reference": "ESRS E1 35"
+                }
+            ]
+            }
+        },
+        "fact-209": {
+            "value": "false",
+            "dimensions": {
+            "concept": "esrs:NetZeroTargetHasBeenSet",
+            "entity": "scheme:efrag",
+            "period": "2027-01-01T00:00:00/2050-01-01T00:00:00"
+            },
+            "esrs_data_reference": {
+            "concept": "esrs:NetZeroTargetHasBeenSet",
+            "concept_group": {
+                "role": "https://xbrl.efrag.org/taxonomy/role-410060",
+                "definition": "[410060] E1-7 GHG Targets"
+            },
+            "parsed_references": [
+                {
+                "document": "ESRS E1",
+                "tag": "ESRS E1 60",
+                "text": "In the case where the undertaking discloses a net-zero target ...",
+                "reference": "ESRS E1 60"
+                }
+            ]
+            }
         }
-      ]
-    }
-  },
-
-  "fact-208": {
-    "value": "45.0",
-    "dimensions": {
-      "concept": "esrs:ProportionOfRenewableEnergyUsed",
-      "language": "en",
-      "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
-      "unit": "Percentage"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:ProportionOfRenewableEnergyUsed",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410035",
-        "definition": "[410035] E1-3 Energy Consumption"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 35",
-          "text": "The undertaking shall provide information on its energy consumption and mix...",
-          "reference": "ESRS E1 35"
-        }
-      ]
-    }
-  },
-
-  "fact-209": {
-    "value": "true",
-    "dimensions": {
-      "concept": "esrs:NetZeroTargetHasBeenSet",
-      "entity": "scheme:efrag",
-      "period": "2027-01-01T00:00:00/2050-01-01T00:00:00"
-    },
-    "esrs_data_reference": {
-      "concept": "esrs:NetZeroTargetHasBeenSet",
-      "concept_group": {
-        "role": "https://xbrl.efrag.org/taxonomy/role-410060",
-        "definition": "[410060] E1-7 GHG Targets"
-      },
-      "parsed_references": [
-        {
-          "document": "ESRS E1",
-          "tag": "ESRS E1 60",
-          "text": "In the case where the undertaking discloses a net-zero target in addition to the gross GHG emission reduction targets...",
-          "reference": "ESRS E1 60"
-        }
-      ]
-    }
-  }
     }
 }

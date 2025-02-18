@@ -1,1 +1,4 @@
-globalThis.config = { "BACKEND_WS_ORIGIN": "ws://localhost:8080" };
+globalThis.config = {
+  "VITE_API_URL": "",
+  "BACKEND_WS_ORIGIN": ""
+};
