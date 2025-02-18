@@ -30,7 +30,11 @@ export default function Chat() {
 
   // 2) On mount, connect to WebSocket
   useEffect(() => {
-    const userId = localStorage.getItem('userId') || '';
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+      userId = crypto.randomUUID();
+      localStorage.setItem('userId', userId);
+    }
     const websocket = new WebSocket(`${WS_ORIGIN}/ws?user_id=${userId}`);
 
     websocket.onopen = () => {
