@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 import json
 import traceback
+import logging
 
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -12,6 +13,8 @@ assistant_id = os.getenv("ASSISTANT_ID")  # Preloaded assistant
 conversion_assistant_id = os.getenv("CONVERSION_ASSISTANT_ID")  # File-search assistant
 
 openai.api_key = openai_api_key
+
+logger = logging.getLogger(__name__)
 
 class AssistantService:
     def __init__(self):
@@ -184,28 +187,42 @@ class AssistantService:
     def attach_vector_store_to_assistant(self, vector_store_id):
         """Attach vector store to the file search assistant"""
         try:
+            logger.info(f"Attaching vector store {vector_store_id} to assistant {self.file_search_assistant_id}")
+            
             # First clear any existing vector stores
-            updated = self.client.beta.assistants.update(
+            logger.info("Clearing existing vector stores")
+            cleared = self.client.beta.assistants.update(
                 assistant_id=self.file_search_assistant_id,
                 tools=[{"type": "file_search"}],
                 tool_resources={"file_search": {"vector_store_ids": []}}
             )
+            logger.info("Existing vector stores cleared")
             
             # Then attach the new vector store
+            logger.info("Attaching new vector store")
             updated = self.client.beta.assistants.update(
                 assistant_id=self.file_search_assistant_id,
                 tools=[{"type": "file_search"}],
                 tool_resources={"file_search": {"vector_store_ids": [vector_store_id]}}
             )
-            print(f"Vector store {vector_store_id} attached to assistant {self.file_search_assistant_id}")
+            logger.info(f"Vector store attached successfully. Assistant updated: {updated.id}")
             return updated
         except Exception as e:
-            print(f"Error attaching vector store to assistant: {e}")
+            logger.error(f"Error attaching vector store to assistant: {e}")
+            traceback.print_exc()
             raise
 
     def attach_vector_store_to_thread(self, thread_id, vector_store_id):
-        updated_thread = self.client.beta.threads.update(
-            thread_id=thread_id,
-            tool_resources={"file_search": {"vector_store_ids": [vector_store_id]}}
-        )
-        return updated_thread
+        """Attach vector store to a specific thread"""
+        try:
+            logger.info(f"Attaching vector store {vector_store_id} to thread {thread_id}")
+            updated_thread = self.client.beta.threads.update(
+                thread_id=thread_id,
+                tool_resources={"file_search": {"vector_store_ids": [vector_store_id]}}
+            )
+            logger.info(f"Vector store successfully attached to thread {thread_id}")
+            return updated_thread
+        except Exception as e:
+            logger.error(f"Error attaching vector store to thread: {e}")
+            traceback.print_exc()
+            raise

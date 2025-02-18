@@ -24,6 +24,8 @@ app = FastAPI()
 
 # Add these lines at the top after imports
 logging.getLogger("multipart.multipart").setLevel(logging.WARNING)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # CORS
 cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000')
@@ -71,6 +73,7 @@ class ConnectionManager:
     def __init__(self, assistant_service: AssistantService):
         self.active_connections: Dict[WebSocket, dict] = {}
         self.assistant_service = assistant_service
+        logger.info("ConnectionManager initialized")
 
     async def connect(self, websocket: WebSocket, user_id: str):
         """
@@ -78,9 +81,13 @@ class ConnectionManager:
           - preloaded_thread for the original assistant
           - file_search_thread for the second assistant
         """
+        logger.info(f"New connection request from user_id: {user_id}")
+        
         # Create threads and store their IDs
         thread = self.assistant_service.create_thread()
-        file_search_thread = self.assistant_service.create_thread()  # Create another thread for file search
+        file_search_thread = self.assistant_service.create_thread()
+        
+        logger.info(f"Created threads - Preloaded: {thread.id}, File Search: {file_search_thread.id}")
 
         self.active_connections[websocket] = {
             'user_id': user_id,
@@ -89,8 +96,10 @@ class ConnectionManager:
             'file_search_thread_id': file_search_thread.id,
             'file_uploaded': False
         }
+        logger.info(f"Stored connection info for user {user_id}")
 
         await websocket.accept()
+        logger.info(f"WebSocket connection accepted for user {user_id}")
 
     def disconnect(self, websocket: WebSocket):
         self.active_connections.pop(websocket, None)
@@ -99,8 +108,14 @@ class ConnectionManager:
         await websocket.send_json({"type": "personal_message", "message": message})
 
     def set_mode(self, websocket: WebSocket, new_mode: str):
+        """Switch the mode for a connection between 'preloaded' and file search modes."""
         if websocket in self.active_connections:
+            old_mode = self.active_connections[websocket]['mode']
             self.active_connections[websocket]['mode'] = new_mode
+            user_id = self.active_connections[websocket]['user_id']
+            logger.info(f"User {user_id}: Switched mode from {old_mode} to {new_mode}")
+            return True
+        return False
 
     def get_mode(self, websocket: WebSocket) -> str:
         if websocket in self.active_connections:
@@ -218,10 +233,6 @@ async def upload_file(file: UploadFile = File(...)):
 
         os.remove(file_path)  # cleanup original
 
-        # ATTACH to file_search logic if you want
-        # e.g. create a vector store, etc.
-        # Or do that automatically if there's an active WS
-        # We'll omit for brevity. Suppose user calls attach endpoint later or something.
 
         return JSONResponse(
             {"message": "XBRL File uploaded & converted successfully", "user_id": user_id},
@@ -239,72 +250,87 @@ async def upload_file(file: UploadFile = File(...)):
 # The new JSON endpoint
 #######################################################
 @app.post("/upload_json_file")
-async def upload_json_file(
-    file: UploadFile = File(...),
-    websocket_user_id: str = Form(None)
-):
+async def upload_json_file(file: UploadFile = File(...), websocket_user_id: str = Form(...)):
     """
+    Handle JSON file upload and assistant switching:
     1) Accept user-uploaded JSON
     2) Create vector store from it
     3) Attach to user's 'file_search_thread'
     4) Switch mode to 'user_json'
     """
     try:
+        logger.info(f"Starting file upload process for user {websocket_user_id}")
+        logger.info(f"File name: {file.filename}")
+
         if not websocket_user_id:
             websocket_user_id = str(uuid.uuid4())
+            logger.info(f"Generated new user ID: {websocket_user_id}")
 
         # Save file locally
         upload_dir = "user_json_files"
         os.makedirs(upload_dir, exist_ok=True)
         file_path = os.path.join(upload_dir, f"{websocket_user_id}_{file.filename}")
+        logger.info(f"Saving file to: {file_path}")
 
         # Use async file operations
         contents = await file.read()
         with open(file_path, 'wb') as f:
             f.write(contents)
-
-        # Validate JSON
-        with open(file_path, 'r', encoding='utf-8') as jf:
-            test_parsed = json.load(jf)
+        logger.info("File saved successfully")
 
         # Create vector store & attach
+        logger.info("Creating vector store")
         vector_store = assistant_service.create_vector_store(
             name=f"User JSON for {websocket_user_id}"
         )
+        logger.info(f"Vector store created: {vector_store.id}")
         
+        # Upload file to vector store
+        logger.info("Uploading file to vector store")
         with open(file_path, 'rb') as fstream:
-            assistant_service.upload_files_to_vector_store(vector_store.id, [fstream])
+            file_batch = assistant_service.upload_files_to_vector_store(vector_store.id, [fstream])
+            logger.info(f"File batch uploaded: {file_batch.id}")
 
         # Clean up the temporary file
         os.remove(file_path)
+        logger.info("Temporary file cleaned up")
 
-        # Link to user's file_search_thread
+        # Find the user's websocket connection
         ws_found = None
         for ws, info in manager.active_connections.items():
             if info['user_id'] == websocket_user_id:
                 ws_found = ws
+                logger.info(f"Found websocket connection for user {websocket_user_id}")
                 break
 
         if ws_found:
             file_search_thread_id = manager.active_connections[ws_found]['file_search_thread_id']
+            logger.info(f"Attaching vector store to thread {file_search_thread_id}")
             assistant_service.attach_vector_store_to_thread(file_search_thread_id, vector_store.id)
-            manager.set_mode(ws_found, 'user_json')
-
-        return JSONResponse({
-            "message": "JSON file uploaded & attached successfully",
-            "user_id": websocket_user_id,
-            "mode_set": "user_json"
-        }, status_code=200)
+            
+            # Switch mode to user_json
+            logger.info("Switching mode to user_json")
+            manager.set_mode(ws_found, "user_json")
+            
+            return JSONResponse(content={
+                "message": "File processed successfully",
+                "vector_store_id": vector_store.id,
+                "thread_id": file_search_thread_id
+            })
+        else:
+            logger.warning(f"No active websocket connection found for user {websocket_user_id}")
+            return JSONResponse(
+                content={"error": "No active connection found"},
+                status_code=400
+            )
 
     except Exception as e:
-        # Clean up on error
-        if 'file_path' in locals():
-            try:
-                os.remove(file_path)
-            except:
-                pass
+        logger.error(f"Error processing file upload: {str(e)}")
         traceback.print_exc()
-        return JSONResponse({"error": str(e)}, status_code=500)
+        return JSONResponse(
+            content={"error": f"Failed to process file: {str(e)}"},
+            status_code=500
+        )
 
 #######################################################
 # Switching mode

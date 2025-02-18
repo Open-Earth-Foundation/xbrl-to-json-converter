@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useToast } from "../hooks/use-toast";
-import JsonUploadButton from './JsonUploadButton'; // or correct path
+import JsonUploadButton from './JsonUploadButton';
 
 interface Message {
   text: string;
@@ -22,7 +22,6 @@ export default function Chat() {
   const [ws, setWs] = useState<WebSocket | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [enhancedContext, setEnhancedContext] = useState(false);
   const { toast } = useToast();
 
   // 2) On mount, connect to WebSocket
@@ -93,7 +92,7 @@ export default function Chat() {
 
     // 4) *** Include enhancedContext in the message payload ***
     ws.send(JSON.stringify({
-      message: input
+      message: input,
     }));
 
     // Show user's own message in the UI
@@ -221,7 +220,7 @@ export default function Chat() {
         </div>
 
         {/* 7) The message input */}
-        <form onSubmit={sendMessage} className="flex gap-2">
+        <form onSubmit={sendMessage} className="flex gap-2 items-center">
           <input
             type="text"
             value={input}
@@ -229,13 +228,16 @@ export default function Chat() {
             className="flex-1 p-2 border rounded"
             placeholder="Type your message..."
           />
-          <JsonUploadButton />
-          <button
-            type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            Send
-          </button>
+          <div className="flex gap-2">
+            <JsonUploadButton />
+            <button
+              type="submit"
+              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 min-w-[80px]"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Sending...' : 'Send'}
+            </button>
+          </div>
         </form>
       </CardContent>
     </Card>

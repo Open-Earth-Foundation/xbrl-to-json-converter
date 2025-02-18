@@ -4,63 +4,66 @@ import React, { useState } from 'react';
 import { useToast } from "../hooks/use-toast";
 
 export default function JsonUploadButton() {
-  const [loading, setLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [isUploaded, setIsUploaded] = useState(false);
   const { toast } = useToast();
 
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files?.length) return;
-    const file = e.target.files[0];
-    setLoading(true);
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploading(true);
+    const userId = localStorage.getItem('userId');
 
     try {
-      const userId = localStorage.getItem('userId') || '';
       const formData = new FormData();
       formData.append('file', file);
-      formData.append('websocket_user_id', userId);
+      formData.append('websocket_user_id', userId || '');
 
-      const resp = await fetch(`http://localhost:8000/upload_json_file`, {
+      const response = await fetch('http://localhost:8000/upload_json_file', {
         method: 'POST',
-        body: formData
+        body: formData,
       });
-      if (!resp.ok) {
-        const errData = await resp.json();
-        throw new Error(errData.error || 'Failed uploading JSON');
-      }
-      const data = await resp.json();
-      if (data.user_id) {
-        localStorage.setItem('userId', data.user_id);
+
+      if (!response.ok) {
+        throw new Error('Upload failed');
       }
 
+      setIsUploaded(true);
       toast({
-        title: 'JSON Uploaded',
-        description: data.message,
+        title: "Success",
+        description: "JSON file uploaded successfully"
       });
-    } catch (err) {
+    } catch (error) {
       toast({
-        title: 'Error',
-        description: err instanceof Error ? err.message : 'Unknown error',
-        variant: 'destructive'
+        title: "Error",
+        description: "Failed to upload JSON file",
+        variant: "destructive"
       });
     } finally {
-      setLoading(false);
+      setIsUploading(false);
     }
   };
 
   return (
-    <div>
-      <label
-        htmlFor="json-upload-input"
-        className="px-4 py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-600"
-      >
-        {loading ? 'Uploading...' : 'Upload JSON'}
-      </label>
+    <div className="relative">
       <input
         type="file"
-        id="json-upload-input"
-        style={{ display: 'none' }}
         accept=".json"
-        onChange={handleFileChange}
+        onChange={handleUpload}
+        className="hidden"
+        id="json-upload"
       />
+      <label
+        htmlFor="json-upload"
+        className={`px-4 py-2 rounded cursor-pointer inline-flex items-center justify-center
+          ${isUploaded 
+            ? 'bg-green-500 hover:bg-green-600' 
+            : 'bg-blue-500 hover:bg-blue-600'} 
+          text-white transition-colors min-w-[120px]`}
+      >
+        {isUploading ? 'Uploading...' : isUploaded ? 'Uploaded' : 'Upload JSON'}
+      </label>
     </div>
   );
 }
