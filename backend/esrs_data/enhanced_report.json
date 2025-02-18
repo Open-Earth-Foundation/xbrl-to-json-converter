@@ -25,7 +25,7 @@
             "dimensions": {
                 "concept": "esrs:TypesOfConsumersAndEndusersSubjectToMaterialImpactsByOwnOperationsOrThroughValueChain",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -39,7 +39,7 @@
             "dimensions": {
                 "concept": "esrs:MaterialNegativeImpactsOccurrenceWorkersInValueChainWorkersAffectedCommunitiesConsumersAndEndUsers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -75,7 +75,7 @@
             "dimensions": {
                 "concept": "esrs:SustainabilityMattersAddressedByPolicy",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -89,7 +89,7 @@
             "dimensions": {
                 "concept": "esrs:GroupsForWhichEngagementOccursConsumersAndEndusers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -113,7 +113,7 @@
             "dimensions": {
                 "concept": "esrs:EstablishmentOfSpecificChannelsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersToRaiseConcernsOrNeeds",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -155,7 +155,7 @@
             "dimensions": {
                 "concept": "esrs:AccessibilityOfThirdPartyMechanismsForConsumersAndEndusers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -177,7 +177,7 @@
             "dimensions": {
                 "concept": "esrs:SustainableDevelopmentGoalsWhichInitiativesOrProcessesWhosePrimaryAimIsToDeliverPositiveImpactsForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreDesignedToSupportAchievementOf",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -211,7 +211,7 @@
             "dimensions": {
                 "concept": "esrs:SustainabilityMattersAddressedByAction",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -225,7 +225,7 @@
             "dimensions": {
                 "concept": "esrs:StatusOfKeyAction",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -249,7 +249,7 @@
             "dimensions": {
                 "concept": "esrs:TimeHorizonsUnderWhichKeyActionIsToBeCompleted",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -263,7 +263,7 @@
             "dimensions": {
                 "concept": "esrs:KeyActionCoverage",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -277,7 +277,7 @@
             "dimensions": {
                 "concept": "esrs:TargetRelationshipToImpactsRisksAndOpportunities",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -319,7 +319,7 @@
             "dimensions": {
                 "concept": "esrs:SustainabilityMattersAddressedByTarget",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -334,7 +334,7 @@
             "dimensions": {
                 "concept": "esrs:MeasurableTargetAbsoluteValue",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -358,7 +358,7 @@
             "dimensions": {
                 "concept": "esrs:AbsoluteOrRelativeTarget",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -382,7 +382,7 @@
             "dimensions": {
                 "concept": "esrs:ESRSMetricsAndMonetaryAmountsUsedForTarget",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -396,7 +396,7 @@
             "dimensions": {
                 "concept": "esrs:TargetCoverage",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -410,7 +410,7 @@
             "dimensions": {
                 "concept": "esrs:CountriesWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccur",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -453,7 +453,7 @@
                 "concept": "esrs:DisclosureOfMaterialImpactsRisksAndOpportunitiesAndHowTheyInteractWithStrategyAndBusinessModelExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
             },
             "esrs_data_reference": {
                 "concept": "esrs:DisclosureOfMaterialImpactsRisksAndOpportunitiesAndHowTheyInteractWithStrategyAndBusinessModelExplanatory",
@@ -477,7 +477,7 @@
                 "concept": "esrs:NameOfImpactRiskAndOpportunity",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -492,7 +492,7 @@
                 "concept": "esrs:DescriptionOfMaterialImpactsResultingFromMaterialityAssessmentExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -522,7 +522,7 @@
             "dimensions": {
                 "concept": "esrs:ActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOriginateFromOrAreConnectedToStrategyAndBusinessModels",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -565,7 +565,7 @@
                 "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOriginateFromOrAreConnectedToStrategyAndBusinessModelsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -607,7 +607,7 @@
             "dimensions": {
                 "concept": "esrs:ActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModel",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -650,7 +650,7 @@
                 "concept": "esrs:DisclosureOfHowActualAndPotentialImpactsOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformAndContributeToAdaptingStrategyAndBusinessModelExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact3"
             },
             "esrs_data_reference": {
@@ -692,7 +692,7 @@
             "dimensions": {
                 "concept": "esrs:AllPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersWhoCouldBeMateriallyImpactedByUndertakingAreIncludedInScopeOfDisclosureUnderESRS2",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -735,7 +735,7 @@
                 "concept": "esrs:DescriptionOfTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersSubjectToMaterialImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact4"
             },
             "esrs_data_reference": {
@@ -777,7 +777,7 @@
             "dimensions": {
                 "concept": "esrs:UnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDeveloped",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact5"
             },
             "esrs_data_reference": {
@@ -802,7 +802,7 @@
                 "concept": "esrs:DisclosureOfHowUnderstandingOfHowConsumersAndEndusersWithParticularCharacteristicsOrThoseUsingParticularProductsOrServicesMayBeAtGreaterRiskOfHarmHasBeenDevelopedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact5"
             },
             "esrs_data_reference": {
@@ -827,7 +827,7 @@
                 "concept": "esrs:DescriptionOfActivitiesThatResultInPositiveImpactsAndTypesOfEmployeesAndNonemployeesInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersThatArePositivelyAffectedOrCouldBePositivelyAffectedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact7"
             },
             "esrs_data_reference": {
@@ -870,7 +870,7 @@
                 "concept": "esrs:DisclosureOfSpecificCountriesOrRegionsWherePositiveImpactsForOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersOccurExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact11"
             },
             "esrs_data_reference": {
@@ -913,7 +913,7 @@
                 "concept": "esrs:DescriptionOfMaterialRisksAndOrOpportunitiesResultingFromMaterialityAssessmentExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -962,7 +962,7 @@
                 "concept": "esrs:DisclosureOfRelationshipBetweenMaterialRisksAndOpportunitiesArisingFromImpactsAndOrDependenciesOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndStrategyAndBusinessModelExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -976,7 +976,7 @@
             "dimensions": {
                 "concept": "esrs:MaterialRisksAndOpportunitiesArisingFromImpactsAndOrDependenciesEitherOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersRelateToSpecificGroups",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfImpactRiskAndOpportunityTypedAxis": "Impact1"
             },
             "esrs_data_reference": {
@@ -991,7 +991,7 @@
                 "concept": "esrs:DisclosureOfPoliciesAdoptedToManageMaterialImpactsOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAsWellAsAssociatedMaterialRisksAndOpportunitiesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1034,7 +1034,7 @@
                 "concept": "esrs:DescriptionOfProcessesAndMechanismsToMonitorComplianceWithUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkAndOecdGuidelinesForMultinationalEnterprisesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1077,7 +1077,7 @@
                 "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToRespectForHumanRightsOfConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1102,7 +1102,7 @@
                 "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToEngagementWithPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1145,7 +1145,7 @@
                 "concept": "esrs:DisclosureOfMattersThatAreMaterialInRelationToAsWellAsGeneralApproachToMeasuresToProvideAndOrEnableRemedyForHumanRightsImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1187,7 +1187,7 @@
             "dimensions": {
                 "concept": "esrs:PoliciesAreAlignedWithRelevantInternationallyRecognisedInstruments",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1230,7 +1230,7 @@
                 "concept": "esrs:DescriptionOfHowPoliciesAreAlignedWithRelevantInternationallyRecognisedInstrumentsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1273,7 +1273,7 @@
                 "concept": "esrs:DisclosureOfExtentToWhichCasesOfNonrespectOfUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkOrOecdGuidelinesForMultinationalEnterprisesThatInvolveConsumersAndEndusersHaveBeenReportedInDownstreamValueChainExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1298,7 +1298,7 @@
                 "concept": "esrs:DisclosureOfNatureOfCasesOfNonrespectOfUnGuidingPrinciplesOnBusinessAndHumanRightsIloDeclarationOnFundamentalPrinciplesAndRightsAtWorkOrOecdGuidelinesForMultinationalEnterprisesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1335,7 +1335,7 @@
                 "concept": "esrs:DisclosureOfExplanationsForSignificantChangesToPoliciesAdoptedDuringReportingYearExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1370,7 +1370,7 @@
                 "concept": "esrs:NameOfPolicy",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1385,7 +1385,7 @@
                 "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1400,7 +1400,7 @@
                 "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "Policy1"
             },
             "esrs_data_reference": {
@@ -1415,7 +1415,7 @@
                 "concept": "esrs:DescriptionOfKeyContentsOfPolicyExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1440,7 +1440,7 @@
                 "concept": "esrs:DescriptionOfScopeOfPolicyOrOfItsExclusionsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1465,7 +1465,7 @@
                 "concept": "esrs:DescriptionOfMostSeniorLevelInOrganisationThatIsAccountableForImplementationOfPolicyExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1490,7 +1490,7 @@
                 "concept": "esrs:ReferenceToThirdpartyStandardsOrInitiativesThatAreRespectedThroughImplementationOfPolicy",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1505,7 +1505,7 @@
                 "concept": "esrs:DescriptionOfConsiderationGivenToInterestsOfKeyStakeholdersInSettingPolicyExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1529,7 +1529,7 @@
             "dimensions": {
                 "concept": "esrs:PolicyIsMadeAvailableToPotentiallyAffectedStakeholdersAndOrStakeholdersWhoNeedToHelpImplementIt",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1544,7 +1544,7 @@
                 "concept": "esrs:ExplanationOfHowPolicyIsMadeAvailableToPotentiallyAffectedStakeholdersAndOrStakeholdersWhoNeedToHelpImplementItExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1559,7 +1559,7 @@
                 "concept": "esrs:ReferenceForIdentificationOfAspectsOfPolicyThatSatisfyRequirementsOfDisclosureOfPoliciesRelatedToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusers",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1574,7 +1574,7 @@
                 "concept": "esrs:DisclosureOfCommunicationToolsAndChannelsAimedAtEnsuringThatPolicyIsAccessibleAndThatDifferentAudiencesUnderstandItsImplicationsAsWellAsExplanationOfHowPotentialBarriersForDisseminationAreIdentifiedAndRemovedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfPolicyTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -1589,7 +1589,7 @@
                 "concept": "esrs:DisclosureOfGeneralProcessesForEngagingWithPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAndTheirRepresentativesAboutActualAndPotentialImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1635,7 +1635,7 @@
             "dimensions": {
                 "concept": "esrs:PerspectivesOfOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformDecisionsAndOrActivitiesAimedAtManagingActualAndPotentialImpacts",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1650,7 +1650,7 @@
                 "concept": "esrs:DisclosureOfHowPerspectivesOfOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersInformDecisionsAndOrActivitiesAimedAtManagingActualAndPotentialImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1665,7 +1665,7 @@
                 "concept": "esrs:DisclosureOfStagesAtWhichEngagementOccursTypeOfEngagementAndFrequencyOfEngagementExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1708,7 +1708,7 @@
                 "concept": "esrs:DisclosureOfFunctionAndMostSeniorRoleWithinUndertakingThatHasOperationalResponsibilityForEnsuringThatEngagementHappensAndThatResultsInformUndertakingSApproachExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1755,7 +1755,7 @@
                 "concept": "esrs:DisclosureOfHowEffectivenessOfEngagementWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsAssessedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1798,7 +1798,7 @@
                 "concept": "esrs:DisclosureOfStepsTakenToGainInsightIntoPerspectivesOfPeopleInOwnWorkforceNOValueChainWorkersNOConsumersAndEndusersThatMayBeParticularlyVulnerableToImpactsAndOrMarginalisedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1834,7 +1834,7 @@
             "dimensions": {
                 "concept": "esrs:NoGeneralProcessToEngageWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersHasBeenAdopted",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1844,12 +1844,12 @@
             }
         },
         "fact-51": {
-            "value": "We plan to finalize a more formal, general engagement framework by Q2 2027, consolidating our user panels and feedback surveys into a single reporting system for easier tracking.",
+            "value": "We plan to finalize a more formal, general engagement framework by Q2 2024, consolidating our user panels and feedback surveys into a single reporting system for easier tracking.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfTimeframeForAdoptionOfGeneralProcessToEngageWithOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1892,7 +1892,7 @@
                 "concept": "esrs:DisclosureOfProcessesInPlaceToProvideForOrCooperateInRemediationOfNegativeImpactsOnPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThatUndertakingIsConnectedWithAsWellAsChannelsAvailableToRaiseConcernsAndHaveThemAddressedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1935,7 +1935,7 @@
                 "concept": "esrs:DisclosureOfGeneralApproachToAndProcessesForProvidingOrContributingToRemedyWhereUndertakingHasCausedOrContributedToMaterialNegativeImpactOnPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -1977,7 +1977,7 @@
             "dimensions": {
                 "concept": "esrs:UndertakingAssessesThatRemedyProvidedForMaterialNegativeImpactOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsEffective",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2020,7 +2020,7 @@
                 "concept": "esrs:DisclosureOfHowUndertakingAssessesThatRemedyProvidedForMaterialNegativeImpactOnPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersIsEffectiveExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2063,7 +2063,7 @@
                 "concept": "esrs:DisclosureOfSpecificChannelsInPlaceForOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersToRaiseConcernsOrNeedsDirectlyWithUndertakingAndHaveThemAddressedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2105,7 +2105,7 @@
             "dimensions": {
                 "concept": "esrs:UndertakingIsRelyingSolelyOnInformationProvidedByItsBusinessRelationshipsAboutExistenceOfChannelsToRaiseConcernsOrNeeds",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2139,7 +2139,7 @@
             "dimensions": {
                 "concept": "esrs:AffectedCommunitiesConsumersAndEndusersThatMayBeAffectedAreAbleToAccessChannelsAtLevelOfUndertakingTheyAreAffectedBy",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2166,7 +2166,7 @@
                 "concept": "esrs:DisclosureOfHowAffectedCommunitiesConsumersAndEndusersThatMayBeAffectedAreAbleToAccessChannelsAtLevelOfUndertakingTheyAreAffectedByExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2193,7 +2193,7 @@
                 "concept": "esrs:DisclosureOfProcessesThroughWhichUndertakingSupportsOrRequiresAvailabilityOfChannelsByItsBusinessRelationshipsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2218,7 +2218,7 @@
                 "concept": "esrs:DisclosureOfHowIssuesRaisedAndAddressedAreTrackedAndMonitoredAndHowEffectivenessOfChannelsIsEnsuredIncludingThroughInvolvementOfStakeholdersWhoAreIntendedUsersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2260,7 +2260,7 @@
             "dimensions": {
                 "concept": "esrs:UndertakingAssessesThatPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreAwareOfAndTrustStructuresOrProcessesAsWayToRaiseTheirConcernsOrNeedsAndHaveThemAddressed",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2303,7 +2303,7 @@
                 "concept": "esrs:DisclosureOfHowUndertakingAssessesThatPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAreAwareOfAndTrustStructuresOrProcessesAsWayToRaiseTheirConcernsOrNeedsAndHaveThemAddressedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2346,7 +2346,7 @@
             "dimensions": {
                 "concept": "esrs:NumberOfComplaintsReceivedFromConsumersAndEndusers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
                 "unit": "iso4217:EUR"
             },
@@ -2369,7 +2369,7 @@
             "dimensions": {
                 "concept": "esrs:PoliciesRegardingProtectionAgainstRetaliationForIndividualsThatUseChannelsToRaiseConcernsOrNeedsAreInPlace",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2411,7 +2411,7 @@
             "dimensions": {
                 "concept": "esrs:GrievancesAreTreatedConfidentiallyAndOrWithRespectToRightsOfPrivacyAndDataProtection",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2425,7 +2425,7 @@
             "dimensions": {
                 "concept": "esrs:NoChannelForRaisingConcernsEitherForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersHasBeenAdopted",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2439,7 +2439,7 @@
             "dimensions": {
                 "concept": "esrs:ChannelsToRaiseConcernsOrNeedsAllowValueChainWorkersAffectedCommunitiesConsumersAndEndusersToUseThemAnonymously",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2453,7 +2453,7 @@
             "dimensions": {
                 "concept": "esrs:AvailabilityOfChannelForRaisingConcernsIsNotSupportedForPeopleInOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2491,12 +2491,12 @@
             }
         },
         "fact-72": {
-            "value": "We intend to roll out a universal channel for raising concerns by Q4 2027. This process will centralize how all employees, communities, and end-users can report issues securely and anonymously, bridging current gaps.",
+            "value": "We intend to roll out a universal channel for raising concerns by Q4 2024. This process will centralize how all employees, communities, and end-users can report issues securely and anonymously, bridging current gaps.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfTimeframeForChannelForRaisingConcernsToBeInPlaceExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember"
             },
             "esrs_data_reference": {
@@ -2539,7 +2539,7 @@
                 "concept": "esrs:DisclosureOfHowActionIsTakenToAddressMaterialNegativeAndPositiveImpactsAndToManageMaterialRisksAndPursueMaterialOpportunitiesRelatedToOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAndEffectivenessOfThoseActionsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2581,7 +2581,7 @@
             "dimensions": {
                 "concept": "esrs:UndertakingSeeksToUseLeverageInBusinessRelationshipsToManageMaterialNegativeImpactsAffectingOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusers",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2616,7 +2616,7 @@
                 "concept": "esrs:DisclosureOfHowUndertakingSeeksToUseLeverageInBusinessRelationshipsToManageMaterialNegativeImpactsAffectingOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2651,7 +2651,7 @@
                 "concept": "esrs:DisclosureOfHowParticipationInIndustryOrMultistakeholderInitiativeAndUndertakingsOwnInvolvementIsAimingToAddressMaterialNegativeImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2666,7 +2666,7 @@
                 "concept": "esrs:DescriptionOfAdditionalActionsOrInitiativesWithPrimaryPurposeOfPositivelyContributingToImprovedSocialOutcomesForConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2690,7 +2690,7 @@
             "dimensions": {
                 "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrLegitimateRepresentativesOrTheirCredibleProxiesPlayRoleInDecisionsRegardingDesignAndImplementationOfProgrammesOrProcesses",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2705,7 +2705,7 @@
                 "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrLegitimateRepresentativesOrTheirCredibleProxiesPlayRoleInDecisionsRegardingDesignAndImplementationOfProgrammesOrProcessesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2720,7 +2720,7 @@
                 "concept": "esrs:DisclosureOfIntendedOrAchievedPositiveOutcomesOfProgrammesOrProcessesForPeopleInOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2755,7 +2755,7 @@
                 "concept": "esrs:DescriptionOfHowEffectivenessOfActionsAndInitiativesInDeliveringOutcomesForOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersIsTrackedAndAssessedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2798,7 +2798,7 @@
                 "concept": "esrs:DescriptionOfProcessesThroughWhichUndertakingIdentifiesWhatActionIsNeededAndAppropriateInResponseToParticularActualOrPotentialNegativeImpactOnOwnWorkforceNOValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2841,7 +2841,7 @@
                 "concept": "esrs:DescriptionOfApproachToTakingActionInRelationToSpecificMaterialNegativeImpactsOnValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2877,7 +2877,7 @@
             "dimensions": {
                 "concept": "esrs:WiderIndustryOrCollaborativeActionWithOtherRelevantPartiesWillBeRequired",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2908,7 +2908,7 @@
                 "concept": "esrs:DescriptionOfHowItIsEnsuredThatProcessesToProvideOrEnableRemedyInEventOfMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersAreAvailableAndEffectiveInTheirImplementationAndOutcomesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2944,7 +2944,7 @@
             "dimensions": {
                 "concept": "esrs:ActionIsTakenToAvoidCausingOrContributingToMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThroughOwnPractices",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -2981,7 +2981,7 @@
                 "concept": "esrs:DisclosureOfHowActionIsTakenToAvoidCausingOrContributingToMaterialNegativeImpactsOnValueChainWorkersNOAffectedCommunitiesNOConsumersAndEndusersThroughOwnPracticesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3018,7 +3018,7 @@
                 "concept": "esrs:DisclosureOfResourcesAllocatedToManagementOfMaterialImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3061,7 +3061,7 @@
                 "concept": "esrs:DescriptionOfInternalFunctionsThatAreInvolvedInManagingImpactsAndTypesOfActionTakenByInternalFunctionsToAddressNegativeAndAdvancePositiveImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3096,7 +3096,7 @@
                 "concept": "esrs:DisclosureOfGeneralAndSpecificApproachesToAddressingMaterialNegativeImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3131,7 +3131,7 @@
                 "concept": "esrs:DisclosureOfInitiativesAimedAtContributingToAdditionalMaterialPositiveImpactsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3162,7 +3162,7 @@
                 "concept": "esrs:DisclosureOfHowFarUndertakingHasProgressedInEffortsDuringReportingPeriodExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3197,7 +3197,7 @@
                 "concept": "esrs:DisclosureOfAimsForContinuedImprovementExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3232,7 +3232,7 @@
                 "concept": "esrs:DescriptionOfWhatActionIsPlannedOrUnderwayToMitigateMaterialRisksArisingFromImpactsAndDependenciesOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersAndHowEffectivenessIsTrackedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3275,7 +3275,7 @@
                 "concept": "esrs:DescriptionOfWhatActionIsPlannedOrUnderwayToPursueMaterialOpportunitiesInRelationToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3317,7 +3317,7 @@
             "dimensions": {
                 "concept": "esrs:SevereHumanRightsIssuesAndIncidentsConnectedToUpstreamAndDownstreamValueChainNOAffectedCommunitiesNOConsumersAndEndusersHaveBeenReported",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3354,7 +3354,7 @@
                 "concept": "esrs:DisclosureOfSevereHumanRightsIssuesAndIncidentsConnectedToUpstreamAndDownstreamValueChainNOAffectedCommunitiesNOConsumersAndEndusersThatHaveBeenReportedExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3391,7 +3391,7 @@
                 "concept": "esrs:NameOfActionPlan",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3406,7 +3406,7 @@
                 "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3421,7 +3421,7 @@
                 "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3436,7 +3436,7 @@
                 "concept": "esrs:IdentifiersOfRelatedPolicies",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3451,7 +3451,7 @@
                 "concept": "esrs:NamesOfRelatedPolicies",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3466,7 +3466,7 @@
                 "concept": "esrs:IdentifiersOfRelatedTargets",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3476,12 +3476,12 @@
             }
         },
         "fact-105": {
-            "value": "Our user-trust enhancement target includes reducing privacy-related complaints by 40% by 2027.",
+            "value": "Our user-trust enhancement target includes reducing privacy-related complaints by 40% by 2024.",
             "dimensions": {
                 "concept": "esrs:NamesOfRelatedTargets",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3496,7 +3496,7 @@
                 "concept": "esrs:DisclosureOfKeyActionExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3521,7 +3521,7 @@
                 "concept": "esrs:DisclosureOfExpectedOutcomesOfKeyActionAndHowItsImplementationContributesToAchievementOfPolicyObjectivesAndTargetsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3546,7 +3546,7 @@
                 "concept": "esrs:DescriptionOfScopeOfKeyActionCoverageInTermsOfActivitiesUpstreamAndOrDownstreamValueChainGeographiesAndAffectedStakeholderGroupsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3561,7 +3561,7 @@
                 "concept": "esrs:DescriptionOfScopeOfKeyActionInOwnOperationsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3576,7 +3576,7 @@
                 "concept": "esrs:DescriptionOfScopeOfKeyActionInUpstreamAndOrDownstreamValueChainExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3590,7 +3590,7 @@
             "dimensions": {
                 "concept": "esrs:KeyActionIsTakenToEitherProvideForCooperateInOrInSupportProvisionOfRemedyForThoseHarmedByActualMaterialImpacts",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3604,7 +3604,7 @@
             "dimensions": {
                 "concept": "esrs:ActionToProvideAndOrEnableRemedyInRelationToActualMaterialImpactOnOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndUsersHasBeenTaken",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action1"
             },
             "esrs_data_reference": {
@@ -3619,7 +3619,7 @@
                 "concept": "esrs:DisclosureOfQuantitativeAndQualitativeInformationRegardingProgressOfActionsOrActionPlansDisclosedInPriorPeriodsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -3644,7 +3644,7 @@
                 "concept": "esrs:NameOfActionPlan",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
             },
             "esrs_data_reference": {
@@ -3659,7 +3659,7 @@
                 "concept": "esrs:DescriptionOfTypeOfCurrentAndFutureFinancialAndOtherResourcesAllocatedToActionPlanExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
             },
             "esrs_data_reference": {
@@ -3683,7 +3683,7 @@
             "dimensions": {
                 "concept": "esrs:AbilityToImplementActionOrActionPlanDependsOnSpecificPreconditions",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
             },
             "esrs_data_reference": {
@@ -3708,7 +3708,7 @@
                 "concept": "esrs:ExplanationOfHowCurrentFinancialResourcesRelateToMostRelevantAmountsPresentedInFinancialStatementsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "Action2"
             },
             "esrs_data_reference": {
@@ -3733,7 +3733,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
                 "unit": "iso4217:EUR"
@@ -3772,7 +3772,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:ShorttermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -3812,7 +3812,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:MediumtermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -3852,7 +3852,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanOpEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:LongtermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -3892,7 +3892,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
                 "unit": "iso4217:EUR"
@@ -3931,7 +3931,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:ShorttermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -3971,7 +3971,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:MediumtermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -4011,7 +4011,7 @@
             "dimensions": {
                 "concept": "esrs:FinancialResourcesAllocatedToActionPlanCapEx",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfActionPlanTypedAxis": "1",
                 "esrs:ReportingScopeAxis": "esrs:LongtermMember",
                 "esrs:TopicalESRSAxis": "esrs:ESRSS4ConsumersAndEndusersMember",
@@ -4051,7 +4051,7 @@
                 "concept": "esrs:DisclosureOfTimeboundAndOutcomeOrientedTargetsRelatedToOwnWorkforceValueChainWorkersAffectedCommunitiesConsumersAndEndusersExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4066,7 +4066,7 @@
                 "concept": "esrs:DisclosureOfProcessForSettingTimeboundAndOutcomeorientedTargetsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4108,7 +4108,7 @@
             "dimensions": {
                 "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInSettingTargets",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4123,7 +4123,7 @@
                 "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInSettingTargetsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4137,7 +4137,7 @@
             "dimensions": {
                 "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInTrackingPerformanceAgainstTargets",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4152,7 +4152,7 @@
                 "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInTrackingPerformanceAgainstTargetsExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4166,7 +4166,7 @@
             "dimensions": {
                 "concept": "esrs:ValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInIdentifyingLessonsOrImprovementsAsResultOfUndertakingsPerformance",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4181,7 +4181,7 @@
                 "concept": "esrs:DisclosureOfHowValueChainWorkersAffectedCommunitiesConsumersAndEndUsersAndOrTheirLegitimateRepresentativesOrCredibleProxiesWereEngagedDirectlyInIdentifyingLessonsOrImprovementsAsResultOfUndertakingsPerformanceExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4191,12 +4191,12 @@
             }
         },
         "fact-130": {
-            "value": "Our target (Target1) focuses on Impact1 (data-privacy risk), tied to Policy1. We plan to reduce data incidents by 30% (absolute measure) between 2025 and 2050, with a baseline year of 2026. This aligns with our broader corporate approach: we incorporate user feedback, apply encryption protocols, and measure progress yearly.",
+            "value": "Our target (Target1) focuses on Impact1 (data-privacy risk), tied to Policy1. We plan to reduce data incidents by 30% (absolute measure) between 2025 and 2050, with a baseline year of 2023. This aligns with our broader corporate approach: we incorporate user feedback, apply encryption protocols, and measure progress yearly.",
             "dimensions": {
                 "concept": "esrs:DisclosureOfMeasurableOutcomeorientedAndTimeboundTargetExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4221,7 +4221,7 @@
                 "concept": "esrs:NameOfTarget",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4236,7 +4236,7 @@
                 "concept": "esrs:IdentifiersOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4251,7 +4251,7 @@
                 "concept": "esrs:NamesOfRelatedImpactsRisksAndOpportunities",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4266,7 +4266,7 @@
                 "concept": "esrs:IdentifiersOfRelatedPolicies",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4281,7 +4281,7 @@
                 "concept": "esrs:NamesOfRelatedPolicies",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4296,7 +4296,7 @@
                 "concept": "esrs:DescriptionOfRelationshipOfTargetToPolicyObjectivesExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4311,7 +4311,7 @@
             "dimensions": {
                 "concept": "esrs:MeasurableTargetPercentage",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4336,7 +4336,7 @@
                 "concept": "esrs:DescriptionOfScopeOfTargetExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4356,11 +4356,11 @@
             }
         },
         "fact-145": {
-            "value": "2026",
+            "value": "2023",
             "dimensions": {
                 "concept": "esrs:BaseYearFromWhichProgressIsMeasured",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4390,7 +4390,7 @@
             "dimensions": {
                 "concept": "esrs:PeriodToWhichTargetAppliesStartYear",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4404,7 +4404,7 @@
             "dimensions": {
                 "concept": "esrs:PeriodToWhichTargetAppliesEndYear",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "Target1"
             },
             "esrs_data_reference": {
@@ -4419,7 +4419,7 @@
                 "concept": "esrs:DescriptionOfMethodologiesAndSignificantAssumptionsUsedToDefineTargetExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4443,7 +4443,7 @@
             "dimensions": {
                 "concept": "esrs:StakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatter",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4458,7 +4458,7 @@
                 "concept": "esrs:DisclosureOfHowStakeholdersHaveBeenInvolvedInTargetSettingForEachMaterialSustainabilityMatterExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4473,7 +4473,7 @@
                 "concept": "esrs:DescriptionOfAnyChangesInTargetAndCorrespondingMetricsOrUnderlyingMeasurementMethodologiesSignificantAssumptionsLimitationsSourcesAndAdoptedProcessesToCollectDataExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4498,7 +4498,7 @@
                 "concept": "esrs:DescriptionOfPerformanceAgainstDisclosedTargetExplanatory",
                 "language": "en",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4522,7 +4522,7 @@
             "dimensions": {
                 "concept": "esrs:ProgressIsInLineWithWhatHadBeenInitiallyPlanned",
                 "entity": "scheme:efrag",
-                "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+                "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
                 "esrs:IdentifierOfTargetTypedAxis": "1"
             },
             "esrs_data_reference": {
@@ -4547,7 +4547,7 @@
       "concept": "esrs:GrossScope1GHGEmissions",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:GrossScope1GHGEmissions",
@@ -4572,7 +4572,7 @@
       "concept": "esrs:GrossScope2GHGEmissions",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:GrossScope2GHGEmissions",
@@ -4603,7 +4603,7 @@
       "concept": "esrs:GrossScope3GHGEmissions",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:GrossScope3GHGEmissions",
@@ -4634,7 +4634,7 @@
       "concept": "esrs:TotalGHGEmissions",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:TotalGHGEmissions",
@@ -4665,7 +4665,7 @@
       "concept": "esrs:GHGEmissionsIntensity",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
       "unit": "Other_per_million_EUR_revenue"
     },
     "esrs_data_reference": {
@@ -4690,7 +4690,7 @@
     "dimensions": {
       "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00"
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:GHGEmissionReductionTargetHasBeenSet",
@@ -4715,7 +4715,7 @@
       "concept": "esrs:GHGEmissionReductionTargetShortTerm",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2027-01-01T00:00:00/2030-01-01T00:00:00", 
+      "period": "2024-01-01T00:00:00/2030-01-01T00:00:00", 
       "unit": "Percentage"
     },
     "esrs_data_reference": {
@@ -4741,7 +4741,7 @@
       "concept": "esrs:TotalEnergyConsumptionOwnOperationsMWh",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
       "unit": "MWh"
     },
     "esrs_data_reference": {
@@ -4773,7 +4773,7 @@
       "concept": "esrs:ProportionOfRenewableEnergyUsed",
       "language": "en",
       "entity": "scheme:efrag",
-      "period": "2026-01-01T00:00:00/2027-01-01T00:00:00",
+      "period": "2023-01-01T00:00:00/2024-01-01T00:00:00",
       "unit": "Percentage"
     },
     "esrs_data_reference": {
@@ -4798,7 +4798,7 @@
     "dimensions": {
       "concept": "esrs:NetZeroTargetHasBeenSet",
       "entity": "scheme:efrag",
-      "period": "2027-01-01T00:00:00/2050-01-01T00:00:00"
+      "period": "2024-01-01T00:00:00/2050-01-01T00:00:00"
     },
     "esrs_data_reference": {
       "concept": "esrs:NetZeroTargetHasBeenSet",
