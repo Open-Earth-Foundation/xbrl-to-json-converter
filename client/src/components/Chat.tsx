@@ -7,6 +7,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useToast } from "../hooks/use-toast";
 import JsonUploadButton from './JsonUploadButton';
+import { getUserId } from '@/user-id';
 
 interface Message {
   text: string;
@@ -30,11 +31,7 @@ export default function Chat() {
 
   // 2) On mount, connect to WebSocket
   useEffect(() => {
-    let userId = localStorage.getItem('userId');
-    if (!userId) {
-      userId = crypto.randomUUID();
-      localStorage.setItem('userId', userId);
-    }
+    let userId = getUserId()
     const websocket = new WebSocket(`${WS_ORIGIN}/ws?user_id=${userId}`);
 
     websocket.onopen = () => {
@@ -115,7 +112,7 @@ export default function Chat() {
 
   // 5) Add a function to switch to preloaded
   async function switchToPreloaded() {
-    const userId = localStorage.getItem('userId') || '';
+    const userId = getUserId()
     if (!userId) {
       console.error("No userId found in localStorage");
       return;

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useToast } from "../hooks/use-toast";
+import { getUserId } from "@/user-id";
 
 const API_BASE_URL =
   globalThis?.config?.VITE_API_URL ||
@@ -18,7 +19,7 @@ export default function JsonUploadButton() {
     if (!file) return;
 
     setIsUploading(true);
-    const userId = localStorage.getItem('userId');
+    const userId = getUserId();
 
     try {
       const formData = new FormData();

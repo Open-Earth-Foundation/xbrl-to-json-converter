@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent } from "./ui/card";
 import { api } from '../lib/api';
 import { useToast } from "../hooks/use-toast";
+import { getUserId } from '@/user-id';
 
 export default function FileUpload() {
   const [file, setFile] = useState<File | null>(null);
@@ -16,7 +17,7 @@ export default function FileUpload() {
 
     try {
       // CHANGED: get userId from localStorage or fallback
-      const userId = localStorage.getItem('userId') || '';
+      const userId = getUserId()
       if (!userId) {
         toast({
           title: "Warning",
@@ -25,7 +26,7 @@ export default function FileUpload() {
       }
 
       const data = await api.upload(e.target.files[0], userId);  // <-- pass userId
-      // If needed, you could refresh localStorage userId. 
+      // If needed, you could refresh localStorage userId.
       // But we are no longer updating userId with data.user_id, because the server doesn't generate it.
       // localStorage.setItem('userId', data.user_id);
 
