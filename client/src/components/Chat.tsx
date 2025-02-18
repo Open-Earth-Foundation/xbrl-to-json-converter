@@ -15,6 +15,10 @@ interface Message {
 
 // 1) Ensure we pick up the WS origin from config or default
 const WS_ORIGIN = globalThis.config?.BACKEND_WS_ORIGIN || 'ws://localhost:8000';
+const API_BASE_URL =
+  globalThis?.config?.VITE_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:8000";
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -117,7 +121,7 @@ export default function Chat() {
     formData.append('new_mode', 'preloaded');
 
     try {
-      const resp = await fetch('http://localhost:8000/switch_mode', {
+      const resp = await fetch(API_BASE_URL + '/switch_mode', {
         method: 'POST',
         body: formData
       });
@@ -145,7 +149,7 @@ export default function Chat() {
       <CardContent className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold">Chat</h2>
-          
+
           {/* 6) A button to revert to Preloaded mode */}
           <button
             type="button"

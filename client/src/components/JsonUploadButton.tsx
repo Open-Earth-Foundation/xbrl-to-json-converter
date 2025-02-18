@@ -3,6 +3,11 @@
 import React, { useState } from 'react';
 import { useToast } from "../hooks/use-toast";
 
+const API_BASE_URL =
+  globalThis?.config?.VITE_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:8000";
+
 export default function JsonUploadButton() {
   const [isUploading, setIsUploading] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
@@ -20,7 +25,7 @@ export default function JsonUploadButton() {
       formData.append('file', file);
       formData.append('websocket_user_id', userId || '');
 
-      const response = await fetch('http://localhost:8000/upload_json_file', {
+      const response = await fetch(API_BASE_URL + '/upload_json_file', {
         method: 'POST',
         body: formData,
       });
@@ -57,9 +62,9 @@ export default function JsonUploadButton() {
       <label
         htmlFor="json-upload"
         className={`px-4 py-2 rounded cursor-pointer inline-flex items-center justify-center
-          ${isUploaded 
-            ? 'bg-green-500 hover:bg-green-600' 
-            : 'bg-blue-500 hover:bg-blue-600'} 
+          ${isUploaded
+            ? 'bg-green-500 hover:bg-green-600'
+            : 'bg-blue-500 hover:bg-blue-600'}
           text-white transition-colors min-w-[120px]`}
       >
         {isUploading ? 'Uploading...' : isUploaded ? 'Uploaded' : 'Upload JSON'}
