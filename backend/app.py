@@ -70,25 +70,35 @@ uploaded_data = {}
 class ConnectionManager:
     def __init__(self, assistant_service: AssistantService):
         self.active_connections: Dict[WebSocket, dict] = {}
+        self.user_connections: Dict[str, dict] = {}
         self.assistant_service = assistant_service
         logger.info("ConnectionManager initialized")
 
     async def connect(self, websocket: WebSocket, user_id: str):
         logger.info(f"New connection request from user_id: {user_id}")
-        
-        thread = self.assistant_service.create_thread()
-        file_search_thread = self.assistant_service.create_thread()
-        
-        logger.info(f"Created threads - Preloaded: {thread.id}, File Search: {file_search_thread.id}")
 
-        self.active_connections[websocket] = {
-            'user_id': user_id,
-            'mode': 'preloaded',
-            'preloaded_thread_id': thread.id,
-            'file_search_thread_id': file_search_thread.id,
-            'file_uploaded': False
-        }
-        logger.info(f"Stored connection info for user {user_id}")
+        if user_id in self.user_connections:
+            logger.info("Restoring state for user " + user_id)
+            self.active_connections[websocket] = self.user_connections[user_id]
+        else:
+            thread = self.assistant_service.create_thread()
+            file_search_thread = self.assistant_service.create_thread()
+
+            logger.info(
+                f"Created threads - Preloaded: {thread.id}, File Search: {file_search_thread.id}"
+            )
+
+            self.active_connections[websocket] = {
+                "user_id": user_id,
+                "mode": "preloaded",
+                "preloaded_thread_id": thread.id,
+                "file_search_thread_id": file_search_thread.id,
+                "file_uploaded": False,
+            }
+
+            self.user_connections[user_id] = self.active_connections[websocket]
+
+            logger.info(f"Stored connection info for user {user_id}")
 
         await websocket.accept()
         logger.info(f"WebSocket connection accepted for user {user_id}")
@@ -139,7 +149,7 @@ class ConnectionManager:
             info = self.active_connections[websocket]
             current_mode = info['mode']
             print(f"Processing message in mode: {current_mode}")
-            
+
             if current_mode == "preloaded":
                 thread_id = info['preloaded_thread_id']
                 print(f"Using preloaded thread: {thread_id}")
@@ -150,11 +160,11 @@ class ConnectionManager:
                 response = await self.assistant_service.send_message(message, thread_id, mode=current_mode)
             else:
                 response = "Error: Invalid mode"
-            
+
             if not response:
                 print("Warning: Empty response received")
                 response = "No response received from assistant"
-            
+
             print(f"Final response to send: {response[:100]}...")
             return response
         except Exception as e:
@@ -202,7 +212,7 @@ async def process_json_for_user(
         file_search_thread_id = manager.active_connections[ws_found]['file_search_thread_id']
         logger.info(f"Attaching vector store to thread {file_search_thread_id}")
         assistant_service.attach_vector_store_to_thread(file_search_thread_id, vector_store.id)
-        
+
         logger.info(f"Switching mode to {new_mode}")
         manager.set_mode(ws_found, new_mode)
 
@@ -274,9 +284,9 @@ async def upload_file(
             file_path=json_file_path,
             manager=manager,
             assistant_service=assistant_service,
-            new_mode="converted_xbrl"  
+            new_mode="converted_xbrl",
         )
-        
+
         return JSONResponse(
             {
                 "message": "XBRL File uploaded & converted successfully",
