@@ -1,15 +1,11 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
-import { FileText, Upload, Database } from "lucide-react";
-import { useToast } from "../hooks/use-toast";
-import { getUserId } from "@/user-id";
-
-const API_BASE_URL =
-  globalThis?.config?.VITE_API_URL ||
-  import.meta.env.VITE_API_URL ||
-  "http://localhost:8000";
+import { useState } from 'react';
+import { useToast } from "./ui/use-toast";
+import { Card, CardContent } from './ui/card';
+import { Button } from './ui/button';
+import { FileText, Upload, Database } from 'lucide-react';
+import { API_BASE_URL } from '../utils/constants';
+import { getUserId } from '../utils/user';
 
 type UploadStatus = {
   type: 'none' | 'preloaded' | 'xbrl' | 'json';
@@ -65,19 +61,18 @@ export default function CorporateFilingUpload() {
     if (!file) return;
 
     setLoading(true);
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('websocket_user_id', userId || '');
 
     try {
-      const formData = new FormData();
-      formData.append('file', file);
-      formData.append('websocket_user_id', userId || '');
-
-      const response = await fetch(API_BASE_URL + '/upload_file', {
+      const response = await fetch(`${API_BASE_URL}/upload_xbrl`, {
         method: 'POST',
         body: formData,
       });
 
       if (!response.ok) {
-        throw new Error('Upload failed');
+        throw new Error('Failed to upload XBRL file');
       }
 
       setUploadStatus({
@@ -87,12 +82,12 @@ export default function CorporateFilingUpload() {
       
       toast({
         title: "Success",
-        description: "XBRL file uploaded and processed successfully"
+        description: "XBRL file uploaded successfully"
       });
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to process XBRL file",
+        description: "Failed to upload XBRL file",
         variant: "destructive"
       });
     } finally {
@@ -105,19 +100,18 @@ export default function CorporateFilingUpload() {
     if (!file) return;
 
     setLoading(true);
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('websocket_user_id', userId || '');
 
     try {
-      const formData = new FormData();
-      formData.append('file', file);
-      formData.append('websocket_user_id', userId || '');
-
-      const response = await fetch(API_BASE_URL + '/upload_json_file', {
+      const response = await fetch(`${API_BASE_URL}/upload_json`, {
         method: 'POST',
         body: formData,
       });
 
       if (!response.ok) {
-        throw new Error('Upload failed');
+        throw new Error('Failed to upload JSON file');
       }
 
       setUploadStatus({
@@ -145,7 +139,7 @@ export default function CorporateFilingUpload() {
       <CardContent className="p-4">
         <h2 className="text-xl font-semibold mb-4">Corporate Filing</h2>
         
-        <div className="grid gap-3 mb-4">
+        <div className="grid md:grid-cols-3 gap-3 mb-4">
           {/* Preloaded Option */}
           <div className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
             <div className="flex items-center gap-3 mb-2">
