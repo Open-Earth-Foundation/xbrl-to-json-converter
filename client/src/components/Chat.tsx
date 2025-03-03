@@ -7,6 +7,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useToast } from "../hooks/use-toast";
 import { getUserId } from '@/user-id';
+import { Send } from "lucide-react";
+import { Button } from "./ui/button";
+
 
 interface Message {
   text: string;
@@ -249,13 +252,14 @@ export default function Chat() {
             className="flex-1 p-2 border rounded"
             placeholder="Type your message..."
           />
-          <button
+          <Button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 min-w-[80px]"
+            size="sm"
             disabled={isLoading}
+            className="ml-2"
           >
-            {isLoading ? 'Sending...' : 'Send'}
-          </button>
+            <Send className="h-4 w-4" />
+          </Button>
         </form>
       </CardContent>
     </Card>

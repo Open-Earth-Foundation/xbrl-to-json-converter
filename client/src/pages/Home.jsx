@@ -1,4 +1,12 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import CardCarousel from "../components/CardCarousel";
+import CorporateFilingUpload from "@/components/CorporateFilingUpload";
+import Chat from "../components/Chat";
+import About from "../components/About";
+import Documentation from "../components/Documentation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import Hero from "../components/Hero";
+import { MessageSquare, Info, BookOpen } from "lucide-react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('upload');
@@ -35,5 +43,39 @@ export default function Home() {
     };
   }, []);
 
-  // ... rest of the component code ...
+  return (
+    <div>
+      <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsList className="mb-4">
+          <TabsTrigger value="upload">Upload</TabsTrigger>
+          <TabsTrigger value="chat">
+            <MessageSquare className="h-4 w-4 mr-1" />
+            Chat
+          </TabsTrigger>
+          <TabsTrigger value="about">
+            <Info className="h-4 w-4 mr-1" />
+            About
+          </TabsTrigger>
+          <TabsTrigger value="documentation">
+            <BookOpen className="h-4 w-4 mr-1" />
+            Documentation
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="upload">
+          <Hero />
+          <CardCarousel />
+          <CorporateFilingUpload />
+        </TabsContent>
+        <TabsContent value="chat">
+          <Chat />
+        </TabsContent>
+        <TabsContent value="about">
+          <About />
+        </TabsContent>
+        <TabsContent value="documentation">
+          <Documentation />
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
 }
