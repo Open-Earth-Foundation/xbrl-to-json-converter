@@ -202,7 +202,7 @@ export default function Documentation() {
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">JSON Export Endpoint</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>GET /export/{file_id}</p>
+                    <p>GET /export/{"<file_id>"}</p>
                   </div>
                   <p className="text-gray-600 text-sm">
                     Retrieves the processed JSON data for a specific file by its ID.
