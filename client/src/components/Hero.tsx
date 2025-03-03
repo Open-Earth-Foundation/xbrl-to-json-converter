@@ -35,18 +35,13 @@ export default function Hero() {
                   top: window.innerHeight,
                   behavior: 'smooth'
                 });
-                // Then set a timeout to select the About tab after scrolling
-                setTimeout(() => {
-                  // Directly set the value of the Tabs component to "about"
-                  const tabsElement = document.querySelector('[role="tablist"]')?.parentElement;
-                  if (tabsElement) {
-                    // Find and dispatch a click on the about tab trigger 
-                    const aboutTab = document.querySelector('[value="about"][role="tab"]') as HTMLElement;
-                    if (aboutTab) {
-                      aboutTab.click();
-                    }
-                  }
-                }, 600);
+                
+                // Use localStorage to signal tab change
+                localStorage.setItem('activeTab', 'about');
+                
+                // Dispatch a custom event that Home component will listen for
+                const event = new CustomEvent('switchTab', { detail: { tab: 'about' } });
+                window.dispatchEvent(event);
               }}
               variant="outline"
               size="lg"
