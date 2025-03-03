@@ -152,9 +152,6 @@ export default function CorporateFilingUpload() {
               <FileText className="h-5 w-5 text-blue-600" />
               <h3 className="font-medium">Don't have a file?</h3>
             </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Use a Preloaded Mockup File
-            </p>
             <Button 
               variant="outline" 
               size="sm"
@@ -162,7 +159,7 @@ export default function CorporateFilingUpload() {
               onClick={usePreloaded}
               disabled={loading}
             >
-              Use Preloaded
+              Use a Preloaded Mockup File
             </Button>
           </div>
           
@@ -172,10 +169,7 @@ export default function CorporateFilingUpload() {
               <Upload className="h-5 w-5 text-green-600" />
               <h3 className="font-medium">Have an XBRL file?</h3>
             </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Upload it
-            </p>
-            <div className="ml-8">
+            <div className="ml-6">
               <input
                 type="file"
                 id="xbrl-upload"
@@ -198,10 +192,7 @@ export default function CorporateFilingUpload() {
               <Database className="h-5 w-5 text-purple-600" />
               <h3 className="font-medium">Have a JSON filing?</h3>
             </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Upload it
-            </p>
-            <div className="ml-8">
+            <div className="ml-6">
               <input
                 type="file"
                 id="json-upload"
