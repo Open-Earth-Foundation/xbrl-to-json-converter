@@ -192,7 +192,7 @@ export default function Documentation() {
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">WebSocket Connection</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>WS /ws/{user_id}</p>
+                    <p>WS /ws/{"<user_id>"}</p>
                   </div>
                   <p className="text-gray-600 text-sm">
                     Establishes a WebSocket connection for real-time chat with the AI assistant. The user_id is obtained from the upload response.
