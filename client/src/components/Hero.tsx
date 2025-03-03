@@ -26,7 +26,7 @@ export default function Hero() {
               size="lg"
               className="bg-white text-primary hover:bg-white/90"
             >
-              Explore ESRS
+              Explore an ESRS Filing
             </Button>
             <Button 
               onClick={() => {
