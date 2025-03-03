@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-blue-00 via-primary/90 to-[#3C9BDC] h-[80vh] min-h-[600px] flex items-center relative">
+    <section className="bg-gradient-to-br from-blue-800 via-blue-600 to-blue-500 h-[80vh] min-h-[600px] flex items-center relative">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-sans">
