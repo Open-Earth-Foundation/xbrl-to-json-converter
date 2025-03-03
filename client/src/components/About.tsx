@@ -105,9 +105,23 @@ export default function About() {
             </section>
             
             <section>
-              <h3 className="text-xl font-semibold mb-3">Conclusion</h3>
+              <h3 className="text-xl font-semibold mb-3">Further Work & Collaboration</h3>
+              <p className="text-gray-600 mb-4">
+                The XBRL Disclosure Explorer is an open source project designed to catalyze corporate climate action through improved transparency and data accessibility. We're just getting started, and we invite you to join us in developing this toolset further.
+              </p>
+              
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
+                <h4 className="font-medium text-blue-800 mb-2">How You Can Contribute</h4>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Build additional reporting and visualization tools using our Open API</li>
+                  <li>Help improve our XBRL parser to handle more complex sustainability filings</li>
+                  <li>Develop sector-specific analysis modules for different industries</li>
+                  <li>Create educational resources to help stakeholders interpret ESRS data</li>
+                </ul>
+              </div>
+              
               <p className="text-gray-600">
-                By making sustainability data accessible and actionable, our ESRS Analysis Tool is empowering stakeholders to drive meaningful change. As corporations work towards meeting their climate commitments, tools like this are essential for monitoring progress, ensuring accountability, and ultimately accelerating the transition to a sustainable future.
+                By leveraging this open source foundation, together we can build a more robust ecosystem of tools for tracking corporate climate progress, holding companies accountable, and accelerating the transition to a sustainable economy.
               </p>
             </section>
           </div>
