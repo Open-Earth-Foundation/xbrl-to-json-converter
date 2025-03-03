@@ -235,10 +235,10 @@ export default function Chat() {
 
         {/* 7) The message input */}
         <div className="flex flex-wrap gap-2 mb-3 mt-2">
-          <button onClick={() => setInput("What are the key climate targets in this ESRS filing?")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Key climate targets</button>
-          <button onClick={() => setInput("Explain ESRS E1 section and its requirements")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">ESRS E1 explanation</button>
-          <button onClick={() => setInput("Compare this company's social impact disclosures with industry standards")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Social impact analysis</button>
-          <button onClick={() => setInput("Summarize governance practices disclosed in this filing")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Governance summary</button>
+          <button onClick={() => setInput("What are the key climate targets in this ESRS filing?")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">What are the key climate targets in this ESRS filing?</button>
+          <button onClick={() => setInput("Explain ESRS E1 section and its requirements")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Explain ESRS E1 section and its requirements</button>
+          <button onClick={() => setInput("Compare this company's social impact disclosures with industry standards")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Compare this company's social impact disclosures with industry standards</button>
+          <button onClick={() => setInput("Summarize governance practices disclosed in this filing")} className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors">Summarize governance practices disclosed in this filing</button>
         </div>
 
         <form onSubmit={sendMessage} className="flex gap-2 items-center">
