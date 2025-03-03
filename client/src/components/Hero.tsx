@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-primary via-primary/90 to-[#3C9BDC] h-[80vh] min-h-[600px] flex items-center relative">
+    <section className="bg-gradient-to-br from-blue-00 via-primary/90 to-[#3C9BDC] h-[80vh] min-h-[600px] flex items-center relative">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-sans">
@@ -37,11 +37,16 @@ export default function Hero() {
                 });
                 // Then set a timeout to select the About tab after scrolling
                 setTimeout(() => {
-                  const aboutTab = document.querySelector('[data-value="about"]') as HTMLElement;
-                  if (aboutTab) {
-                    aboutTab.click();
+                  // Directly set the value of the Tabs component to "about"
+                  const tabsElement = document.querySelector('[role="tablist"]')?.parentElement;
+                  if (tabsElement) {
+                    // Find and dispatch a click on the about tab trigger 
+                    const aboutTab = document.querySelector('[value="about"][role="tab"]') as HTMLElement;
+                    if (aboutTab) {
+                      aboutTab.click();
+                    }
                   }
-                }, 500);
+                }, 600);
               }}
               variant="outline"
               size="lg"
