@@ -6,7 +6,6 @@ import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useToast } from "../hooks/use-toast";
-import JsonUploadButton from './JsonUploadButton';
 import { getUserId } from '@/user-id';
 
 interface Message {
@@ -27,6 +26,8 @@ export default function Chat() {
   const [ws, setWs] = useState<WebSocket | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [usingPreloaded, setUsingPreloaded] = useState(false);
   const { toast } = useToast();
 
   // 2) On mount, connect to WebSocket
@@ -88,7 +89,7 @@ export default function Chat() {
   }, [toast]);
 
   // 3) Function to send user message
-  const sendMessage = (e: React.FormEvent) => {
+  const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || !ws) return;
 
@@ -104,6 +105,17 @@ export default function Chat() {
     setMessages(prev => [...prev, { text: input, isUser: true }]);
     setInput('');
   };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedFile(e.target.files?.[0]);
+  };
+
+  const handleJsonUpload = async (file: File) => {
+    // Implement JSON upload logic here
+    console.log("JSON file uploaded:", file);
+    // ... (Add your backend interaction here) ...
+  };
+
 
   // Keep scrolled to bottom
   useEffect(() => {
@@ -130,6 +142,7 @@ export default function Chat() {
         const err = await resp.json();
         throw new Error(err.error || 'Could not switch mode');
       }
+      setUsingPreloaded(true);
       console.log("Switched to preloaded mode");
       toast({
         title: "Mode Switch",
@@ -150,15 +163,36 @@ export default function Chat() {
       <CardContent className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold">Chat</h2>
+          <div>
+            {usingPreloaded || selectedFile ? (
+              <p>Using: {usingPreloaded ? 'Preloaded Mockup File' : selectedFile?.name}</p>
+            ) : null}
+          </div>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-lg font-medium mb-2">Corporate Filing</h3>
+          <div className="space-y-2">
+            <button
+              type="button"
+              className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 w-full"
+              onClick={switchToPreloaded}
+            >
+              Don't have a file? Use a Preloaded Mockup File
+            </button>
+            <input
+              type="file"
+              accept=".xbrl"
+              onChange={handleFileChange}
+              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+            />
+            <input
+              type="file"
+              accept=".json"
+              onChange={(e) => handleJsonUpload(e.target.files![0])}
+              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+            />
 
-          {/* 6) A button to revert to Preloaded mode */}
-          <button
-            type="button"
-            className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
-            onClick={switchToPreloaded}
-          >
-            Use Preloaded
-          </button>
+          </div>
         </div>
 
         <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
@@ -233,16 +267,13 @@ export default function Chat() {
             className="flex-1 p-2 border rounded"
             placeholder="Type your message..."
           />
-          <div className="flex gap-2">
-            <JsonUploadButton />
-            <button
-              type="submit"
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 min-w-[80px]"
-              disabled={isLoading}
-            >
-              {isLoading ? 'Sending...' : 'Send'}
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 min-w-[80px]"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending...' : 'Send'}
+          </button>
         </form>
       </CardContent>
     </Card>

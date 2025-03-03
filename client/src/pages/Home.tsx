@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardCarousel from "../components/CardCarousel";
-import FileUpload from "../components/FileUpload";
+import CorporateFilingUpload from "@/components/CorporateFilingUpload"; // Updated import
 import Chat from "../components/Chat";
 import About from "../components/About";
 import Documentation from "../components/Documentation";
@@ -8,9 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import Hero from "../components/Hero";
 
 function Home() {
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [activeTab, setActiveTab] = useState('chat');
-  
+
   // Listen for tab change requests
   useEffect(() => {
     const handleTabSwitch = (event: CustomEvent) => {
@@ -18,17 +17,17 @@ function Home() {
         setActiveTab(event.detail.tab);
       }
     };
-    
+
     // Check localStorage for active tab on mount
     const savedTab = localStorage.getItem('activeTab');
     if (savedTab) {
       setActiveTab(savedTab);
       localStorage.removeItem('activeTab'); // Clear after use
     }
-    
+
     // Add event listener for custom event
     window.addEventListener('switchTab', handleTabSwitch as EventListener);
-    
+
     return () => {
       window.removeEventListener('switchTab', handleTabSwitch as EventListener);
     };
@@ -47,7 +46,9 @@ function Home() {
 
           <TabsContent value="chat" className="space-y-6">
             <CardCarousel />
-            <FileUpload />
+            <div className="flex flex-col gap-4"> {/*Replaced FileUpload with CorporateFilingUpload*/}
+              <CorporateFilingUpload />
+            </div>
             <Chat />
           </TabsContent>
 
