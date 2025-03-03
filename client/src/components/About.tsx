@@ -41,7 +41,7 @@ export default function About() {
             <section>
               <h3 className="text-xl font-semibold mb-3">The ESRS Analysis Tool: Revolutionizing Sustainability Reporting</h3>
               <p className="text-gray-600 mb-4">
-                To make the process of analyzing sustainability disclosures easier and more effective, we built the <span className="font-bold">ESRS Analysis Tool</span>. This interactive platform leverages state-of-the-art technologies, including advanced XBRL processing and AI-powered insights, to transform raw corporate data into actionable information.
+                To make the process of analyzing sustainability disclosures easier and more effective, we built the <span className="font-bold">XBRL Disclosure Explorer</span>. This interactive platform leverages state-of-the-art technologies, including advanced XBRL processing and AI-powered insights, to transform raw corporate data into actionable information.
               </p>
               
               <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -59,17 +59,17 @@ export default function About() {
                   </p>
                 </div>
                 
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <h4 className="font-medium text-gray-900 mb-2">Real-Time Data Analysis</h4>
-                  <p className="text-gray-700">
-                    With WebSocket communication, the tool provides real-time feedback, ensuring that users always have access to the latest available information.
-                  </p>
-                </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow">
                   <h4 className="font-medium text-gray-900 mb-2">ESRS Documentation Browser</h4>
                   <p className="text-gray-700">
                     The integrated ESRS documentation browser allows users to easily reference the standards and guidelines that companies must adhere to in their filings.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow">
+                  <h4 className="font-medium text-gray-900 mb-2">Open API</h4>
+                  <p className="text-gray-700">
+                    With WebSocket communication, the tool provides real-time feedback, ensuring that users always have access to the latest available information.
                   </p>
                 </div>
               </div>
