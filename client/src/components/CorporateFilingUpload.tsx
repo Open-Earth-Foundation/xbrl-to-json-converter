@@ -1,49 +1,86 @@
 
-import { useState } from 'react';
+import { useState } from "react";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { getUserId } from "../utils/user";
 import { useToast } from "./ui/use-toast";
-import { Card, CardContent } from './ui/card';
-import { Button } from './ui/button';
-import { FileText, Upload, Database } from 'lucide-react';
-import { API_BASE_URL } from '../utils/constants';
-import { getUserId } from '../utils/user';
+import { FileUpload, FileJson, FileCheck } from "lucide-react";
 
-type UploadStatus = {
-  type: 'none' | 'preloaded' | 'xbrl' | 'json';
-  filename?: string;
-};
+const API_BASE_URL =
+  globalThis?.config?.VITE_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:8000";
 
 export default function CorporateFilingUpload() {
-  const [uploadStatus, setUploadStatus] = useState<UploadStatus>({ type: 'none' });
-  const [loading, setLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [fileName, setFileName] = useState<string | null>(null);
+  const [fileSource, setFileSource] = useState<string | null>(null);
   const { toast } = useToast();
-  const userId = getUserId();
-
-  const usePreloaded = async () => {
-    setLoading(true);
+  
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    setIsUploading(true);
+    setFileSource("upload");
+    const userId = getUserId();
+    
     try {
-      const response = await fetch(`${API_BASE_URL}/switch_mode`, {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('websocket_user_id', userId || '');
+      
+      const response = await fetch(API_BASE_URL + '/upload_file', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+      
+      setFileName(file.name);
+      toast({
+        title: "Success",
+        description: "File uploaded successfully"
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to upload file",
+        variant: "destructive"
+      });
+      setFileName(null);
+      setFileSource(null);
+    } finally {
+      setIsUploading(false);
+    }
+  };
+  
+  const usePreloadedFile = async () => {
+    setIsUploading(true);
+    setFileSource("preloaded");
+    const userId = getUserId();
+    
+    try {
+      const response = await fetch(API_BASE_URL + '/use_preloaded', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
-        body: new URLSearchParams({
-          'websocket_user_id': userId || '',
-          'new_mode': 'preloaded',
+        body: JSON.stringify({
+          websocket_user_id: userId || '',
         }),
       });
       
       if (!response.ok) {
-        throw new Error('Failed to switch to preloaded mode');
+        throw new Error('Failed to use preloaded file');
       }
       
-      setUploadStatus({ 
-        type: 'preloaded',
-        filename: 'Sample ESRS Filing'
-      });
-      
+      setFileName("ESRS-Mockup-Example.xbrl");
       toast({
         title: "Success",
-        description: "Using preloaded ESRS sample file"
+        description: "Using preloaded XBRL file"
       });
     } catch (error) {
       toast({
@@ -51,74 +88,36 @@ export default function CorporateFilingUpload() {
         description: "Failed to use preloaded file",
         variant: "destructive"
       });
+      setFileName(null);
+      setFileSource(null);
     } finally {
-      setLoading(false);
+      setIsUploading(false);
     }
   };
-
-  const handleXbrlUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setLoading(true);
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('websocket_user_id', userId || '');
-
-    try {
-      const response = await fetch(`${API_BASE_URL}/upload_xbrl`, {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to upload XBRL file');
-      }
-
-      setUploadStatus({
-        type: 'xbrl',
-        filename: file.name
-      });
-      
-      toast({
-        title: "Success",
-        description: "XBRL file uploaded successfully"
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to upload XBRL file",
-        variant: "destructive"
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  
   const handleJsonUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
-    setLoading(true);
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('websocket_user_id', userId || '');
-
+    
+    setIsUploading(true);
+    setFileSource("json");
+    const userId = getUserId();
+    
     try {
-      const response = await fetch(`${API_BASE_URL}/upload_json`, {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('websocket_user_id', userId || '');
+      
+      const response = await fetch(API_BASE_URL + '/upload_json_file', {
         method: 'POST',
         body: formData,
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to upload JSON file');
-      }
-
-      setUploadStatus({
-        type: 'json',
-        filename: file.name
-      });
       
+      if (!response.ok) {
+        throw new Error('Upload failed');
+      }
+      
+      setFileName(file.name);
       toast({
         title: "Success",
         description: "JSON file uploaded successfully"
@@ -129,101 +128,101 @@ export default function CorporateFilingUpload() {
         description: "Failed to upload JSON file",
         variant: "destructive"
       });
+      setFileName(null);
+      setFileSource(null);
     } finally {
-      setLoading(false);
+      setIsUploading(false);
     }
   };
 
   return (
-    <Card>
-      <CardContent className="p-4">
+    <Card className="w-full">
+      <CardContent className="p-6">
         <h2 className="text-xl font-semibold mb-4">Corporate Filing</h2>
         
-        <div className="grid md:grid-cols-3 gap-3 mb-4">
-          {/* Preloaded Option */}
-          <div className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center gap-3 mb-2">
-              <FileText className="h-5 w-5 text-blue-600" />
-              <h3 className="font-medium">Don't have a file?</h3>
-            </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Use a Preloaded Mockup File
+        <div className="space-y-6">
+          {/* Option 1: Preloaded file */}
+          <div className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <h3 className="font-medium mb-2 flex items-center">
+              <FileCheck className="mr-2 h-5 w-5 text-blue-500" />
+              Don't have a file? Use a Preloaded Mockup File
+            </h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Use our sample XBRL file to explore the system capabilities.
             </p>
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="ml-8"
-              onClick={usePreloaded}
-              disabled={loading}
+            <Button
+              onClick={usePreloadedFile}
+              disabled={isUploading}
+              variant="outline"
+              className="w-full"
             >
-              Use Preloaded
+              {isUploading && fileSource === "preloaded" ? "Loading..." : "Use Preloaded"}
             </Button>
           </div>
           
-          {/* XBRL Upload Option */}
-          <div className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center gap-3 mb-2">
-              <Upload className="h-5 w-5 text-green-600" />
-              <h3 className="font-medium">Have an XBRL file?</h3>
-            </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Upload it
+          {/* Option 2: XBRL upload */}
+          <div className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <h3 className="font-medium mb-2 flex items-center">
+              <FileUpload className="mr-2 h-5 w-5 text-green-500" />
+              Have an XBRL file? Upload it
+            </h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Upload your XBRL document for processing and analysis.
             </p>
-            <div className="ml-8">
-              <input
-                type="file"
-                id="xbrl-upload"
-                onChange={handleXbrlUpload}
-                accept=".xml,.xbrl,.zip"
-                className="block w-full text-sm text-gray-500
-                  file:mr-4 file:py-2 file:px-4
-                  file:rounded-full file:border-0
-                  file:text-sm file:font-semibold
-                  file:bg-green-50 file:text-green-700
-                  hover:file:bg-green-100"
-                disabled={loading}
-              />
-            </div>
+            <input
+              type="file"
+              accept=".xbrl,.xml"
+              onChange={handleFileChange}
+              className="hidden"
+              id="xbrl-upload"
+              disabled={isUploading}
+            />
+            <label
+              htmlFor="xbrl-upload"
+              className="inline-block w-full cursor-pointer"
+            >
+              <div className="bg-white border border-gray-300 rounded text-center py-2 px-4 hover:bg-gray-50 transition-colors">
+                {isUploading && fileSource === "upload" ? "Uploading..." : "Choose File"}
+              </div>
+            </label>
           </div>
           
-          {/* JSON Upload Option */}
-          <div className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex items-center gap-3 mb-2">
-              <Database className="h-5 w-5 text-purple-600" />
-              <h3 className="font-medium">Have a JSON filing?</h3>
-            </div>
-            <p className="text-sm text-gray-600 mb-2 pl-8">
-              Upload it
+          {/* Option 3: JSON upload */}
+          <div className="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+            <h3 className="font-medium mb-2 flex items-center">
+              <FileJson className="mr-2 h-5 w-5 text-purple-500" />
+              Have a JSON filing? Upload it
+            </h3>
+            <p className="text-sm text-gray-600 mb-3">
+              Upload a preprocessed JSON file if you already have one.
             </p>
-            <div className="ml-8">
-              <input
-                type="file"
-                id="json-upload"
-                onChange={handleJsonUpload}
-                accept=".json"
-                className="block w-full text-sm text-gray-500
-                  file:mr-4 file:py-2 file:px-4
-                  file:rounded-full file:border-0
-                  file:text-sm file:font-semibold
-                  file:bg-purple-50 file:text-purple-700
-                  hover:file:bg-purple-100"
-                disabled={loading}
-              />
-            </div>
+            <input
+              type="file"
+              accept=".json"
+              onChange={handleJsonUpload}
+              className="hidden"
+              id="json-upload"
+              disabled={isUploading}
+            />
+            <label
+              htmlFor="json-upload"
+              className="inline-block w-full cursor-pointer"
+            >
+              <div className="bg-white border border-gray-300 rounded text-center py-2 px-4 hover:bg-gray-50 transition-colors">
+                {isUploading && fileSource === "json" ? "Uploading..." : "Upload JSON"}
+              </div>
+            </label>
           </div>
         </div>
         
-        {/* Status Display */}
-        {loading && (
-          <div className="mt-2 p-2 bg-blue-50 text-blue-700 rounded">
-            Processing...
-          </div>
-        )}
-        
-        {(!loading && uploadStatus.type !== 'none') && (
-          <div className="mt-2 p-2 bg-green-50 text-green-700 rounded flex items-center gap-2">
-            <div className="font-medium">Using:</div> 
-            {uploadStatus.type === 'preloaded' ? 'Preloaded Mockup File' : uploadStatus.filename}
+        {fileName && (
+          <div className="mt-6 p-3 bg-green-50 border border-green-100 rounded-md">
+            <p className="text-green-800 font-medium flex items-center">
+              <FileCheck className="mr-2 h-5 w-5" />
+              {fileSource === "preloaded" 
+                ? "Using Preloaded Mockup File" 
+                : `Using ${fileName}`}
+            </p>
           </div>
         )}
       </CardContent>

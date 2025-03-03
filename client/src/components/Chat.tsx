@@ -1,149 +1,173 @@
-import { useState, useEffect, useRef, KeyboardEvent } from 'react';
-import { Card, CardContent } from './ui/card';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { getUserId } from '../utils/user';
-import { Send } from 'lucide-react';
-import { API_BASE_URL } from '../utils/constants';
+
+import { useState, useEffect, useRef } from "react";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { getUserId } from "../utils/user";
+import { Send } from "lucide-react";
+
+const WEBSOCKET_URL =
+  globalThis?.config?.BACKEND_WS_ORIGIN ||
+  import.meta.env.VITE_WEBSOCKET_URL ||
+  "ws://localhost:8000";
+
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
 
 export default function Chat() {
-  const [messages, setMessages] = useState<{ role: 'user' | 'assistant'; content: string; }[]>([]);
-  const [input, setInput] = useState('');
-  const [isConnected, setIsConnected] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef<null | HTMLDivElement>(null);
-  const messagesContainerRef = useRef<null | HTMLDivElement>(null);
-  const websocketRef = useRef<WebSocket | null>(null);
-  const userId = getUserId();
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("disconnected");
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const ws = useRef<WebSocket | null>(null);
+  const reconnectTimeout = useRef<number | null>(null);
 
-  // Connect to WebSocket when component mounts
   useEffect(() => {
-    if (!userId) return;
+    connectWebSocket();
 
-    const wsUrl = `${API_BASE_URL.replace('http', 'ws')}/ws/${userId}`;
-    const ws = new WebSocket(wsUrl);
+    return () => {
+      if (ws.current) {
+        ws.current.close();
+      }
+      if (reconnectTimeout.current) {
+        clearTimeout(reconnectTimeout.current);
+      }
+    };
+  }, []);
 
-    ws.onopen = () => {
-      console.log('WebSocket connected');
-      setIsConnected(true);
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const connectWebSocket = () => {
+    const userId = getUserId();
+    const wsUrl = `${WEBSOCKET_URL}/ws/${userId}`;
+
+    console.log("Connecting to WebSocket:", wsUrl);
+    
+    ws.current = new WebSocket(wsUrl);
+
+    ws.current.onopen = () => {
+      console.log("WebSocket connected");
+      setStatus("connected");
     };
 
-    ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        if (data.type === 'thinking') {
-          setIsTyping(true);
-        } else if (data.type === 'message') {
-          setIsTyping(false);
-          setMessages(prev => [...prev, { role: 'assistant', content: data.content }]);
-        }
-      } catch (error) {
-        console.error('Failed to parse WebSocket message:', error);
+    ws.current.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      if (data.type === "message") {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { role: "assistant", content: data.content },
+        ]);
+        setIsLoading(false);
       }
     };
 
-    ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
-      setIsConnected(false);
+    ws.current.onclose = () => {
+      console.log("WebSocket disconnected");
+      setStatus("disconnected");
+      
+      // Attempt to reconnect after 5 seconds
+      reconnectTimeout.current = window.setTimeout(() => {
+        console.log("Attempting to reconnect...");
+        connectWebSocket();
+      }, 5000);
     };
 
-    ws.onclose = () => {
-      console.log('WebSocket disconnected');
-      setIsConnected(false);
+    ws.current.onerror = (error) => {
+      console.log("WebSocket error:", error);
     };
-
-    websocketRef.current = ws;
-
-    return () => {
-      ws.close();
-    };
-  }, [userId]);
-
-  // Scroll to bottom when messages update
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isTyping]);
-
-  const sendMessage = () => {
-    if (!input.trim() || !isConnected) return;
-
-    const newMessage = { role: 'user' as const, content: input };
-    setMessages(prev => [...prev, newMessage]);
-
-    if (websocketRef.current?.readyState === WebSocket.OPEN) {
-      websocketRef.current.send(JSON.stringify({ type: 'message', content: input }));
-    }
-
-    setInput('');
   };
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const sendMessage = () => {
+    if (!message.trim() || !ws.current || ws.current.readyState !== WebSocket.OPEN) {
+      return;
+    }
+
+    const newMessage = { role: "user", content: message };
+    setMessages([...messages, newMessage]);
+    setIsLoading(true);
+    setMessage("");
+
+    ws.current.send(JSON.stringify({
+      type: "message",
+      content: message,
+    }));
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
     }
   };
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <Card>
-      <CardContent className="p-4">
-        <h2 className="text-xl font-semibold mb-4">Chat</h2>
-
-        <div 
-          ref={messagesContainerRef}
-          className="h-[400px] overflow-y-auto mb-4 bg-gray-50 rounded-lg p-3 space-y-3"
-        >
-          {messages.length === 0 && (
-            <div className="text-center text-gray-500 py-8">
-              <p>Upload or select a corporate filing to start chatting</p>
-              <p className="text-sm mt-2">Ask questions about the ESRS filing to get insights</p>
-            </div>
-          )}
-
-          {messages.map((message, index) => (
-            <div 
-              key={index}
-              className={`p-3 rounded-lg max-w-[80%] ${
-                message.role === 'user' 
-                  ? 'bg-blue-100 ml-auto' 
-                  : 'bg-white border shadow-sm'
+    <div className="flex flex-col h-[600px] max-h-[calc(100vh-250px)]">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {messages.map((msg, index) => (
+          <div
+            key={index}
+            className={`flex ${
+              msg.role === "user" ? "justify-end" : "justify-start"
+            }`}
+          >
+            <div
+              className={`max-w-[80%] p-3 rounded-lg ${
+                msg.role === "user"
+                  ? "bg-blue-500 text-white rounded-br-none"
+                  : "bg-gray-200 text-gray-800 rounded-bl-none"
               }`}
             >
-              {message.content.split('\n').map((text, i) => (
-                <p key={i}>{text}</p>
-              ))}
+              <p className="whitespace-pre-wrap">{msg.content}</p>
             </div>
-          ))}
-
-          {isTyping && (
-            <div className="p-3 rounded-lg max-w-[80%] bg-white border shadow-sm">
-              <p className="text-gray-500">Thinking...</p>
+          </div>
+        ))}
+        {isLoading && (
+          <div className="flex justify-start">
+            <div className="max-w-[80%] p-3 rounded-lg bg-gray-200 text-gray-800 rounded-bl-none">
+              <div className="flex space-x-2 items-center">
+                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.3s]"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.15s]"></div>
+                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"></div>
+              </div>
             </div>
-          )}
+          </div>
+        )}
+        <div ref={messagesEndRef} />
+      </div>
 
-          <div ref={messagesEndRef} />
-        </div>
-
-        <div className="flex gap-2">
-          <Input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+      <div className="border-t p-4">
+        <div className="flex items-center space-x-2">
+          <input
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask a question about the filing..."
-            disabled={!isConnected}
-            className="flex-1"
+            placeholder="Type your message..."
+            className="flex-1 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            disabled={status !== "connected"}
           />
-          <Button onClick={sendMessage} disabled={!isConnected || !input.trim()}>
+          <Button 
+            onClick={sendMessage} 
+            disabled={status !== "connected" || !message.trim()}
+            size="icon"
+          >
             <Send className="h-4 w-4" />
           </Button>
         </div>
-
-        {!isConnected && (
-          <p className="text-red-500 text-sm mt-2">
-            Not connected. Please try refreshing the page.
-          </p>
-        )}
-      </CardContent>
-    </Card>
+        <div className="text-xs text-gray-500 mt-2">
+          {status === "connected"
+            ? "Connected to chat server"
+            : "Connecting to chat server..."}
+        </div>
+      </div>
+    </div>
   );
 }
