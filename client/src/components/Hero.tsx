@@ -1,7 +1,16 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
+  // Force scroll to top when Hero component mounts
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto'
+    });
+  }, []);
+
   const scrollToContent = () => {
     window.scrollTo({
       top: window.innerHeight,
