@@ -1,173 +1,281 @@
-
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
-import { getUserId } from "../utils/user";
-import { Send } from "lucide-react";
+import LoadingDots from "./LoadingDots";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useToast } from "../hooks/use-toast";
+import { getUserId } from '@/user-id';
 
-const WEBSOCKET_URL =
-  globalThis?.config?.BACKEND_WS_ORIGIN ||
-  import.meta.env.VITE_WEBSOCKET_URL ||
-  "ws://localhost:8000";
+interface Message {
+  text: string;
+  isUser: boolean;
+}
 
-type Message = {
-  role: "user" | "assistant";
-  content: string;
-};
+// 1) Ensure we pick up the WS origin from config or default
+const WS_ORIGIN = globalThis.config?.BACKEND_WS_ORIGIN || 'ws://localhost:8000';
+const API_BASE_URL =
+  globalThis?.config?.VITE_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:8000";
 
 export default function Chat() {
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("disconnected");
   const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [input, setInput] = useState('');
+  const [ws, setWs] = useState<WebSocket | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const ws = useRef<WebSocket | null>(null);
-  const reconnectTimeout = useRef<number | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [usingPreloaded, setUsingPreloaded] = useState(false);
+  const { toast } = useToast();
 
+  // 2) On mount, connect to WebSocket
   useEffect(() => {
-    connectWebSocket();
+    let userId = getUserId()
+    const websocket = new WebSocket(`${WS_ORIGIN}/ws?user_id=${userId}`);
 
-    return () => {
-      if (ws.current) {
-        ws.current.close();
+    websocket.onopen = () => {
+      console.log('Connected to WebSocket');
+    };
+
+    websocket.onmessage = (event) => {
+      setIsLoading(false);
+      const message = event.data;
+      let data: any = null;
+      try {
+        data = JSON.parse(message);
+      } catch (error) {
+        console.error('Failed to parse message:', error);
+        return;
       }
-      if (reconnectTimeout.current) {
-        clearTimeout(reconnectTimeout.current);
+      switch (data.type) {
+        case 'message':
+          setMessages(prev => [...prev, { text: data.message, isUser: false }]);
+          break;
+        case 'user_id':
+          localStorage.setItem('userId', data.user_id);
+          break;
+        case 'personal_message':
+          toast({
+            title: "Personal message from server",
+            description: data.message,
+            duration: 3000,
+          });
+          break;
+        case 'error':
+          console.error('Server error:', data.error);
+          toast({
+            title: "Server error",
+            description: data.error,
+            variant: "destructive",
+          });
+          break;
+        default:
+          console.error('Invalid message type:', data.type);
       }
     };
-  }, []);
 
+    websocket.onerror = (error) => {
+      console.error('WebSocket error:', error);
+    };
+
+    setWs(websocket);
+
+    // Clean up on unmount
+    return () => {
+      websocket.close();
+    };
+  }, [toast]);
+
+  // 3) Function to send user message
+  const sendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || !ws) return;
+
+    setIsLoading(true);
+    console.log('Sending message:', input);
+
+    // 4) *** Include enhancedContext in the message payload ***
+    ws.send(JSON.stringify({
+      message: input,
+    }));
+
+    // Show user's own message in the UI
+    setMessages(prev => [...prev, { text: input, isUser: true }]);
+    setInput('');
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedFile(e.target.files?.[0]);
+  };
+
+  const handleJsonUpload = async (file: File) => {
+    // Implement JSON upload logic here
+    console.log("JSON file uploaded:", file);
+    // ... (Add your backend interaction here) ...
+  };
+
+
+  // Keep scrolled to bottom
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const connectWebSocket = () => {
-    const userId = getUserId();
-    const wsUrl = `${WEBSOCKET_URL}/ws/${userId}`;
-
-    console.log("Connecting to WebSocket:", wsUrl);
-    
-    ws.current = new WebSocket(wsUrl);
-
-    ws.current.onopen = () => {
-      console.log("WebSocket connected");
-      setStatus("connected");
-    };
-
-    ws.current.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      if (data.type === "message") {
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { role: "assistant", content: data.content },
-        ]);
-        setIsLoading(false);
-      }
-    };
-
-    ws.current.onclose = () => {
-      console.log("WebSocket disconnected");
-      setStatus("disconnected");
-      
-      // Attempt to reconnect after 5 seconds
-      reconnectTimeout.current = window.setTimeout(() => {
-        console.log("Attempting to reconnect...");
-        connectWebSocket();
-      }, 5000);
-    };
-
-    ws.current.onerror = (error) => {
-      console.log("WebSocket error:", error);
-    };
-  };
-
-  const sendMessage = () => {
-    if (!message.trim() || !ws.current || ws.current.readyState !== WebSocket.OPEN) {
+  // 5) Add a function to switch to preloaded
+  async function switchToPreloaded() {
+    const userId = getUserId()
+    if (!userId) {
+      console.error("No userId found in localStorage");
       return;
     }
+    const formData = new FormData();
+    formData.append('websocket_user_id', userId);
+    formData.append('new_mode', 'preloaded');
 
-    const newMessage = { role: "user", content: message };
-    setMessages([...messages, newMessage]);
-    setIsLoading(true);
-    setMessage("");
-
-    ws.current.send(JSON.stringify({
-      type: "message",
-      content: message,
-    }));
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
+    try {
+      const resp = await fetch(API_BASE_URL + '/switch_mode', {
+        method: 'POST',
+        body: formData
+      });
+      if (!resp.ok) {
+        const err = await resp.json();
+        throw new Error(err.error || 'Could not switch mode');
+      }
+      setUsingPreloaded(true);
+      console.log("Switched to preloaded mode");
+      toast({
+        title: "Mode Switch",
+        description: "Now using Preloaded Assistant"
+      });
+    } catch (err) {
+      console.error("Failed to switch mode:", err);
+      toast({
+        title: "Error",
+        description: err instanceof Error ? err.message : 'Unknown error',
+        variant: "destructive"
+      });
     }
-  };
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }
 
   return (
-    <div className="flex flex-col h-[600px] max-h-[calc(100vh-250px)]">
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`flex ${
-              msg.role === "user" ? "justify-end" : "justify-start"
-            }`}
-          >
-            <div
-              className={`max-w-[80%] p-3 rounded-lg ${
-                msg.role === "user"
-                  ? "bg-blue-500 text-white rounded-br-none"
-                  : "bg-gray-200 text-gray-800 rounded-bl-none"
-              }`}
+    <Card>
+      <CardContent className="p-4">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold">Chat</h2>
+          <div>
+            {usingPreloaded || selectedFile ? (
+              <p>Using: {usingPreloaded ? 'Preloaded Mockup File' : selectedFile?.name}</p>
+            ) : null}
+          </div>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-lg font-medium mb-2">Corporate Filing</h3>
+          <div className="space-y-2">
+            <button
+              type="button"
+              className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 w-full"
+              onClick={switchToPreloaded}
             >
-              <p className="whitespace-pre-wrap">{msg.content}</p>
-            </div>
-          </div>
-        ))}
-        {isLoading && (
-          <div className="flex justify-start">
-            <div className="max-w-[80%] p-3 rounded-lg bg-gray-200 text-gray-800 rounded-bl-none">
-              <div className="flex space-x-2 items-center">
-                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.3s]"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.15s]"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"></div>
-              </div>
-            </div>
-          </div>
-        )}
-        <div ref={messagesEndRef} />
-      </div>
+              Don't have a file? Use a Preloaded Mockup File
+            </button>
+            <input
+              type="file"
+              accept=".xbrl"
+              onChange={handleFileChange}
+              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+            />
+            <input
+              type="file"
+              accept=".json"
+              onChange={(e) => handleJsonUpload(e.target.files![0])}
+              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
+            />
 
-      <div className="border-t p-4">
-        <div className="flex items-center space-x-2">
+          </div>
+        </div>
+
+        <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={
+                "mb-2 p-2 rounded-lg " +
+                (message.isUser
+                  ? "bg-blue-100 ml-auto max-w-[80%]"
+                  : "bg-gray-100 mr-auto max-w-[80%]")
+              }
+            >
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || '');
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        style={vscDarkPlus}
+                        language={match[1]}
+                        PreTag="div"
+                        className="rounded-md my-2"
+                        {...props}
+                      >
+                        {String(children).replace(/\n$/, '')}
+                      </SyntaxHighlighter>
+                    ) : (
+                      <code
+                        className={
+                          inline
+                            ? "bg-opacity-20 bg-gray-500 rounded px-1"
+                            : "block bg-opacity-10 bg-gray-500 p-2 rounded-lg my-2"
+                        }
+                        {...props}
+                      >
+                        {children}
+                      </code>
+                    );
+                  },
+                  a: ({ node, ...props }) => (
+                    <a
+                      className="text-blue-500 hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      {...props}
+                    />
+                  ),
+                  ul: ({ node, ...props }) => (
+                    <ul className="list-disc ml-4 my-2" {...props} />
+                  ),
+                  ol: ({ node, ...props }) => (
+                    <ol className="list-decimal ml-4 my-2" {...props} />
+                  ),
+                }}
+              >
+                {message.text}
+              </ReactMarkdown>
+            </div>
+          ))}
+          {isLoading && <LoadingDots />}
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* 7) The message input */}
+        <form onSubmit={sendMessage} className="flex gap-2 items-center">
           <input
             type="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="flex-1 p-2 border rounded"
             placeholder="Type your message..."
-            className="flex-1 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
-            disabled={status !== "connected"}
           />
-          <Button 
-            onClick={sendMessage} 
-            disabled={status !== "connected" || !message.trim()}
-            size="icon"
+          <button
+            type="submit"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 min-w-[80px]"
+            disabled={isLoading}
           >
-            <Send className="h-4 w-4" />
-          </Button>
-        </div>
-        <div className="text-xs text-gray-500 mt-2">
-          {status === "connected"
-            ? "Connected to chat server"
-            : "Connecting to chat server..."}
-        </div>
-      </div>
-    </div>
+            {isLoading ? 'Sending...' : 'Send'}
+          </button>
+        </form>
+      </CardContent>
+    </Card>
   );
 }
