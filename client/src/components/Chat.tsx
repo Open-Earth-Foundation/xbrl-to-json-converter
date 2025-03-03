@@ -169,31 +169,6 @@ export default function Chat() {
             ) : null}
           </div>
         </div>
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Corporate Filing</h3>
-          <div className="space-y-2">
-            <button
-              type="button"
-              className="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 w-full"
-              onClick={switchToPreloaded}
-            >
-              Don't have a file? Use a Preloaded Mockup File
-            </button>
-            <input
-              type="file"
-              accept=".xbrl"
-              onChange={handleFileChange}
-              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
-            />
-            <input
-              type="file"
-              accept=".json"
-              onChange={(e) => handleJsonUpload(e.target.files![0])}
-              className="w-full px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
-            />
-
-          </div>
-        </div>
 
         <div className="h-[400px] overflow-y-auto mb-4 p-4 border rounded-lg">
           {messages.map((message, index) => (

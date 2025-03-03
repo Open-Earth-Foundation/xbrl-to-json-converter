@@ -145,7 +145,7 @@ export default function CorporateFilingUpload() {
       <CardContent className="p-4">
         <h2 className="text-xl font-semibold mb-4">Corporate Filing</h2>
         
-        <div className="grid gap-3 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
           {/* Preloaded Option */}
           <div className="p-3 border rounded-lg hover:bg-gray-50 transition-colors">
             <div className="flex items-center gap-3 mb-2">
