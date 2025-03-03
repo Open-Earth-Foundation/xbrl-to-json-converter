@@ -28,6 +28,9 @@ export default function Hero() {
     <section className="bg-gradient-to-br from-blue-800 via-blue-600 to-blue-500 h-[80vh] min-h-[600px] flex items-center relative">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl">
+          <div className="inline-block px-3 py-1 mb-3 border border-white rounded-full text-xs font-medium text-white">
+            Beta Version
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-sans">
             XBRL Disclosure Explorer for ESRS
           </h1>
