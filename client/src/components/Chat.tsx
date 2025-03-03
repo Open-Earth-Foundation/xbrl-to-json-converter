@@ -256,7 +256,7 @@ export default function Chat() {
             type="submit"
             size="sm"
             disabled={isLoading}
-            className="ml-2"
+            className="ml-2 bg-blue-700 hover:bg-blue-600"
           >
             <Send className="h-4 w-4" />
           </Button>
