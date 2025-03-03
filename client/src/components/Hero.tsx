@@ -4,11 +4,17 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   // Force scroll to top when Hero component mounts
+  // Use a stronger approach to ensure we really stay at the top
   React.useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'auto'
-    });
+    // Immediate scroll
+    window.scrollTo(0, 0);
+    
+    // Also do a delayed scroll to handle any race conditions
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const scrollToContent = () => {
