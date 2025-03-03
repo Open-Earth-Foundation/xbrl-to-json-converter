@@ -27,54 +27,68 @@ export default function Documentation() {
                 <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-6">
                   <h4 className="font-medium text-blue-800">Why It Matters</h4>
                   <p className="text-gray-700">
-                    Climate change is one of the most pressing challenges of our time. By making sustainability data accessible and actionable, our tool empowers stakeholders to hold companies accountable for their environmental commitments and drive meaningful climate action.
+                    Tracking corporate sustainability filings allows stakeholders to evaluate whether companies are making measurable progress toward their climate targets. This tool makes it easier to identify trends, compare reporting across companies, and ensure compliance with ESRS requirements.
                   </p>
+                </div>
+                
+                <h4 className="font-semibold text-lg mb-2">Key Components</h4>
+                <ul className="list-disc pl-5 space-y-2 mb-6">
+                  <li>XBRL file processing and conversion to accessible JSON format</li>
+                  <li>Natural language query interface for document exploration</li>
+                  <li>Built-in knowledge about ESRS requirements and taxonomy</li>
+                  <li>Real-time analysis and insights generation</li>
+                </ul>
+                
+                <div className="bg-gray-50 p-4 rounded-lg mb-6">
+                  <h4 className="font-semibold mb-2">Project Status</h4>
+                  <p>This is an open source project in active development. Contributions are welcome!</p>
                 </div>
               </div>
             </TabsContent>
             
             <TabsContent value="getting-started">
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold">Installation</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <h3 className="text-xl font-semibold mb-3">Getting Started</h3>
+                
+                <h4 className="font-semibold text-lg mb-2">Prerequisites</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-600 mb-6">
+                  <li>XBRL files that comply with ESRS standards</li>
+                  <li>Modern web browser for optimal experience</li>
+                </ul>
+                
+                <h4 className="font-semibold text-lg mb-2">Quick Start</h4>
+                <ol className="list-decimal pl-5 space-y-2 text-gray-600 mb-6">
+                  <li>Visit the upload section from the main interface</li>
+                  <li>Upload your XBRL or pre-converted JSON file</li>
+                  <li>Wait for processing to complete</li>
+                  <li>Use the chat interface to start exploring your data</li>
+                </ol>
+                
+                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mb-6">
+                  <h4 className="font-medium text-green-800">Sample Queries</h4>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                    <li>"What climate targets has the company disclosed?"</li>
+                    <li>"Summarize the sustainability risks mentioned in this filing"</li>
+                    <li>"Show me all environmental metrics with their values"</li>
+                    <li>"Compare this company's emissions to industry averages"</li>
+                  </ul>
+                </div>
+                
+                <h4 className="font-semibold text-lg mb-2">System Modes</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg shadow">
-                    <h4 className="font-medium text-gray-900 mb-2">Backend Setup</h4>
-                    <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                      <p>cd backend</p>
-                      <p>pip install -r requirements.txt</p>
-                      <p>uvicorn app:app --reload --port 8000</p>
-                    </div>
-                    <p className="text-gray-600 text-sm">Starts the FastAPI backend server for WebSocket communication and file processing.</p>
+                    <h5 className="font-medium text-gray-900 mb-2">Preloaded Mode</h5>
+                    <p className="text-gray-700 text-sm">
+                      Access general information about ESRS standards and taxonomy without uploading files.
+                    </p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
-                    <h4 className="font-medium text-gray-900 mb-2">Arelle Service Setup</h4>
-                    <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                      <p>cd arelle_service</p>
-                      <p>pip install -r requirements.txt</p>
-                      <p>uvicorn app:app --reload --port 8001</p>
-                    </div>
-                    <p className="text-gray-600 text-sm">Starts the XBRL processing service that converts XBRL files to JSON.</p>
+                    <h5 className="font-medium text-gray-900 mb-2">User Upload Mode</h5>
+                    <p className="text-gray-700 text-sm">
+                      Upload and analyze your own XBRL or JSON files for specific company insights.
+                    </p>
                   </div>
-                </div>
-                
-                <div className="bg-white p-4 rounded-lg shadow mb-6">
-                  <h4 className="font-medium text-gray-900 mb-2">Frontend Setup</h4>
-                  <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>cd client</p>
-                    <p>npm install</p>
-                    <p>npm run dev</p>
-                  </div>
-                  <p className="text-gray-600 text-sm">Starts the React frontend on http://localhost:5173</p>
-                </div>
-                
-                <h3 className="text-xl font-semibold">Configuration</h3>
-                <p className="text-gray-600 mb-4">
-                  Copy the example environment files and configure your settings:
-                </p>
-                <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-4">
-                  <p>cp backend/.env.example backend/.env</p>
-                  <p>cp client/.env.example client/.env</p>
                 </div>
               </div>
             </TabsContent>
@@ -87,21 +101,21 @@ export default function Documentation() {
                   <div className="bg-white p-4 rounded-lg shadow">
                     <h4 className="font-medium text-gray-900 mb-2">XBRL File Processing</h4>
                     <p className="text-gray-700">
-                      Upload and parse complex XBRL files to extract relevant sustainability data. Our Arelle-powered service converts XBRL into JSON format for easier analysis.
+                      Upload complex XBRL files and convert them into a structured JSON format for easy analysis.
                     </p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
                     <h4 className="font-medium text-gray-900 mb-2">AI-Powered Chat Interface</h4>
                     <p className="text-gray-700">
-                      Interact with the data through a natural language chatbot interface. Ask questions about the filing to get instant insights without needing technical expertise.
+                      Interact with your data through a natural language interface that understands ESRS context.
                     </p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
                     <h4 className="font-medium text-gray-900 mb-2">ESRS Embedded Knowledge</h4>
                     <p className="text-gray-700">
-                      The platform includes embedded ESRS knowledge to help users navigate the complex taxonomy and different sections of the standards.
+                      The platform includes embedded ESRS knowledge that helps users navigate and understand the taxonomy, different sections, and requirements of the standards.
                     </p>
                   </div>
                   
@@ -161,28 +175,21 @@ export default function Documentation() {
                   <div className="bg-white p-3 rounded-lg border border-gray-200">
                     <h5 className="font-medium text-gray-900">Arelle Service</h5>
                     <p className="text-gray-600 text-sm">
-                      A dedicated microservice for converting XBRL files to JSON format using the Arelle library.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <h5 className="font-medium text-gray-900">Query API Service</h5>
-                    <p className="text-gray-600 text-sm">
-                      Provides endpoints for querying ESRS documentation and reference materials.
+                      Specialized microservice for processing XBRL files and converting them to a more accessible JSON format.
                     </p>
                   </div>
                   
                   <div className="bg-white p-3 rounded-lg border border-gray-200">
                     <h5 className="font-medium text-gray-900">React Frontend</h5>
                     <p className="text-gray-600 text-sm">
-                      Modern UI with real-time WebSocket communication for file uploads and chat interactions.
+                      Provides an intuitive user interface with file upload capabilities, chat interface, and document visualization.
                     </p>
                   </div>
                 </div>
                 
                 <h4 className="font-semibold text-lg mb-2">Data Flow</h4>
-                <ol className="list-decimal list-inside space-y-2 text-gray-600">
-                  <li>User uploads an XBRL file to the backend</li>
+                <ol className="list-decimal pl-5 space-y-2 text-gray-600">
+                  <li>User uploads XBRL file through the frontend</li>
                   <li>Backend forwards the file to Arelle Service for conversion</li>
                   <li>Converted JSON is processed and indexed for AI analysis</li>
                   <li>User interacts with the data via WebSocket-powered chat interface</li>
@@ -222,7 +229,7 @@ export default function Documentation() {
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">WebSocket Endpoint</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>WS /ws?user_id={user_id}</p>
+                    <p>WS /ws?user_id=&#123;userId&#125;</p>
                   </div>
                   <p className="text-gray-600 text-sm">
                     Establishes a WebSocket connection for real-time chat interaction with the AI assistant.
