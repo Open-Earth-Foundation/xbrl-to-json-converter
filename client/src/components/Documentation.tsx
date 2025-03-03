@@ -1,6 +1,6 @@
 
-import { Card, CardContent } from "./ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Card, CardContent } from "./ui/card";
 
 export default function Documentation() {
   return (
@@ -21,15 +21,8 @@ export default function Documentation() {
             <TabsContent value="overview">
               <div className="prose text-gray-600 max-w-none">
                 <p className="mb-4">
-                  The XBRL Disclosure Explorer is an interactive tool for analyzing and exploring European Sustainability Reporting Standards (ESRS) documents using AI assistance. This platform helps stakeholders navigate complex corporate sustainability filings to promote transparency and accountability in climate reporting.
+                  The XBRL Disclosure Explorer is an interactive tool for analyzing European Sustainability Reporting Standards (ESRS) documents using AI assistance. This documentation will guide you through the platform's features and usage.
                 </p>
-                
-                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 mb-6">
-                  <h4 className="font-medium text-blue-800">Why It Matters</h4>
-                  <p className="text-gray-700">
-                    Tracking corporate sustainability filings allows stakeholders to evaluate whether companies are making measurable progress toward their climate targets. This tool makes it easier to identify trends, compare reporting across companies, and ensure compliance with ESRS requirements.
-                  </p>
-                </div>
                 
                 <h4 className="font-semibold text-lg mb-2">Key Components</h4>
                 <ul className="list-disc pl-5 space-y-2 mb-6">
@@ -51,45 +44,18 @@ export default function Documentation() {
                 <h3 className="text-xl font-semibold mb-3">Getting Started</h3>
                 
                 <h4 className="font-semibold text-lg mb-2">Prerequisites</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-600 mb-6">
-                  <li>XBRL files that comply with ESRS standards</li>
-                  <li>Modern web browser for optimal experience</li>
+                <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-600">
+                  <li>A modern web browser (Chrome, Firefox, Safari, or Edge recommended)</li>
+                  <li>XBRL files in ESRS format for analysis (optional)</li>
                 </ul>
                 
-                <h4 className="font-semibold text-lg mb-2">Quick Start</h4>
-                <ol className="list-decimal pl-5 space-y-2 text-gray-600 mb-6">
-                  <li>Visit the upload section from the main interface</li>
-                  <li>Upload your XBRL or pre-converted JSON file</li>
-                  <li>Wait for processing to complete</li>
-                  <li>Use the chat interface to start exploring your data</li>
+                <h4 className="font-semibold text-lg mb-2">Usage Instructions</h4>
+                <ol className="list-decimal pl-5 space-y-2 text-gray-600">
+                  <li>Upload your XBRL or JSON file through the upload interface.</li>
+                  <li>Wait for the system to process and analyze your file.</li>
+                  <li>Use the chat interface to ask questions about the data in natural language.</li>
+                  <li>Switch between different modes to access either preloaded knowledge or file-specific analysis.</li>
                 </ol>
-                
-                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500 mb-6">
-                  <h4 className="font-medium text-green-800">Sample Queries</h4>
-                  <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                    <li>"What climate targets has the company disclosed?"</li>
-                    <li>"Summarize the sustainability risks mentioned in this filing"</li>
-                    <li>"Show me all environmental metrics with their values"</li>
-                    <li>"Compare this company's emissions to industry averages"</li>
-                  </ul>
-                </div>
-                
-                <h4 className="font-semibold text-lg mb-2">System Modes</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded-lg shadow">
-                    <h5 className="font-medium text-gray-900 mb-2">Preloaded Mode</h5>
-                    <p className="text-gray-700 text-sm">
-                      Access general information about ESRS standards and taxonomy without uploading files.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow">
-                    <h5 className="font-medium text-gray-900 mb-2">User Upload Mode</h5>
-                    <p className="text-gray-700 text-sm">
-                      Upload and analyze your own XBRL or JSON files for specific company insights.
-                    </p>
-                  </div>
-                </div>
               </div>
             </TabsContent>
             
@@ -106,34 +72,43 @@ export default function Documentation() {
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
-                    <h4 className="font-medium text-gray-900 mb-2">AI-Powered Chat Interface</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">AI-Powered Analysis</h4>
                     <p className="text-gray-700">
-                      Interact with your data through a natural language interface that understands ESRS context.
+                      Leverage natural language processing to extract insights from sustainability reporting data.
                     </p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
-                    <h4 className="font-medium text-gray-900 mb-2">ESRS Embedded Knowledge</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">Conversational Interface</h4>
                     <p className="text-gray-700">
-                      The platform includes embedded ESRS knowledge that helps users navigate and understand the taxonomy, different sections, and requirements of the standards.
+                      Ask questions and receive answers about ESRS filings in natural language through the chat interface.
                     </p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow">
                     <h4 className="font-medium text-gray-900 mb-2">Open API</h4>
                     <p className="text-gray-700">
-                      Our Open API enables developers to flatten XBRL files into JSON format that can be easily parsed by LLMs and used to build other climate action solutions.
+                      Access programmatic interfaces to build your own applications on top of our XBRL processing capabilities.
                     </p>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3">Using the Tool</h3>
-                <ol className="list-decimal list-inside space-y-3 text-gray-600">
-                  <li>Upload your XBRL or JSON file through the upload interface.</li>
-                  <li>Wait for the system to process and analyze your file.</li>
-                  <li>Use the chat interface to ask questions about the data in natural language.</li>
-                  <li>Switch between different modes to access either preloaded knowledge or file-specific analysis.</li>
-                </ol>
+                <h4 className="font-semibold text-lg mb-2">Operation Modes</h4>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <h5 className="font-medium text-gray-900 mb-2">Preloaded Mode</h5>
+                    <p className="text-gray-700 text-sm">
+                      Access general information about ESRS standards and taxonomy without uploading files.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <h5 className="font-medium text-gray-900 mb-2">User Upload Mode</h5>
+                    <p className="text-gray-700 text-sm">
+                      Upload and analyze your own XBRL or JSON files for specific company insights.
+                    </p>
+                  </div>
+                </div>
               </div>
             </TabsContent>
             
@@ -164,23 +139,23 @@ export default function Documentation() {
                 </div>
                 
                 <h4 className="font-semibold text-lg mb-2">System Components</h4>
-                <div className="space-y-3 mb-6">
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <h5 className="font-medium text-gray-900">FastAPI Backend</h5>
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <h5 className="font-medium text-gray-900 mb-2">XBRL Service</h5>
                     <p className="text-gray-600 text-sm">
-                      Handles WebSocket connections, manages user sessions, and coordinates between the AI assistant and file processing services.
+                      Converts XBRL documents into structured JSON format using Arelle framework.
                     </p>
                   </div>
                   
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <h5 className="font-medium text-gray-900">Arelle Service</h5>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <h5 className="font-medium text-gray-900 mb-2">Backend API</h5>
                     <p className="text-gray-600 text-sm">
-                      Specialized microservice for processing XBRL files and converting them to a more accessible JSON format.
+                      Handles file uploads, data processing, and WebSocket connections for real-time communication.
                     </p>
                   </div>
                   
-                  <div className="bg-white p-3 rounded-lg border border-gray-200">
-                    <h5 className="font-medium text-gray-900">React Frontend</h5>
+                  <div className="bg-white p-4 rounded-lg shadow">
+                    <h5 className="font-medium text-gray-900 mb-2">Frontend App</h5>
                     <p className="text-gray-600 text-sm">
                       Provides an intuitive user interface with file upload capabilities, chat interface, and document visualization.
                     </p>
@@ -207,56 +182,61 @@ export default function Documentation() {
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
                     <p>POST /upload</p>
                     <p>Content-Type: multipart/form-data</p>
-                    <p>Body: file, websocket_user_id</p>
+                    <p>Body: file</p>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    Uploads an XBRL file, converts it to JSON using Arelle, and makes it available for querying.
+                    Uploads an XBRL file for processing. Returns a unique identifier for tracking the file's analysis status.
                   </p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2">JSON Upload Endpoint</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">WebSocket Connection</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>POST /upload_json_file</p>
-                    <p>Content-Type: multipart/form-data</p>
-                    <p>Body: file, websocket_user_id</p>
+                    <p>WS /ws/{user_id}</p>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    Uploads a JSON file directly for analysis without XBRL conversion.
+                    Establishes a WebSocket connection for real-time chat with the AI assistant. The user_id is obtained from the upload response.
                   </p>
                 </div>
                 
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2">WebSocket Endpoint</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">JSON Export Endpoint</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>WS /ws?user_id=&#123;userId&#125;</p>
+                    <p>GET /export/{file_id}</p>
                   </div>
                   <p className="text-gray-600 text-sm">
-                    Establishes a WebSocket connection for real-time chat interaction with the AI assistant.
+                    Retrieves the processed JSON data for a specific file by its ID.
                   </p>
                 </div>
                 
-                <div className="bg-white p-4 rounded-lg shadow mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2">Switch Mode Endpoint</h4>
-                  <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>POST /switch_mode</p>
-                    <p>Content-Type: application/x-www-form-urlencoded</p>
-                    <p>Body: websocket_user_id, new_mode</p>
+                <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                  <h4 className="font-medium mb-2">API Usage Example</h4>
+                  <div className="bg-gray-700 text-white p-3 rounded text-sm font-mono">
+                    <pre>{`// Example JavaScript code for file upload
+const formData = new FormData();
+formData.append('file', xbrlFile);
+
+fetch('/upload', {
+  method: 'POST',
+  body: formData
+})
+.then(response => response.json())
+.then(data => {
+  const userId = data.user_id;
+  const socket = new WebSocket(\`ws://your-domain.com/ws/\${userId}\`);
+  
+  socket.onmessage = (event) => {
+    const message = JSON.parse(event.data);
+    console.log('Received:', message);
+  };
+  
+  socket.onopen = () => {
+    socket.send(JSON.stringify({
+      message: 'What are the company's climate targets?'
+    }));
+  };
+});`}</pre>
                   </div>
-                  <p className="text-gray-600 text-sm">
-                    Switches between different assistant modes: preloaded, user_json, or converted_xbrl.
-                  </p>
-                </div>
-                
-                <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                  <h4 className="font-medium mb-2">API Documentation</h4>
-                  <p className="text-sm text-gray-600 mb-2">
-                    Full API documentation is available at:
-                  </p>
-                  <ul className="list-disc list-inside text-sm text-blue-600">
-                    <li>Backend API: <span className="font-mono">http://localhost:8000/docs</span></li>
-                    <li>Arelle Service: <span className="font-mono">http://localhost:8001/docs</span></li>
-                  </ul>
                 </div>
               </div>
             </TabsContent>
