@@ -49,15 +49,15 @@ export default function Home() {
         <TabsList className="mb-4">
           <TabsTrigger value="upload">Upload</TabsTrigger>
           <TabsTrigger value="chat">
-            <MessageSquare className="h-4 w-4 mr-1" />
+            <MessageSquare className="h-4 w-4 mr-1 text-blue-500" />
             Chat
           </TabsTrigger>
           <TabsTrigger value="about">
-            <Info className="h-4 w-4 mr-1" />
+            <Info className="h-4 w-4 mr-1 text-blue-500" />
             About
           </TabsTrigger>
           <TabsTrigger value="documentation">
-            <BookOpen className="h-4 w-4 mr-1" />
+            <BookOpen className="h-4 w-4 mr-1 text-blue-500" />
             Documentation
           </TabsTrigger>
         </TabsList>
