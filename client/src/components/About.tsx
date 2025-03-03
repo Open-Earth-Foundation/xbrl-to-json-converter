@@ -61,15 +61,15 @@ export default function About() {
                 
                 
                 <div className="bg-white p-4 rounded-lg shadow">
-                  <h4 className="font-medium text-gray-900 mb-2">ESRS Documentation Browser</h4>
+                  <h4 className="font-medium text-gray-900 mb-2">ESRS Embedded Knowledge</h4>
                   <p className="text-gray-700">
-                    The integrated ESRS documentation browser allows users to easily reference the standards and guidelines that companies must adhere to in their filings.
+                    The platform includes embedded ESRS knowledge that helps users navigate and understand the taxonomy, different sections, and requirements of the standards without needing to reference external documentation.
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow">
                   <h4 className="font-medium text-gray-900 mb-2">Open API</h4>
                   <p className="text-gray-700">
-                    With WebSocket communication, the tool provides real-time feedback, ensuring that users always have access to the latest available information.
+                    Our Open API enables developers to flatten XBRL files into JSON format that can be easily parsed by LLMs for analysis and used to build other climate action solutions and integrations.
                   </p>
                 </div>
               </div>
