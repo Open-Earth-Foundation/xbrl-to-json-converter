@@ -66,11 +66,11 @@ export default function CardCarousel() {
             <Card
               key={index}
               className={`min-w-[250px] md:min-w-[300px] cursor-pointer transition-transform duration-200 hover:scale-105 snap-center
-                ${index === currentIndex ? 'ring-2 ring-primary shadow-lg' : ''}`}
+                ${index === currentIndex ? 'ring-2 ring-blue-700 shadow-lg' : ''}`}
               onClick={() => setSelectedCard(index)}
             >
               <CardContent className="p-6">
-                <div className="mb-4 text-primary">{card.icon}</div>
+                <div className="mb-4 text-blue-700">{card.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
                 <p className="text-sm text-gray-600">{card.description}</p>
               </CardContent>
