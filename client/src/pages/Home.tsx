@@ -17,7 +17,7 @@ function Home() {
         <Tabs defaultValue="chat" className="w-full p-6 bg-muted rounded-lg">
           <TabsList className="grid w-full grid-cols-3 mb-4">
             <TabsTrigger value="chat">Chat</TabsTrigger>
-            <TabsTrigger value="about">About</TabsTrigger>
+            <TabsTrigger value="about" data-value="about">About</TabsTrigger>
             <TabsTrigger value="docs">Documentation</TabsTrigger>
           </TabsList>
 

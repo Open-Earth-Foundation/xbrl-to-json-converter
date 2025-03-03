@@ -28,6 +28,27 @@ export default function Hero() {
             >
               Explore ESRS
             </Button>
+            <Button 
+              onClick={() => {
+                // First scroll to content
+                window.scrollTo({
+                  top: window.innerHeight,
+                  behavior: 'smooth'
+                });
+                // Then set a timeout to select the About tab after scrolling
+                setTimeout(() => {
+                  const aboutTab = document.querySelector('[data-value="about"]') as HTMLElement;
+                  if (aboutTab) {
+                    aboutTab.click();
+                  }
+                }, 500);
+              }}
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white/20"
+            >
+              Why it's important for Climate Action
+            </Button>
           </div>
         </div>
       </div>
