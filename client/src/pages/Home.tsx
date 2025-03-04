@@ -6,6 +6,7 @@ import About from "../components/About";
 import Documentation from "../components/Documentation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import Hero from "../components/Hero";
+import { MessageSquare, Info, BookOpen } from "lucide-react";
 
 function Home() {
   const [activeTab, setActiveTab] = useState('chat');
@@ -39,9 +40,15 @@ function Home() {
       <main className="flex-1 container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full p-6 bg-muted rounded-lg">
           <TabsList className="grid w-full grid-cols-3 mb-4">
-            <TabsTrigger value="chat">Chat</TabsTrigger>
-            <TabsTrigger value="about" data-value="about">About</TabsTrigger>
-            <TabsTrigger value="docs">Documentation</TabsTrigger>
+            <TabsTrigger value="chat">
+              <MessageSquare className="h-4 w-4 mr-1" />
+              Chat</TabsTrigger>
+            <TabsTrigger value="about" data-value="about">
+              <Info className="h-4 w-4 mr-1" />
+              About</TabsTrigger>
+            <TabsTrigger value="docs">
+              <BookOpen className="h-4 w-4 mr-1" />
+              Documentation</TabsTrigger>
           </TabsList>
 
           <TabsContent value="chat" className="space-y-6">
