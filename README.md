@@ -24,6 +24,12 @@ git clone <repository-url>
 cd <repository-name>
 ```
 
+### 2️⃣Run with Docker:
+
+```bash
+$ docker-compose up --build # use --build only the first time you're running it
+```
+
 ### 2️⃣ Backend Setup
 
 Create and activate virtual environment:
