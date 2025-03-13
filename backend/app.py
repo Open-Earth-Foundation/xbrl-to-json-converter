@@ -237,7 +237,7 @@ async def read_root():
 #######################################################
 # The original XBRL endpoint - CHANGED to accept user ID
 #######################################################
-@app.post("/upload")
+@app.post("/upload_file")
 async def upload_file(
     file: UploadFile = File(...),
     websocket_user_id: str = Form(...)  # <-- CHANGED: we now accept user ID from form

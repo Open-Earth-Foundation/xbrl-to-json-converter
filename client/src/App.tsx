@@ -2,6 +2,8 @@ import { Switch, Route } from "wouter";
 import Home from "./pages/Home.jsx";
 import { Card, CardContent } from "./components/ui/card";
 import { AlertCircle } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
 
 function App() {
   return (
@@ -28,6 +30,36 @@ function NotFound() {
       </Card>
     </div>
   );
+}
+
+
+function TabComponent() {
+  const [activeTab, setActiveTab] = useState(0);
+  const initialLoadRef = useRef(true);
+
+  useEffect(() => {
+    const handleTabSwitch = (event) => {
+      setActiveTab(event.detail.tab);
+    };
+
+    window.addEventListener('switchTab', handleTabSwitch);
+
+    // Prevent automatic scrolling on initial load
+    if (initialLoadRef.current) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+      });
+      initialLoadRef.current = false;
+    }
+
+    return () => {
+      window.removeEventListener('switchTab', handleTabSwitch);
+    };
+  }, []);
+
+  // ... rest of TabComponent (rendering tabs, etc.) ...
+  return <div>Active Tab: {activeTab}</div>;
 }
 
 export default App;

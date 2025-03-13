@@ -1,0 +1,27 @@
+modules = ["python-3.12", "nodejs-20", "web"]
+run = "npm run dev"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run dev"]
+
+[[ports]]
+localPort = 5173
+externalPort = 80
+
+[[ports]]
+localPort = 5174
+externalPort = 3000
+
+[workflows]
+runButton = "Run Frontend"
+
+[[workflows.workflow]]
+name = "Run Frontend"
+author = 24359658
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd client && ./run.sh"
