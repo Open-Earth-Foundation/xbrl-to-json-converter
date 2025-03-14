@@ -26,12 +26,6 @@ const cards: Card[] = [
         modalContent: "Master the European Sustainability Reporting Standards (ESRS) framework. Learn about different disclosure requirements including environmental standards (E1-E5), social standards (S1-S4), and governance standards (G1-G2). Understand how these standards shape corporate sustainability reporting and what information companies must disclose in each section."
     },
     {
-        icon: <MessageSquare className="h-8 w-8"/>,
-        title: "Natural Language Chat",
-        description: "Chat directly with filings and standards documentation",
-        modalContent: "Interact with ESRS filings and standards documentation using natural language queries. Ask questions about specific disclosures, get clarification on reporting requirements, or explore sustainability metrics. Our AI-powered chat interface makes it easy to find and understand the information you need without navigating complex technical documents."
-    },
-    {
         icon: <Code2 className="h-8 w-8"/>,
         title: "Open Source & API",
         description: "Build and extend using our open tools and API",

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardCarousel from "../components/CardCarousel";
 import CorporateFilingUpload from "@/components/CorporateFilingUpload"; // Updated import
-import Chat from "../components/Chat";
 import About from "../components/About";
 import Documentation from "../components/Documentation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
@@ -9,7 +8,7 @@ import Hero from "../components/Hero";
 import { MessageSquare, Info, BookOpen } from "lucide-react";
 
 function Home() {
-  const [activeTab, setActiveTab] = useState('chat');
+  const [activeTab, setActiveTab] = useState('convert');
 
   // Listen for tab change requests
   useEffect(() => {
@@ -40,9 +39,9 @@ function Home() {
       <main className="flex-1 container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full p-6 bg-muted rounded-lg">
           <TabsList className="grid w-full grid-cols-3 mb-4">
-            <TabsTrigger value="chat">
+            <TabsTrigger value="convert">
               <MessageSquare className="h-4 w-4 mr-1" />
-              Chat</TabsTrigger>
+              Convert</TabsTrigger>
             <TabsTrigger value="about" data-value="about">
               <Info className="h-4 w-4 mr-1" />
               About</TabsTrigger>
@@ -51,12 +50,11 @@ function Home() {
               Documentation</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="chat" className="space-y-6">
+          <TabsContent value="convert" className="space-y-6">
             <CardCarousel />
-            <div className="flex flex-col gap-4"> {/*Replaced FileUpload with CorporateFilingUpload*/}
+            <div className="flex flex-col gap-4">
               <CorporateFilingUpload />
             </div>
-            <Chat />
           </TabsContent>
 
           <TabsContent value="about">

@@ -32,10 +32,10 @@ export default function Hero() {
             Beta Version
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-sans">
-            XBRL Disclosure Explorer for ESRS
+            XBRL to JSON converter
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8">
-            Navigate and analyze ESRS filings with AI assistance. Upload your XBRL documents for instant insights and compliance verification.
+            Convert your ESRS filings to JSON
           </p>
           <div className="flex gap-4">
             <Button 
