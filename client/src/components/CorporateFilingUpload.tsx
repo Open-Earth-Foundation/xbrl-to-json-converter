@@ -21,7 +21,7 @@ type UploadStatus = {
 export default function CorporateFilingUpload() {
     const [uploadStatus, setUploadStatus] = useState<UploadStatus>({type: 'none'});
     const [loading, setLoading] = useState(false);
-    const [jsonFiling, setJsonFiling] = useState();
+    const [jsonFiling, setJsonFiling] = useState<Object | undefined>();
     const {toast} = useToast();
     const userId = getUserId();
 
@@ -41,13 +41,11 @@ export default function CorporateFilingUpload() {
                 body: formData,
             });
 
-            // For JSON responses
             const data = await response.json();
-            setJsonFiling(data.json_data);
-
             if (!response.ok) {
                 throw new Error('Upload failed');
             }
+            setJsonFiling(data.json_data);
             setUploadStatus({
                 type: 'xbrl',
                 filename: file.name
@@ -68,42 +66,29 @@ export default function CorporateFilingUpload() {
         }
     };
 
-    const handleDownloadJson = () => {
-        if (!jsonFiling) return;
+const downloadJson = (data: any, filename: string) => {
+  const jsonString = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonString], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+};
 
-        // Format the JSON with indentation
-        const jsonString = JSON.stringify(jsonFiling, null, 2);
-
-        // Create a blob with the data
-        const blob = new Blob([jsonString], { type: 'application/json' });
-
-        // Create an object URL for the blob
-        const url = URL.createObjectURL(blob);
-
-        // Create a download link
-        const downloadLink = document.createElement('a');
-        downloadLink.href = url;
-
-        // Set the filename - use the original filename if available, otherwise use a default
-        const filename = uploadStatus.filename
-            ? `${uploadStatus.filename.split('.')[0]}.json`
-            : 'corporate-filing.json';
-
-        downloadLink.download = filename;
-
-        // Append to the document, click it, and remove it
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-
-        // Clean up the object URL
-        URL.revokeObjectURL(url);
-
-        toast({
-            title: "Downloaded",
-            description: `JSON saved as ${filename}`
-        });
-    };
+// Then in handleDownloadJson:
+const handleDownloadJson = () => {
+  if (!jsonFiling) return;
+  const filename = uploadStatus.filename
+    ? `${uploadStatus.filename.split('.')[0]}.json`
+    : 'corporate-filing.json';
+  downloadJson(jsonFiling, filename);
+  toast({
+    title: "Downloaded",
+    description: `JSON saved as ${filename}`
+  });
+};
 
     return (
         <>

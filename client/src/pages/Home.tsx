@@ -5,7 +5,7 @@ import About from "../components/About";
 import Documentation from "../components/Documentation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import Hero from "../components/Hero";
-import { MessageSquare, Info, BookOpen } from "lucide-react";
+import {MessageSquare, Info, BookOpen, FileUp} from "lucide-react";
 
 function Home() {
   const [activeTab, setActiveTab] = useState('convert');
@@ -40,7 +40,7 @@ function Home() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full p-6 bg-muted rounded-lg">
           <TabsList className="grid w-full grid-cols-3 mb-4">
             <TabsTrigger value="convert">
-              <MessageSquare className="h-4 w-4 mr-1" />
+              <FileUp className="h-4 w-4 mr-1" />
               Convert</TabsTrigger>
             <TabsTrigger value="about" data-value="about">
               <Info className="h-4 w-4 mr-1" />
