@@ -180,7 +180,7 @@ export default function Documentation() {
                 <div className="bg-white p-4 rounded-lg shadow mb-4">
                   <h4 className="font-medium text-gray-900 mb-2">XBRL Upload Endpoint</h4>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono mb-2">
-                    <p>POST /upload</p>
+                    <p>POST /upload_file</p>
                     <p>Content-Type: multipart/form-data</p>
                     <p>Body: file</p>
                   </div>
