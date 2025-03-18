@@ -13,6 +13,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from openai import OpenAI
 from starlette.exceptions import HTTPException as StarletteHTTPException
+from dotenv import load_dotenv
 
 app = FastAPI()
 
@@ -20,8 +21,10 @@ logging.getLogger("multipart.multipart").setLevel(logging.WARNING)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+load_dotenv()
+
 # CORS
-cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000')
+cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000,https://xbrl-converter.openearth.dev')
 origins = cors_origins.split(',')
 
 app.add_middleware(
@@ -86,7 +89,10 @@ async def upload_file(
 
     try:
         # Call Arelle
-        arelle_url = os.getenv('ARELLE_URL', 'http://localhost:8001')
+        arelle_url_env = os.getenv('ARELLE_URL')
+        print(arelle_url_env, "arelle_url_env")
+        arelle_url = os.getenv('ARELLE_URL', 'http://xbrl-to-json-converter_arelle_service_1:8001')
+        print(f"ARELLE_URL: {arelle_url}")
         with open(file_path, 'rb') as f:
             files = {'file': f}
             response = requests.post(f'{arelle_url}/convert/', files=files)
