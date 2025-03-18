@@ -7,6 +7,7 @@ import {getUserId} from "@/user-id";
 import {JsonView, defaultStyles} from "react-json-view-lite";
 import "react-json-view-lite/dist/index.css";
 import {Button} from "./ui/button";
+import { Loader } from 'lucide-react';
 
 const API_BASE_URL =
     globalThis?.config?.VITE_API_URL ||
@@ -123,8 +124,9 @@ const handleDownloadJson = () => {
                     {/* Status Display */}
                     {loading && (
                         <div className="mt-2 p-2 bg-blue-50 text-blue-700 rounded">
-                            Processing...
+                            Processing... This may take a minute or two.
                         </div>
+
                     )}
 
                     {(!loading && uploadStatus.type !== 'none') && (
@@ -135,7 +137,7 @@ const handleDownloadJson = () => {
                     )}
                 </CardContent>
             </Card>
-
+            {loading && <Loader className="animate-spin" /> }
             {jsonFiling && (
                 <Card>
                     <CardHeader className="pb-2">
