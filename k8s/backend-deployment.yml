@@ -28,14 +28,10 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         env:
-        - name: OPENAI_API_KEY
-          value: ADD_KEY_HERE
-        - name: ASSISTANT_ID
-          value: ADD_ID_HERE
         - name: ARELLE_URL
-          value: http://xbrl-arelle-service
+          value: xbrl-to-json-converter_arelle_service_1
         - name: CORS_ORIGINS
-          value: https://xbrl-explorer.openearth.dev
+          value: https://xbrl-converter.openearth.dev
         ports:
         - containerPort: 8000
         volumeMounts:
