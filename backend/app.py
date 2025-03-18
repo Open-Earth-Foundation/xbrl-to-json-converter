@@ -1,23 +1,18 @@
 # backend/app.py
 
+import json
+import logging
 import os
 import shutil
-import uuid
 import traceback
-from typing import Dict
-from openai import OpenAI
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, Form
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.exceptions import RequestValidationError
-from starlette.exceptions import HTTPException as StarletteHTTPException
-import requests
-import json
-import asyncio
-import threading
-import queue
-import logging
 
+import requests
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, Form
+from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from openai import OpenAI
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 app = FastAPI()
 
