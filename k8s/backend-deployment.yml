@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xbrl-backend-deployment
+  name: xbrl-to-json-backend-deployment
   labels:
-    app: xbrl-backend
+    app: xbrl-to-json-backend
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: xbrl-backend
+      app: xbrl-to-json-backend
   template:
     metadata:
       labels:
-        app: xbrl-backend
+        app: xbrl-to-json-backend
     spec:
       containers:
-      - name: xbrl-backend
+      - name: xbrl-to-json-backend
         image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-backend:latest
         imagePullPolicy: Always
         resources:
@@ -29,15 +29,8 @@ spec:
             cpu: "500m"
         env:
         - name: ARELLE_URL
-          value: xbrl-to-json-converter_arelle_service_1
+          value: xbrl-to-json-converter_arelle
         - name: CORS_ORIGINS
-          value: https://xbrl-converter.openearth.dev
+          value: https://xbrl-to-json.openearth.dev
         ports:
         - containerPort: 8000
-        volumeMounts:
-        - mountPath: /app/converted_files
-          name: backend-storage
-      volumes:
-      - name: backend-storage
-        persistentVolumeClaim:
-          claimName: xbrl-backend-storage
