@@ -1,6 +1,5 @@
 fastapi==0.115.0
 uvicorn[standard]==0.31.0
-openai==1.51.1
 python-socketio[client]==5.11.4
 python-dotenv==1.0.1
 python-multipart==0.0.18

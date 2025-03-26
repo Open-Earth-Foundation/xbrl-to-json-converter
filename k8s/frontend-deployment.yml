@@ -1,28 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xbrl-frontend-deployment
+  name: xbrl-to-json-frontend-deployment
   labels:
-    app: xbrl-frontend
+    app: xbrl-to-json-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: xbrl-frontend
+      app: xbrl-to-json-frontend
   template:
     metadata:
       labels:
-        app: xbrl-frontend
+        app: xbrl-to-json-frontend
     spec:
       containers:
-      - name: xbrl-frontend
-        image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-frontend:latest
+      - name: xbrl-to-json-frontend
+        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-client:latest
         imagePullPolicy: Always
         env:
         - name: VITE_BACKEND_URL
-          value: http://xbrl-backend-service
-        - name: BACKEND_WS_ORIGIN
-          value: wss://xbrl-backend-service
+          value: http://xbrl-to-json-backend-service
         resources:
           requests:
             memory: "512Mi"

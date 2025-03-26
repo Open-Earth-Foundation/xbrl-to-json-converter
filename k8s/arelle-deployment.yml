@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xbrl-arelle-deployment
+  name: xbrl-to-json-arelle-deployment
   labels:
-    app: xbrl-arelle
+    app: xbrl-to-json-arelle
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: xbrl-arelle
+      app: xbrl-to-json-arelle
   template:
     metadata:
       labels:
-        app: xbrl-arelle
+        app: xbrl-to-json-arelle
     spec:
       containers:
-      - name: xbrl-arelle
-        image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-arelleservice:latest
+      - name: xbrl-to-json-arelle
+        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-arelle:latest
         imagePullPolicy: Always
         resources:
           requests:

@@ -11,7 +11,6 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, F
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from openai import OpenAI
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from dotenv import load_dotenv
 
