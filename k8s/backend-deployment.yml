@@ -29,7 +29,7 @@ spec:
             cpu: "500m"
         env:
         - name: ARELLE_URL
-          value: xbrl-to-json-converter_arelle
+          value: http://xbrl-to-json-arelle-service
         - name: CORS_ORIGINS
           value: https://xbrl-to-json.openearth.dev
         ports:

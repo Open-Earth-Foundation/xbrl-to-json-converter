@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: xbrl-frontend-service
+  name: xbrl-to-json-frontend-service
   labels:
-    app: xbrl-frontend
+    app: xbrl-to-json-frontend
 spec:
   selector:
-    app: xbrl-frontend
+    app: xbrl-to-json-frontend
   ports:
     - protocol: TCP
       port: 80

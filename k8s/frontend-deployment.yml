@@ -19,8 +19,8 @@ spec:
         image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-client:latest
         imagePullPolicy: Always
         env:
-        - name: VITE_BACKEND_URL
-          value: http://xbrl-to-json-backend-service
+        - name: VITE_API_URL
+          value: https://xbrl-to-json-backend.openearth.dev
         resources:
           requests:
             memory: "512Mi"

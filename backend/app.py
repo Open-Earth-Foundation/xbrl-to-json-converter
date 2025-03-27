@@ -88,8 +88,6 @@ async def upload_file(
 
     try:
         # Call Arelle
-        arelle_url_env = os.getenv('ARELLE_URL')
-        print(arelle_url_env, "arelle_url_env")
         arelle_url = os.getenv('ARELLE_URL', 'http://xbrl-to-json-converter_arelle_service_1:8001')
         print(f"ARELLE_URL: {arelle_url}")
         with open(file_path, 'rb') as f:
