@@ -1,4 +1,4 @@
-name: Arelle Service Docker Image
+name: Arelle Build and Deploy
 
 on:
   workflow_dispatch:
