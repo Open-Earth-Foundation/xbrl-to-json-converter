@@ -1,6 +1,7 @@
 name: Frontend Docker Image
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,7 +15,7 @@ jobs:
 
     env:
       REGISTRY: ghcr.io
-      REPOSITORY: open-earth-foundation/xbrl-disclosure-explorer-frontend
+      REPOSITORY: open-earth-foundation/xbrl-to-json-converter-client
 
     steps:
       - name: Checkout repository
@@ -61,4 +62,4 @@ jobs:
 
       - name: Re-deploying service
         run: |
-          kubectl rollout restart deployment xbrl-frontend-deployment -n default
+          kubectl rollout restart deployment xbrl-to-json-frontend-deployment -n default

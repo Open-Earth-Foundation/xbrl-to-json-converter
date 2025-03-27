@@ -1,6 +1,7 @@
 name: Backend Docker Image
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,7 +15,7 @@ jobs:
 
     env:
       REGISTRY: ghcr.io
-      REPOSITORY: open-earth-foundation/xbrl-disclosure-explorer-backend
+      REPOSITORY: open-earth-foundation/xbrl-to-json-converter-backend
 
     steps:
       - name: Checkout repository
@@ -61,4 +62,4 @@ jobs:
 
       - name: Re-deploying service
         run: |
-          kubectl rollout restart deployment xbrl-backend-deployment -n default
+          kubectl rollout restart deployment xbrl-to-json-backend-deployment -n default
