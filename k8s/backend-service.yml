@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: xbrl-backend-service
+  name: xbrl-to-json-backend-service
   labels:
-    app: xbrl-backend
+    app: xbrl-to-json-backend
 spec:
   selector:
-    app: xbrl-backend
+    app: xbrl-to-json-backend
   ports:
     - protocol: TCP
       port: 80

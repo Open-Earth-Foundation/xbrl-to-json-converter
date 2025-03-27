@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: xbrl-arelle-service
+  name: xbrl-to-json-arelle-service
   labels:
-    app: xbrl-arelle
+    app: xbrl-to-json-arelle
 spec:
   selector:
-    app: xbrl-arelle
+    app: xbrl-to-json-arelle
   ports:
     - protocol: TCP
       port: 80
