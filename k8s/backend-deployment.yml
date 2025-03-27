@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: xbrl-to-json-backend
-        image: ghcr.io/open-earth-foundation/xbrl-disclosure-explorer-backend:latest
+        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-backend:latest
         imagePullPolicy: Always
         resources:
           requests:
