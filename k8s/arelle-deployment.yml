@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: xbrl-to-json-arelle
-        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-arelle:latest
+        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-arelle:20250331
         imagePullPolicy: Always
         resources:
           requests:
