@@ -1,29 +1,37 @@
 # backend/app.py
 
-import json
+import io
 import logging
 import os
-import shutil
+import sys
 import traceback
-import io
+
 import requests
+from dotenv import load_dotenv
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, Form
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from dotenv import load_dotenv
 
 app = FastAPI()
 
-logging.getLogger("multipart.multipart").setLevel(logging.WARNING)
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+
+logger = logging.getLogger("app")
+logger.setLevel(logging.INFO)
+
+logger.info("Backend application initialized and ready to receive requests")
 
 load_dotenv()
 
 # CORS
-cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000,https://xbrl-converter.openearth.dev')
+cors_origins = os.getenv('CORS_ORIGINS',
+                         'http://localhost:5173,http://localhost:3000,https://xbrl-to-json.openearth.dev')
 origins = cors_origins.split(',')
 
 app.add_middleware(
@@ -33,6 +41,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/test")
+async def test_endpoint():
+    logger.info("Test endpoint was called successfully")
+    print("DIRECT PRINT: Test endpoint was called")  # This will definitely show in logs
+    return {"status": "ok", "message": "Test endpoint working"}
 
 
 # Global error handlers
@@ -61,12 +76,13 @@ async def validation_exception_handler(request, exc):
         content={"error": exc.errors()},
     )
 
+
 #######################################################
 # Root
 #######################################################
 @app.get("/")
 async def read_root():
-    return JSONResponse({"message": "Hello from the XBRL/JSON converter"})
+    return JSONResponse({"message": "Hello NINA from the XBRL/JSON converter"})
 
 
 #######################################################
@@ -91,11 +107,15 @@ async def upload_file(
 
         # Create files dictionary with BytesIO to avoid temporary file creation
         files = {
-            'file': (file.filename, io.BytesIO(file_content), file.content_type)
+            'file': (file.filename, io.BytesIO(file_content), 'application/zip')
+        }
+
+        headers = {
+            'Accept': 'application/json'
         }
 
         # Send the request to Arelle service
-        response = requests.post(f'{arelle_url}/convert/', files=files)
+        response = requests.post(f'{arelle_url}/convert/',  files=files, headers=headers)
         response.raise_for_status()
         json_data = response.json()
         logger.info("File successfully converted by Arelle service")
