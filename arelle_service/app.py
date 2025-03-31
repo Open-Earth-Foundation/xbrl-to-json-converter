@@ -1,3 +1,5 @@
+import tempfile
+
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 import os
@@ -8,69 +10,66 @@ import logging
 logger = logging.getLogger("uvicorn.error")
 logger.setLevel(logging.DEBUG)
 
-# Assuming your convert function and required imports are in a module named convert_module
 from arelle_fun import convert
 
 app = FastAPI()
 
 @app.post("/convert/")
 async def convert_file(file: UploadFile = File(...)):
-    # Define the paths for the uploaded file and the output JSON in the main directory
     logger.debug("Convert endpoint called")
-    main_dir = os.path.dirname(os.path.abspath(__file__))
-    logger.debug("main_dir = " + main_dir)
-    upload_path = os.path.join(main_dir, file.filename).replace("\\", "/")
-    logger.debug("upload_path = " + upload_path)
-    json_output_path = os.path.join(main_dir, 'file.json').replace("\\", "/")
-    logger.debug("json_output_path = " + json_output_path)
 
-    logger.debug("Saving upload file")
+    # Create a temporary directory that will be automatically cleaned up
+    with tempfile.TemporaryDirectory() as temp_dir:
+        try:
+            logger.debug(f"Created temporary directory: {temp_dir}")
 
-    # Save the uploaded file
-    with open(upload_path, 'wb') as buffer:
-        shutil.copyfileobj(file.file, buffer)
+            # Create paths for temporary files within the temp directory
+            upload_path = os.path.join(temp_dir, "input_file")  # Generic filename
+            json_output_path = os.path.join(temp_dir, "output.json")
 
-    logger.debug("File saved")
+            logger.debug(f"upload_path = {upload_path}")
+            logger.debug(f"json_output_path = {json_output_path}")
 
-    # Construct the command arguments
-    command = [
-        '-f', upload_path,
-        '--plugins', 'validate/EFM|saveLoadableOIM',
-        f'--saveLoadableOIM={json_output_path}'
-    ]
+            # Save the uploaded file content to the temp directory
+            logger.debug("Saving upload file")
+            file_content = await file.read()
+            with open(upload_path, 'wb') as buffer:
+                buffer.write(file_content)
+            logger.debug("File saved")
 
-    logger.debug("Calling conversion")
+            # Construct the command arguments
+            command = [
+                '-f', upload_path,
+                '--plugins', 'validate/EFM|saveLoadableOIM',
+                f'--saveLoadableOIM={json_output_path}'
+            ]
 
-    # Call the convert function
-    try:
-        convert(command)
-        logger.debug("Conversion successful")
-    except Exception as e:
-        logger.error("An error occurred during conversion:", e)
-        os.remove(upload_path)
-        os.remove(json_output_path)
-        return JSONResponse(content={"error": "An error occurred during conversion"})
+            logger.debug(f"Calling conversion with command: {command}")
 
-    logger.debug("Reading generated JSON file")
+            # Call the convert function
+            convert(command)
+            logger.debug("Conversion successful")
 
-    # Read the generated JSON file
-    with open(json_output_path, 'r') as json_file:
-        json_content = json_file.read()
+            # Check if the JSON file was created
+            if not os.path.exists(json_output_path):
+                raise Exception("JSON output file was not created after conversion")
 
-    logger.debug("Read the content")
+            # Read the generated JSON file
+            logger.debug("Reading generated JSON file")
+            with open(json_output_path, 'r', encoding='utf-8') as json_file:
+                json_content = json.load(json_file)
 
-    logger.debug("Cleaning up files")
+            logger.debug("Successfully read JSON content")
 
-    # Optionally, clean up the uploaded file and the JSON output if you don't want to keep them
-    os.remove(upload_path)
-    os.remove(json_output_path)
+            # Return the JSON content as a response
+            return JSONResponse(content=json_content)
 
-    logger.debug("Files cleaned")
-
-    logger.debug("Returned the results")
-
-    # Return the JSON content as a response
-    return JSONResponse(content=json.loads(json_content))
+        except Exception as e:
+            logger.error(f"Error during conversion: {str(e)}")
+            return JSONResponse(
+                content={"error": f"XBRL conversion failed: {str(e)}"},
+                status_code=500
+            )
 
 if __name__ == "__main__":
     import uvicorn

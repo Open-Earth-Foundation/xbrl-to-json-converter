@@ -5,7 +5,7 @@ import logging
 import os
 import shutil
 import traceback
-
+import io
 import requests
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, File, UploadFile, Form
 from fastapi.exceptions import RequestValidationError
@@ -77,33 +77,28 @@ async def upload_file(
         file: UploadFile = File(...),
         websocket_user_id: str = Form(...)
 ):
+    logger.info("upload_file endpoint called")
     user_id = websocket_user_id
-    upload_dir = "uploaded_files"
-    os.makedirs(upload_dir, exist_ok=True)
-    file_path = os.path.join(upload_dir, f"{user_id}_{file.filename}")
-
-    # Save the file
-    with open(file_path, 'wb') as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    logger.info(f"Received upload request from user: {user_id} with file: {file.filename}")
 
     try:
-        # Call Arelle
+        # Read the file content directly from the uploaded file
+        file_content = await file.read()
+
+        # Call Arelle service
         arelle_url = os.getenv('ARELLE_URL', 'http://xbrl-to-json-converter_arelle_service_1:8001')
-        print(f"ARELLE_URL: {arelle_url}")
-        with open(file_path, 'rb') as f:
-            files = {'file': f}
-            response = requests.post(f'{arelle_url}/convert/', files=files)
-            response.raise_for_status()
-            json_data = response.json()
+        logger.info(f"Calling Arelle service at {arelle_url}")
 
-        # Save locally
-        converted_dir = "converted_files"
-        os.makedirs(converted_dir, exist_ok=True)
-        json_file_path = os.path.join(converted_dir, f"{user_id}.json")
-        with open(json_file_path, 'w', encoding='utf-8') as jf:
-            json.dump(json_data, jf, ensure_ascii=False, indent=4)
+        # Create files dictionary with BytesIO to avoid temporary file creation
+        files = {
+            'file': (file.filename, io.BytesIO(file_content), file.content_type)
+        }
 
-        os.remove(file_path)  # remove original
+        # Send the request to Arelle service
+        response = requests.post(f'{arelle_url}/convert/', files=files)
+        response.raise_for_status()
+        json_data = response.json()
+        logger.info("File successfully converted by Arelle service")
 
         return JSONResponse(
             {
@@ -114,9 +109,6 @@ async def upload_file(
         )
 
     except Exception as e:
+        logger.error(f"Error during file upload and conversion: {e}")
         traceback.print_exc()
-        try:
-            os.remove(file_path)
-        except:
-            pass
         return JSONResponse({"error": str(e)}, status_code=500)
