@@ -13,68 +13,6 @@ export default function Documentation() {
                         </h2>
                     </div>
 
-                    {/* Why It Matters */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-4">
-                            <Info className="h-6 w-6 text-primary" />
-                            <h3 className="text-2xl font-semibold">Why It Matters</h3>
-                        </div>
-                        <Card className="border border-muted-foreground/20">
-                            <CardContent className="p-6">
-                                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                                    <p>
-                                        This software was developed to make XBRL (eXtensible Business Reporting Language) files 
-                                        more accessible, particularly for climate documentation and financial reports. While XBRL 
-                                        is a powerful standard, it presents several challenges:
-                                    </p>
-                                    
-                                    <ul className="space-y-3">
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Complex structure that's difficult to understand and process</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Limited open-source software support (primarily only Arelle)</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Challenging to integrate with modern data analysis tools</span>
-                                        </li>
-                                    </ul>
-
-                                    <p>
-                                        Our solution transforms XBRL .zip filings into a simplified JSON structure that:
-                                    </p>
-
-                                    <ul className="space-y-3">
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Is compatible with numerous open-source software tools</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Can be easily processed by AI and machine learning systems</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Simplifies data interpretation and analysis</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>Makes financial and climate reporting more accessible to developers and analysts</span>
-                                        </li>
-                                    </ul>
-
-                                    <p>
-                                        By providing this API, we aim to break down the barriers to working with XBRL data, 
-                                        enabling better analysis and understanding of both financial and climate-related disclosures.
-                                    </p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                    
                     {/* Introduction */}
                     <div className="mb-8 bg-muted/30 p-6 rounded-lg">
                         <p className="text-lg text-muted-foreground leading-relaxed">
