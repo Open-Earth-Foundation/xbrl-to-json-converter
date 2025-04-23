@@ -90,13 +90,13 @@
         "@vitejs/plugin-react": "^4.3.2",
         "autoprefixer": "^10.4.20",
         "cross-env": "^7.0.3",
-        "drizzle-kit": "^0.27.1",
-        "esbuild": "^0.24.0",
+        "drizzle-kit": "^0.31.0",
+        "esbuild": "^0.25.3",
         "postcss": "^8.5.0",
         "tailwindcss": "^3.4.17",
-        "tsx": "^4.19.1",
+        "tsx": "^4.19.3",
         "typescript": "^5.6.3",
-        "vite": "^5.4.16"
+        "vite": "^6.3.2"
     },
     "optionalDependencies": {
         "bufferutil": "^4.0.8"
