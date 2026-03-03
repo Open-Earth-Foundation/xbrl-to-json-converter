@@ -15,15 +15,15 @@ spec:
         app: xbrl-to-json-arelle
     spec:
       containers:
-      - name: xbrl-to-json-arelle
-        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-arelle:20250331
-        imagePullPolicy: Always
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "500m"
-          limits:
-            memory: "1024Mi"
-            cpu: "1000m"
-        ports:
-        - containerPort: 8001
+        - name: xbrl-to-json-arelle
+          image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-arelle:20250331
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "125m"
+            limits:
+              memory: "1024Mi"
+              cpu: "250m"
+          ports:
+            - containerPort: 8001

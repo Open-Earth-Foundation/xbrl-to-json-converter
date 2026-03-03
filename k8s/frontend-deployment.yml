@@ -15,18 +15,18 @@ spec:
         app: xbrl-to-json-frontend
     spec:
       containers:
-      - name: xbrl-to-json-frontend
-        image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-client:latest
-        imagePullPolicy: Always
-        env:
-        - name: VITE_API_URL
-          value: https://xbrl-to-json-backend.openearth.dev
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "500m"
-          limits:
-            memory: "2048Mi"
-            cpu: "1000m"
-        ports:
-        - containerPort: 5173
+        - name: xbrl-to-json-frontend
+          image: ghcr.io/open-earth-foundation/xbrl-to-json-converter-client:latest
+          imagePullPolicy: Always
+          env:
+            - name: VITE_API_URL
+              value: https://xbrl-to-json-backend.openearth.dev
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "125m"
+            limits:
+              memory: "512Mi"
+              cpu: "250m"
+          ports:
+            - containerPort: 5173
